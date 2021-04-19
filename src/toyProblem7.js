@@ -26,3 +26,5 @@ console.log(ascDesNone([4, 3, 2, 1], "Asc" )) // ➞ [1, 2, 3, 4]
 console.log(ascDesNone([7, 8, 11, 66], "Des")) // ➞ [66, 11, 8, 7]
 
 console.log(ascDesNone([1, 2, 3, 4], "None")) // ➞ [1, 2, 3, 4]
+
+console.log(ascDesNone([], "None")) // []
