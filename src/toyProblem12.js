@@ -1,3 +1,5 @@
+// Create a singlyLinkedList with methods push, pop, shift, unshift, get, set, insert, remove, reverse
+
 class Node {
   constructor(val) {
     this.val = val;
