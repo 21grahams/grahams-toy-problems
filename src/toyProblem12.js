@@ -12,7 +12,7 @@ class SinglyLinkedList {
     this.length = 0;
   }
   push(val) {
-    var newNode = new Node(val);
+    let newNode = new Node(val);
     if (!this.head) {
       this.head = newNode;
       this.tail = this.head;
@@ -27,8 +27,8 @@ class SinglyLinkedList {
     if (!this.head) {
       return undefined;
     }
-    var current = this.head;
-    var newTail = current;
+    let current = this.head;
+    let newTail = current;
     while (current.next) {
       newTail = current;
       current = current.next;
@@ -68,8 +68,8 @@ class SinglyLinkedList {
     if (index < 0 || index >= this.length) {
       return null;
     }
-    var counter = 0;
-    var current = this.head;
+    let counter = 0;
+    let current = this.head;
     while (counter !== index) {
       current = current.next;
       counter++;
@@ -77,7 +77,7 @@ class SinglyLinkedList {
     return current;
   }
   set(index, val) {
-    var foundNode = this.get(index);
+    let foundNode = this.get(index);
     if (foundNode) {
       foundNode.val = val;
       return true;
@@ -88,6 +88,7 @@ class SinglyLinkedList {
     if (index < 0 || index >= this.length) return null;
     if (index === this.length) return !!this.push(val);
     if (index === 0) return !!this.unshift(val);
+
     let newNode = new Node(val);
     let prev = this.get(index - 1);
     let temp = prev.next;
@@ -96,6 +97,31 @@ class SinglyLinkedList {
     this.length++;
     return true;
   }
+  remove(index, val) {
+    if (index < 0 || index >= this.length) return null;
+    if (index === this.length - 1) return this.pop();
+    if (index === 0) return this.shift();
+
+    let previousNode = this.get(index - 1);
+    let removed = previousNode.next;
+    previousNode.next = removed.next;
+    this.length--;
+    return removed;
+  }
+  reverse() {
+    let node = this.head;
+    this.head = this.tail;
+    let next;
+    let prev = null;
+
+    for (let i = 0; i < this.length; i++) {
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this;
+  }
 }
 
 var nodes = new SinglyLinkedList();
@@ -103,10 +129,4 @@ var nodes = new SinglyLinkedList();
 nodes.push("graham");
 nodes.push("philip");
 nodes.push("kirsh");
-console.log('nodes: ', nodes)
-// console.log('=========================')
-// nodes.pop()
-// console.log('nodes after pop: ', nodes)
-// console.log('=========================')
-// nodes.shift()
-// console.log('nodes after shift: ', nodes)
+console.log("nodes: ", nodes);
