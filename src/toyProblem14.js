@@ -1,3 +1,5 @@
+// create a binary search tree and implement insert and find
+
 class Node {
   constructor(val) {
     this.val = val;
@@ -5,7 +7,6 @@ class Node {
     this.right = null;
   }
 }
-
 class BinarySearchTree {
   constructor() {
     this.root = null;
@@ -37,6 +38,23 @@ class BinarySearchTree {
       }
     }
   }
+  find(val) {
+    if (!this.root) return false;
+    let newNode = new Node(val);
+    let current = this.root,
+      found = false;
+    while (current && !found) {
+      if (val < current.val) {
+        current = current.left;
+      } else if (val > current.val) {
+        current = current.right;
+      } else {
+        found = true;
+      }
+    }
+    if (!found) return undefined;
+    return current;
+  }
   contains(val) {
     if (!this.root) return false;
     let newNode = new Node(val);
@@ -61,7 +79,11 @@ tree.insert(200);
 tree.insert(30);
 tree.insert(400);
 tree.insert(50);
-
+console.log("tree: ", tree);
+console.log("treeFindTrue: ", tree.find(1)); // {val: 1, left: null, right: Node}
+console.log("treeFindFalse: ", tree.find(1000)); // undefined
+console.log("treeContainsTrue: ", tree.contains(1)); // true
+console.log("treeContainsFalse: ", tree.contains(1000)); // false
 //====================================
 // PREVIOUS TO BUILDING INSERT
 // tree.root = new Node(10);
