@@ -1,11 +1,12 @@
 // create a binaryHeap and implement insert, remove and priority queue
 
-class MaxBinaryHeap {
+class PriorityQueue {
   constructor() {
-    this.values = [41, 39, 33, 18, 27, 12];
+    this.values = [];
   }
-  insert(element) {
-    this.values.push(element);
+  enqueue(val, priority) {
+    let newNode = new Node(val, priority);
+    this.values.push(newNode);
     this.bubbleUp();
   }
   bubbleUp() {
@@ -14,13 +15,13 @@ class MaxBinaryHeap {
     while (index > 0) {
       let parentIndex = Math.floor((index - 1) / 2);
       let parent = this.values[parentIndex];
-      if (element <= parent) break;
+      if (element.priority <= parent.priority) break;
       this.values[parentIndex] = element;
       this.values[index] = parent;
       index = parentIndex;
     }
   }
-  extractMax() {
+  dequeue() {
     const max = this.values[0];
     const end = this.values.pop();
     if (this.values.length > 0) {
@@ -41,15 +42,15 @@ class MaxBinaryHeap {
 
       if (leftChildIndex < length) {
         leftChild = this.values[leftChildIndex];
-        if (leftChild > element) {
+        if (leftChild.priority > element.priority) {
           swap = leftChildIndex;
         }
       }
       if (rightChildIndex < length) {
         rightChild = this.values[rightChildIndex];
         if (
-          (swap === null && rightChild > element) ||
-          (swap !== null && rightChild > leftChild)
+          (swap === null && rightChild.priority > element.priority) ||
+          (swap !== null && rightChild.priority > leftChild.priority)
         ) {
           swap = rightChildIndex;
         }
@@ -62,9 +63,22 @@ class MaxBinaryHeap {
   }
 }
 
-var heap = new MaxBinaryHeap();
-heap.insert(55);
-console.log("heapInsert ", heap);
-console.log("heapExtractMax ", heap.extractMax()); // 55
-// [41, 39, 33, 18, 27, 12]
-//  0   1   2   3   4   5
+class Node {
+  constructor(val, priority) {
+    this.val = val;
+    this.priority = priority;
+  }
+}
+
+var ER = new PriorityQueue();
+ER.enqueue("common cold", 1);
+ER.enqueue("gunshot wound", 5);
+ER.enqueue("high fever", 2);
+ER.enqueue("glass in foot", 3);
+ER.enqueue("broken arm", 4);
+console.log('ER: ', ER);
+console.log('ERDequeue1: ', ER.dequeue()); // 'gunshot wound', priority: 5 }
+console.log('ERDequeue2: ', ER.dequeue()); // 'broken arm', priority: 4 }
+console.log('ERDequeue3: ', ER.dequeue()); // 'glass in foot', priority: 3 }
+console.log('ERDequeue4: ', ER.dequeue()); // 'high fever', priority: 2 }
+console.log('ERDequeue5: ', ER.dequeue()); // 'common cold', priority: 1 }
