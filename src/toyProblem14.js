@@ -7,6 +7,7 @@ class Node {
     this.right = null;
   }
 }
+
 class BinarySearchTree {
   constructor() {
     this.root = null;
@@ -71,19 +72,29 @@ class BinarySearchTree {
     }
     return false;
   }
+  BFS() {
+    let data = [],
+      queue = [],
+      node = this.root;
+    queue.push(node);
+    while (queue.length) {
+      node = queue.shift();
+      data.push(node.val);
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+    }
+    return data;
+  }
 }
 
 var tree = new BinarySearchTree();
-tree.insert(1);
-tree.insert(200);
-tree.insert(30);
-tree.insert(400);
-tree.insert(50);
-console.log("tree: ", tree);
-console.log("treeFindTrue: ", tree.find(1)); // {val: 1, left: null, right: Node}
-console.log("treeFindFalse: ", tree.find(1000)); // undefined
-console.log("treeContainsTrue: ", tree.contains(1)); // true
-console.log("treeContainsFalse: ", tree.contains(1000)); // false
+tree.insert(10);
+tree.insert(6);
+tree.insert(15);
+tree.insert(3);
+tree.insert(8);
+tree.insert(20);
+console.log('treeBFS: ', tree.BFS())
 //====================================
 // PREVIOUS TO BUILDING INSERT
 // tree.root = new Node(10);
