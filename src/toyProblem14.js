@@ -1,42 +1,57 @@
-// create a binary search tree and implement insert and find
-
 class Node {
   constructor(val) {
-      this.val = val;
-      this.left = null;
-      this.right = null;
+    this.val = val;
+    this.left = null;
+    this.right = null;
   }
 }
 
 class BinarySearchTree {
   constructor() {
-      this.root = null;
+    this.root = null;
   }
   insert(val) {
-      let newNode = new Node(val);
-      if (!this.root) {
-          this.root = newNode;
-          return this;
-      } else {
-          let current = this.root;
-          while (true) {
-              if (val < current.val) {
-                  if (current.left === null) {
-                      current.left = newNode;
-                      return this;
-                  } else {
-                      current = current.left;
-                  }
-              } else if (val > current.val) {
-                  if (current.right === null) {
-                      current.right = newNode;
-                      return this;
-                  } else {
-                      current = current.right;
-                  }
-              }
+    let newNode = new Node(val);
+    if (!this.root) {
+      this.root = newNode;
+      return this;
+    } else {
+      let current = this.root;
+      while (true) {
+        if (val === current.val) return undefined;
+        if (val < current.val) {
+          if (current.left === null) {
+            current.left = newNode;
+            return this;
+          } else {
+            current = current.left;
           }
+        } else if (val > current.val) {
+          if (current.right === null) {
+            current.right = newNode;
+            return this;
+          } else {
+            current = current.right;
+          }
+        }
       }
+    }
+  }
+  contains(val) {
+    if (!this.root) return false;
+    let newNode = new Node(val);
+    let current = this.root,
+      found = false;
+    while (current && !found) {
+      if (val < current.val) {
+        current = current.left;
+      } else if (val > current.val) {
+        current = current.right;
+      } else {
+        return true;
+      }
+    }
+    return false;
   }
 }
 
@@ -46,7 +61,6 @@ tree.insert(200);
 tree.insert(30);
 tree.insert(400);
 tree.insert(50);
-console.log('tree: ', tree)
 
 //====================================
 // PREVIOUS TO BUILDING INSERT
