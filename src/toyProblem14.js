@@ -73,9 +73,9 @@ class BinarySearchTree {
     return false;
   }
   BFS() {
-    let data = [],
-      queue = [],
-      node = this.root;
+    let data = [];
+    let queue = [];
+    let node = this.root;
     queue.push(node);
     while (queue.length) {
       node = queue.shift();
@@ -115,7 +115,26 @@ class BinarySearchTree {
     helper(current);
     return data;
   }
+  DFSInOrder() {
+    let data = [];
+    let current = this.root;
+    const helper = (node) => {
+      if (node.left) {
+        helper(node.left);
+      }
+      data.push(node.val);
+      if (node.right) {
+        helper(node.right);
+      }
+    };
+    helper(current);
+    return data;
+  }
 }
+
+//       10
+//    6      15
+//  3  8       20
 
 var tree = new BinarySearchTree();
 tree.insert(10);
@@ -127,6 +146,7 @@ tree.insert(20);
 console.log("treeBFS: ", tree.BFS()); // [10, 6, 15, 3, 8, 20]
 console.log("treeDFSPreOrder: ", tree.DFSPreOrder()); // [10, 6, 3, 8, 15, 20]
 console.log("treeDFSPostOrder: ", tree.DFSPostOrder()); // [3, 8, 6, 20, 15, 10]
+console.log("treeDFSInOrder: ", tree.DFSInOrder()); // [3, 6, 8, 10, 15, 20]
 //====================================
 // PREVIOUS TO BUILDING INSERT
 // tree.root = new Node(10);
