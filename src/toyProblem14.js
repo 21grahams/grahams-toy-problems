@@ -85,6 +85,21 @@ class BinarySearchTree {
     }
     return data;
   }
+  DFSPreOrder() {
+    let data = [];
+    let current = this.root;
+    const helper = (node) => {
+      data.push(node.val);
+      if (node.left) {
+        helper(node.left);
+      }
+      if (node.right) {
+        helper(node.right);
+      }
+    };
+    helper(current);
+    return data;
+  }
 }
 
 var tree = new BinarySearchTree();
@@ -94,7 +109,8 @@ tree.insert(15);
 tree.insert(3);
 tree.insert(8);
 tree.insert(20);
-console.log('treeBFS: ', tree.BFS())
+console.log("treeBFS: ", tree.BFS()); // [10, 6, 15, 3, 8, 20]
+console.log("treeDFSPreOrder: ", tree.DFSPreOrder()); // [10, 6, 3, 8, 15, 20]
 //====================================
 // PREVIOUS TO BUILDING INSERT
 // tree.root = new Node(10);
