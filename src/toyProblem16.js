@@ -1,3 +1,5 @@
+// create a hashTable and implement insert, retrieve, remove and resize
+
 var HashTable = function () {
   this._size = 0;
   this._limit = 8;
