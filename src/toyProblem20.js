@@ -40,7 +40,17 @@ LinkedList.prototype.removeHead = function () {
   return removedNode;
 };
 
-LinkedList.prototype.contains = function () {};
+LinkedList.prototype.contains = function (target) {
+  if (!this.head) return undefined;
+  var node = this.head;
+  while (node) {
+    if (node.val === target) {
+      return true;
+    }
+    node = node.next;
+  }
+  return false;
+};
 
 LinkedList.prototype.makeNode = function () {};
 
@@ -55,7 +65,8 @@ list.addToTail(9);
 console.log('list: ', list); // 4, 5, 6, 7, 8, 9
 list.removeHead();
 list.removeHead();
-console.log('list: ', list); // 4, 5
+console.log('list: ', list); // 6, 7, 8, 9
+console.log('list contains: ', list.contains(6)); // true
 
 // EXAMPLE USAGE:
 // var list = new LinkedList();
