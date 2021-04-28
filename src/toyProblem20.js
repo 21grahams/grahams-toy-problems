@@ -52,21 +52,27 @@ LinkedList.prototype.contains = function (target) {
   return false;
 };
 
-LinkedList.prototype.makeNode = function () {};
+LinkedList.prototype.makeNode = function (value) {
+  var node = {};
+  node.value = value;
+  node.next = null;
+  return node;
+};
 
 var list = new LinkedList();
 console.log('list: ', list.tail); // null
 list.addToTail(4);
 list.addToTail(5);
+console.log('list.head.val: ', list.head.val); // '4';
+console.log('list: ', list); // 4, 5, 6, 7, 8, 9
+console.log('removeHead: ', list.removeHead()); // 4
+list.addToTail(4);
+list.addToTail(5);
 list.addToTail(6);
 list.addToTail(7);
-list.addToTail(8);
-list.addToTail(9);
-console.log('list: ', list); // 4, 5, 6, 7, 8, 9
-list.removeHead();
-list.removeHead();
-console.log('list: ', list); // 6, 7, 8, 9
-console.log('list contains: ', list.contains(6)); // true
+console.log('list contains: ', list.contains(5)); // true
+console.log('list with new nodes: ', list.makeNode('hello'))
+console.log('list after: ', list)
 
 // EXAMPLE USAGE:
 // var list = new LinkedList();
