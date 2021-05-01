@@ -30,3 +30,4 @@ console.log(twoSum([1, 2, 3, 4, 5], 9)) // [3, 4]
 console.log(twoSum([4, 73, 23, 4], 8)) // [0, 3]
 console.log(twoSum([-1, 23, -345, 2], -346)) // [0, 2]
 console.log(twoSum([], 9)) // []
+// written in quadratic time complexity
