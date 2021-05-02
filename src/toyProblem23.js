@@ -21,3 +21,4 @@ const longestCommonPrefix = (strings) => {
 
 
 console.log(longestCommonPrefix(["flower","flow","flight"])) // 'fl'
+console.log(longestCommonPrefix(["hello","graham","kirsh"])) // ''
