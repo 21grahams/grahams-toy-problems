@@ -42,4 +42,12 @@ var rockPaperScissors = function () {
   return container;
 };
 
-console.log(rockPaperScissors(3))
+console.log(rockPaperScissors(3)) /*
+  'RRR', 'RRP', 'RRS', 'RPR',
+  'RPP', 'RPS', 'RSR', 'RSP',
+  'RSS', 'PRR', 'PRP', 'PRS',
+  'PPR', 'PPP', 'PPS', 'PSR',
+  'PSP', 'PSS', 'SRR', 'SRP',
+  'SRS', 'SPR', 'SPP', 'SPS',
+  'SSR', 'SSP', 'SSS'
+] /*
