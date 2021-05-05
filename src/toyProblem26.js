@@ -11,7 +11,7 @@ var removeDuplicates = function(nums) {
   for (let key of newSet) {
       masterArr.push(key)
   }
-  return masterArr;
+  return masterArr.length;
 };
 
 console.log(removeDuplicates([1, 1, 2])) // [1, 2]
