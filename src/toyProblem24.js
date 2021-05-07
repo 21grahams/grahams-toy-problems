@@ -70,5 +70,5 @@ rockPaperPermutation(2)
 
 console.log('Recursive Approach: ', rockPaperPermutation(3));
 console.log('Recursive Approach: ', rockPaperPermutation(4));
-console.log('Recursive Approach: ', rockPaperPermutation(5));
+console.log('Recursive Approach: ', rockPaperPermutation(9));
 //===========================================
