@@ -42,12 +42,33 @@ var rockPaperScissors = function () {
   return container;
 };
 
-console.log(rockPaperScissors(3)) /*
-  'RRR', 'RRP', 'RRS', 'RPR',
-  'RPP', 'RPS', 'RSR', 'RSP',
-  'RSS', 'PRR', 'PRP', 'PRS',
-  'PPR', 'PPP', 'PPS', 'PSR',
-  'PSP', 'PSS', 'SRR', 'SRP',
-  'SRS', 'SPR', 'SPP', 'SPS',
-  'SSR', 'SSP', 'SSS'
-] /*
+console.log('Iterative Approach: ', rockPaperScissors(3));
+
+//===========================================
+// recursion approach
+
+const rockPaperPermutation = roundCount => {
+  if (roundCount === 0) return [];
+  const permutations = [];
+
+  function playRound(plays) {
+
+    if (plays.length === roundCount) {
+      permutations.push(plays)
+      return;
+    }
+    ['r', 'p', 's'].forEach(play => {
+      playRound(plays + play)
+    })
+  }
+
+  playRound('')
+  return permutations;
+}
+
+rockPaperPermutation(2)
+
+console.log('Recursive Approach: ', rockPaperPermutation(3));
+console.log('Recursive Approach: ', rockPaperPermutation(4));
+console.log('Recursive Approach: ', rockPaperPermutation(5));
+//===========================================
