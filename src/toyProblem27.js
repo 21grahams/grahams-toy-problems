@@ -59,13 +59,10 @@ var isGoodCols = function (board) {
   for (var col = 0; col < 9; col++) {
     // map through each row, and return the row[col] output at that row to get an array of digits representing the column
     // check that array using our fails function
-    if (
-      fails(
-        board.map(function (row) {
+    if (fails(board.map(function (row) {
           return row[col];
         })
-      )
-    ) {
+      )) {
       console.log(
         `invalid col:${col} Output:${board.map(function (row) {
           return row[col];
