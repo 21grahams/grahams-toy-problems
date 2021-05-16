@@ -15,4 +15,4 @@ class Game extends Component {
 
 var Chess = new Game();
 
-console.log('chess: ', Chess) // currently will not work without calling super
+console.log('chess: ', Chess) // works now with super
