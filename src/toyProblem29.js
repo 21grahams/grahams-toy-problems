@@ -8,10 +8,11 @@ class Component {
 
 class Game extends Component {
   constructor() {
+    super(); // works once you add the super to call to Component Parent Class
     console.log('INSIDE THE GAME CONSTRUCTOR');
   }
 }
 
 var Chess = new Game();
 
-console.log('chess: ', chess) // currently will not work without calling super
+console.log('chess: ', Chess) // currently will not work without calling super
