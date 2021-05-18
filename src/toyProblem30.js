@@ -6,37 +6,25 @@
 // edge cases:
 var mergeTwoLists = function(l1, l2) {
   if (!l1) return l2;
-  else if (!l2) return l1;
+  if (!l2) return l1;
+  const head = l1.val >= l2.val? l2 : l1;
+  let cur = head;
 
-  let mergedHead = null;
-  if (l1.data >= l2.data) {
-      mergedHead = l1;
-      l1 = l1.next;
-  } else {
-      mergedHead = l2;
-      l2 = l2.next;
-  }
+  if (l1.val >= l2.val) l2 = l2.next;
+  else l1 = l1.next;
 
-  let mergedTail = mergedHead;
-
-  while (l1 && l2) {
-      let temp = null;
-      if (l1.data <= l2.data) {
-          temp = l1;
-          l1 = l1.next;
-      } else {
-          temp = l2;
+  while (l1 || l2){
+      if (!l1 || (l2 && l1.val > l2.val)){
+          cur.next = l2;
+          cur = cur.next;
           l2 = l2.next;
+      } else {
+          cur.next = l1;
+          cur = cur.next;
+          l1 = l1.next;
       }
-      mergedTail.next = temp;
-      mergedTail = temp;
   }
-  if (l1) {
-      mergedTail.next = l1;
-  } else if (l2) {
-      mergedTail.next = l2;
-  }
-  return mergedHead;
+  return head;
 };
 
 console.log(mergeTwoLists([1, 2, 3], [1, 3, 4])) // [1,1,2,3,4,4]
