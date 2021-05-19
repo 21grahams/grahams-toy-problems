@@ -23,4 +23,16 @@ var strStr = function(haystack, needle) {
       // return index
     // otherwise
       // return -1
+      if (needle === '') return 0;
+
+      // split the needle in a wordArray
+      let wordArray = needle.split(' ');
+      // loop over the haystack
+      for (let i = 0; i < haystack.length; i++) {
+          return (haystack.indexOf(wordArray) !== -1)
+      }
 };
+
+console.log(strStr('hello', 'll')) // 2
+console.log(strStr('aaaaa', 'bba')) // -1
+console.log(strStr('', '')) // 0
