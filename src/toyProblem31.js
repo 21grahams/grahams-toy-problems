@@ -18,7 +18,7 @@ var strStr = function(haystack, needle) {
   // account for the edge cases
 
   // split the needle in a wordArray
-  // loop over the wordArray
+  // loop over the haystack
     // check if the wordArray is contained inside of haystack
       // return index
     // otherwise
