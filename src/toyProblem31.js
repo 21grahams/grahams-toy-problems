@@ -36,3 +36,4 @@ var strStr = function(haystack, needle) {
 console.log(strStr('hello', 'll')) // 2
 console.log(strStr('aaaaa', 'bba')) // -1
 console.log(strStr('', '')) // 0
+console.log(strStr('', 'a')) // -1
