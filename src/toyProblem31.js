@@ -29,7 +29,7 @@ var strStr = function(haystack, needle) {
       let wordArray = needle.split(' ');
       // loop over the haystack
       for (let i = 0; i < haystack.length; i++) {
-          return (haystack.indexOf(wordArray) !== -1)
+          return (haystack.indexOf(wordArray))
       }
 };
 
