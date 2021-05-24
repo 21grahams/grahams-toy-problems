@@ -24,7 +24,7 @@ getStatusCode('http://localhost:3000/getStatusCode', (err, statusCode) => {
 //===========
 // PROMISES
 //===========
-let getStatusCodeAsync = function(url) {
+let getStatusCodeAsync = (url) => {
   return new Promise({resolve, reject} => {
     request.get(url, (err, res) => {
       if (err) {
