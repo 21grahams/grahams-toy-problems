@@ -35,3 +35,7 @@ let getStatusCodeAsync = (url) => {
     });
   });
 };
+// PROMISES invocation
+getStatusCodeAsync('http://localhost:3000/getStatusCode')
+  .then(statusCode => console.log(statusCode))
+  .catch(err => console.error(err));
