@@ -3,8 +3,8 @@
 //=========
 //   CB
 //=========
-let getStatusCode = function (url, callback) {
-  request.get(url, function (err, results) {
+let getStatusCode = (url, callback) => {
+  request.get(url, (err, results) => {
     if (err) {
       callback(err, null);
     } else {
@@ -13,7 +13,7 @@ let getStatusCode = function (url, callback) {
   });
 };
 // CB invocation
-getStatusCode('http://localhost:3000/getStatusCode', function(err, statusCode) {
+getStatusCode('http://localhost:3000/getStatusCode', (err, statusCode) => {
   if (err) {
     console.error(err);
   } else {
