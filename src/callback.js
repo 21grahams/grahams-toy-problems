@@ -20,3 +20,18 @@ getStatusCode('http://localhost:3000/getStatusCode', (err, statusCode) => {
     console.log(statusCode);
   }
 });
+
+//===========
+// PROMISES
+//===========
+let getStatusCodeAsync = function(url) {
+  return new Promise({resolve, reject} => {
+    request.get(url, (err, res) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(res.statusCode);
+      }
+    });
+  });
+};
