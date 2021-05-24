@@ -39,3 +39,15 @@ let getStatusCodeAsync = (url) => {
 getStatusCodeAsync('http://localhost:3000/getStatusCode')
   .then(statusCode => console.log(statusCode))
   .catch(err => console.error(err));
+
+//========================
+// ASYNC AWAIT invocation
+//========================
+async function asyncGetStatusInvocation() {
+  try {
+    const response = await getStatusCodeAsync('http://localhost:3000/getStatusCode');
+    console.log(response);
+  } catch (err) {
+    console.error(err);
+  }
+}
