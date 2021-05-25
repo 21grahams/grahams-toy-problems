@@ -10,11 +10,19 @@ You must write an algorithm with O(log n) runtime complexity
 // constraints: linear time complexity
 // edge cases: if target value doesn't exist in array of nums, return the position it would be in
 const searchInsert = (nums, target) => {
+
   // loop over nums
-  // if target equals currentNum
-  // return index
-  // else if target is greater than currentNum && less than currentNum plus one
-  // return index
+    // if target equals currentNum
+      // return index
+    // else if target is greater than currentNum && less than currentNum plus one
+      // return index
+  for (let i = 0; i < nums.length; i++) {
+    if (target === nums[i]) {
+      return i;
+    } else if (target > nums[i] && target < nums[i + 1]) {
+      return i;
+    }
+  }
 };
 
 console.log(searchInsert([1, 3, 5, 6], 5)); // 2
