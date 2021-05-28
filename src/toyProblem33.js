@@ -8,3 +8,5 @@ const lengthOfLastWord () => {
   // do something
 }
 
+console.log(lengthOfLastWord('Hello World')) // 5
+console.log(lengthOfLastWord('')) // 0
