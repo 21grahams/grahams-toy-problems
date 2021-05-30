@@ -17,14 +17,14 @@ const merge = (nums1, m, nums2, n) => {
   // slice nums1 and nums2 by m and n
   if (m === 0) {
     nums1 = nums1.length = [];
-    return nums1.push(nums2);
+    nums1.push(...nums2)
+    return nums1;
   } else {
     nums1.splice(m, m);
   }
   nums2.splice(n, n);
   // splice in nums2 to num1
   nums1.push(...nums2);
-  console.log("nums1: ", nums1);
   // return sort of nums1
   return nums1.sort((a, b) => {
     return a - b;
