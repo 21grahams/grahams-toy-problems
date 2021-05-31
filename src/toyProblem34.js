@@ -13,16 +13,20 @@ The number of elements initialized in nums1 and nums2 are m and n respectively. 
 
 const merge = (nums1, m, nums2, n) => {
 
-  if (m === 0) {
-    nums1 = nums1.length = [];
-    nums1.push(...nums2)
-    return nums1;
-  } else {
-  nums1.splice(m, m)
-  nums2.splice(n, n);
-  nums1.push(...nums2)
-  return nums1.sort()
-  }
+  // leaving first solution here commented out:
+
+  // if (m === 0) {
+  //   nums1 = nums1.length = [];
+  //   nums1.push(...nums2)
+  //   return nums1;
+  // } else {
+  // nums1.splice(m, m)
+  // nums2.splice(n, n);
+  // nums1.push(...nums2)
+  // return nums1.sort()
+  // }
+
+  // attempt number two
 };
 
 console.log(merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)); // [1,2,2,3,5,6]
