@@ -27,6 +27,12 @@ const merge = (nums1, m, nums2, n) => {
   // }
 
   // attempt number two
+
+  // loop over nums2 descending order
+  // add/unshift current element of nums2 to nums1
+  // remove last element of nums1
+  // sort nums1 array
+
 };
 
 console.log(merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)); // [1,2,2,3,5,6]
