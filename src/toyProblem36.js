@@ -12,10 +12,13 @@ You may assume the integer does not contain any leading zero, except the number 
 // edge cases: return empty array if input is empty
 const plusOne = (digits) => {
   // account for edge case
+  if (digits.length === 0) return [];
 
   // collect the last number of the digits array
   // increment by one
+  digits[digits.length - 1]++;
   // return digits
+  return digits;
 };
 
 console.log(plusOne([1, 2, 3])); // [1, 2, 4]
