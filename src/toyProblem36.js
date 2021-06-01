@@ -6,10 +6,18 @@ The digits are stored such that the most significant digit is at the head of the
 
 You may assume the integer does not contain any leading zero, except the number 0 itself */
 
-const plusOne = digits => {
-  // do something
+// input: an array of decimal digits, positive integers
+// output: the same array with the head of the list incremented by one
+// constraints: none at this time
+// edge cases: return empty array if input is empty
+const plusOne = (digits) => {
+  // account for edge case
+
+  // collect the last number of the digits array
+  // increment by one
+  // return digits
 };
 
-console.log(plusOne([1, 2, 3])) // [1, 2, 4]
-console.log(plusOne([4, 3, 2, 1])) // [4, 3, 2, 2]
-console.log(plusOne([0])) // [1]
+console.log(plusOne([1, 2, 3])); // [1, 2, 4]
+console.log(plusOne([4, 3, 2, 1])); // [4, 3, 2, 2]
+console.log(plusOne([0])); // [1]
