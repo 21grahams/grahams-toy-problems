@@ -9,19 +9,23 @@ Given two binary strings a and b, return their sum as a binary string */
 // constraints: nothing at this time
 // edge cases: return empty string if both arguments are empty
 const addBinary = (a, b) => {
-  // account for edge case
-
-  // create a master string
-  // split into individual nums
-  // loop in descending order
-      // if current element of string a is 0 && current element of string b is 0
-          // continue
-  // if current element of string a is 1 && current element of string b is 0 ||current element of string b is 1 && current element of string a is 0
-    // numArray = 1
-  // else if (current element of string a is 1 && current element of string b is 1 && (current element minus 1 of string a === undefined && current element minus 1 of string b === undefined)
-    // numArray = 10
-  // else if (current element of string a is 1 && current element of string b is 1 && (current element minus 1 of string a !== undefined || current element minus 1 of string b === undefined))
-  // numArray = 0
+  var i = a.length - 1;
+  var j = b.length - 1;
+  var carry = 0;
+  var result = "";
+  while (i >= 0 || j >= 0) {
+    var m = i < 0 ? 0 : a[i] | 0;
+    var n = j < 0 ? 0 : b[j] | 0;
+    carry += m + n; // sum of two digits
+    result = (carry % 2) + result; // string concat
+    carry = (carry / 2) | 0; // remove decimals,  1 / 2 = 0.5, only get 0
+    i--;
+    j--;
+  }
+  if (carry !== 0) {
+    result = carry + result;
+  }
+  return result;
 };
 
 // binary  1  2  4  8  16  32   64   128
@@ -41,5 +45,5 @@ const addBinary = (a, b) => {
 // i (for a) = 0
 // i (for b) = 0
 
-console.log('11', '1') // '100'
-console.log('1010', '1011') // '10101'
+console.log(addBinary("11", "1")); // '100'
+console.log(addBinary("1010", "1011")); // '10101'
