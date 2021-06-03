@@ -11,21 +11,20 @@ Each time you can either climb 1 or 2 steps. In how many distinct ways can you c
 // constraints: can only climb 1 or 2 steps at a time
 // edge cases: if n is 0, return 0
 const climbStairs = n => {
-  // account for edge case
 
-  // create a count
-  // base case recursion
-  // if n equals one
-    // return one
+    // using the fib recursion solution:
 
-  // create a var for step one
-  // create a var for step two
-  // create a var for the combo of both
-  // create an outer function which we'll invoke below
+    // create an arr containing nums one and two
+    // create inner function taking n as an argument
+      // (account for base case) - if n equals 0
+        // return
+      // otherwise
+        // loop over and up to n, commencing at 2
+          // reassign currentElement of array to sum to currentElement minus one of array and currentElement minus two of array
+      // call recursive function and subtract one from n (recursive case)
 
-    // loop over and invoke inner function with n getting added to count
-
-  // return count
+    // call recursive function again, pass in n
+    // return the array at the n value
 };
 
 console.log(climbStairs(2)) // 2
