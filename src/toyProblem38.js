@@ -25,7 +25,25 @@ const climbStairs = n => {
 
     // call recursive function again, pass in n
     // return the array at the n value
+    let arr = [1, 1];
+
+    const recurse = n => {
+        if (n === 0) {
+            return
+        } else {
+            for (let i = 2; i <= n; i++) {
+                arr[i] = arr[i - 1] + arr[i - 2]
+            }
+        recurse(n - 1)
+        }
+    }
+    recurse(n);
+    return arr[n]
 };
 
 console.log(climbStairs(2)) // 2
 console.log(climbStairs(3)) // 3
+console.log(climbStairs(4)) // 5
+console.log(climbStairs(5)) // 8
+console.log(climbStairs(6)) // 13
+console.log(climbStairs(7)) // 21
