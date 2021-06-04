@@ -19,7 +19,7 @@
  */
 
 var nthFibonacci = function (n) {
-  var arr = [0, 1];
+  var arr = [1, 1];
   var recurse = function (n) {
     if (n === 0) {
       return;
@@ -34,7 +34,10 @@ var nthFibonacci = function (n) {
   return arr[n];
 };
 
+console.log(nthFibonacci(2)); // 1
+console.log(nthFibonacci(3)); // 2
 console.log(nthFibonacci(4)); // 3
 console.log(nthFibonacci(5)); // 5
 console.log(nthFibonacci(6)); // 8
 console.log(nthFibonacci(7)); // 13
+console.log(nthFibonacci(8)); // 21
