@@ -10,21 +10,17 @@ Given the head of a sorted linked list, delete all duplicates such that each ele
 // constraints: list is guaranteed to already be sorted in ascending order
 // edge cases: nothing at this time
 function ListNode(val, next) {
-  this.val = val === undefined ? 0 : val;
-  this.next = next === undefined ? null : next;
+  this.val = val;
+  this.next = next;
 }
 
 const deleteDuplicates = (head) => {
-
-
   let current = head;
-  while (current && current.next) {
-
+  while (current !== null && current.next !== null) {
     if (current.val === current.next.val) {
-      let nextPlace = current.next;
-      current.next = nextPlace.next;
+      current.next = current.next.next;
     } else {
-        current = current.next
+      current = current.next;
     }
   }
   return head;
