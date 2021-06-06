@@ -32,3 +32,7 @@ console.log(deleteDuplicates([1, 1, 2, 3, 3])); // [1, 2, 3]
 // head = [1, 2]
 // current = [1, 2]
 // current val = 2
+
+// head = [1, 2, 3]
+// current = [1, 2, 3]
+// current val = 3
