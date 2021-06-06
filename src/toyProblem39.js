@@ -15,18 +15,21 @@ function ListNode(val, next) {
 };
 
 const deleteDuplicates = (head) => {
+    // create two references to head
+    // temp will iterate through entire linked list
+    // prev will point towards the first occurrence of every element
 
-  var length = 0;
-  if (!head) {
-      return undefined;
-  }
-  let current = head;
-  let newHead = head.next;
-      if (current.next.val === current.val) {
-          current = newHead;
-          head = current;
-      }
-  return head;
+    // traverse list until the last node
+
+    // compare values of both pointers
+
+    // if the value of previous is not equal to the value of temp, that means there are no more occurrences of the prev val. So set next of prev to temp node
+
+    // Set the temp to the next node
+
+    // Create edge case if there are more than one occurrence of the last element
+
+    // return linkedList
 };
 
 console.log(deleteDuplicates([1, 1, 2])); // [1, 2]
