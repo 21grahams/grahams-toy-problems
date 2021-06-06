@@ -28,3 +28,7 @@ const deleteDuplicates = (head) => {
 
 console.log(deleteDuplicates([1, 1, 2])); // [1, 2]
 console.log(deleteDuplicates([1, 1, 2, 3, 3])); // [1, 2, 3]
+
+// head = [1, 2]
+// current = [1, 2]
+// current val = 2
