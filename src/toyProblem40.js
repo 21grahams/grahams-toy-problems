@@ -26,21 +26,33 @@ const isSameTree = (p, q) => {
     let val2 = q[key];
     masterObj2[key] = val2;
   }
-  if (masterObj && masterObj2 && masterObj.val === masterObj2.val) {
+  if (masterObj.val && masterObj2.val && masterObj.val === masterObj2.val) {
     if (
-      masterObj.left.val &&
-      masterObj2.left.val &&
+      masterObj.left &&
+      masterObj2.left &&
       masterObj.left.val === masterObj2.left.val
     ) {
       if (
-        (masterObj.right.val &&
-          masterObj2.right.val &&
-          masterObj.right.val === masterObj2.right.val) ||
-        (masterObj.right === null && masterObj2.right === null)
+        masterObj.right &&
+        masterObj2.right &&
+        masterObj.right.val === masterObj2.right.val
       ) {
         return true;
       }
     }
+    if (masterObj.left === null && masterObj2.left === null) {
+      if (
+        masterObj.right &&
+        masterObj2.right &&
+        masterObj.right.val === masterObj2.right.val
+      ) {
+        return true;
+      }
+    }
+    if (masterObj.right === null && masterObj2.right === null) {
+      return true;
+    }
+    return false;
   }
   return false;
 
