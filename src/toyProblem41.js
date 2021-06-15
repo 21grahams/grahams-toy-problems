@@ -8,14 +8,7 @@ Given the root of a binary tree, check whether it is a mirror of itself (i.e., s
 // constraints: none currently
 // edge cases: if no tree exists, return false
 const isSymmetric = root => {
-  // handle edge case
-
-  // if left node doesn't equal right node
-  // return false
-  // otherwise
-  // return true
-
-  // recursively call left node and right node and compare
+  // solution one - recursion
   if (!root) return false;
 
   const isSymmetric = (a, b) => {
@@ -26,6 +19,22 @@ const isSymmetric = root => {
   }
   return isSymmetric(root.left, root.right)
 
+  // solution two - iterative
+  if (!root) return false;
+  let queque = [root.left, root.right];
+  while (queque.length) {
+    let len = queque.length;
+    for (let i = 0; i < len; i++) {
+      let t1 = queque.shift();
+      let t2 = queque.shift();
+      if (!t1 && !t2) continue;
+      if (!t1 || !t2) return false;
+      if (t1.val !== t2.val) return false;
+      queque.push(t1.left, t2.right);
+      queque.push(t1.right, t2.left);
+    }
+  }
+  return true;
 };
 
 console.log(isSymmetric([1, 2, 2, 3, 4, 4, 3])) // true
