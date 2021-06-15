@@ -10,62 +10,7 @@ Two binary trees are considered the same if they are structurally identical, and
 // constraints: none at this time
 // edge cases: none at this time
 const isSameTree = (p, q) => {
-  // QUICKER VERSION (might need to change to LONGER version)
-  // loop through both trees
-  // if each node in tree p matches each node in tree q
-  // return true
-  // otherwise
-  // return false
-  let masterObj = {};
-  let masterObj2 = {};
-  for (let key in p) {
-    let val = p[key];
-    masterObj[key] = val;
-  }
-  for (let key in q) {
-    let val2 = q[key];
-    masterObj2[key] = val2;
-  }
-  if (masterObj.val && masterObj2.val && masterObj.val === masterObj2.val) {
-    if (
-      masterObj.left &&
-      masterObj2.left &&
-      masterObj.left.val === masterObj2.left.val
-    ) {
-      if (
-        masterObj.right &&
-        masterObj2.right &&
-        masterObj.right.val === masterObj2.right.val
-      ) {
-        return true;
-      }
-    }
-    if (masterObj.left === null && masterObj2.left === null) {
-      if (
-        masterObj.right &&
-        masterObj2.right &&
-        masterObj.right.val === masterObj2.right.val
-      ) {
-        return true;
-      }
-    }
-    if (masterObj.right === null && masterObj2.right === null) {
-      return true;
-    }
-    return false;
-  }
-  return false;
-
-  // LONGER VERSION
-
-  // create a queue (with an array) and a variable that will store each node of the tree
-  // place root node in the queue
-  // loop as long as there is anything in the queue
-  // if node at left exists in both tree q and p
-  // if node at right exists in both tree q and p
-  // if these nodes equal each other
-  // return true
-  // return false
+ // reset
 };
 
 console.log(isSameTree([1, 2, 3], [1, 2, 3])); // true
