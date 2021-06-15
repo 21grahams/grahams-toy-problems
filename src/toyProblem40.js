@@ -14,9 +14,14 @@ const isSameTree = (p, q) => {
   return JSON.stringify(p) === JSON.stringify(q)
 
   // solution two (recursion)
+  // if both are null end is found
   if (!p && !q) return true;
-  if ((!p && q) || (p && !q) || p.val !== q.val) return false;
-  return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+  // if any one is null, tree is not same
+  if (!p || !q) return false;
+  // if values do not match, tree is not same
+  if (p.val !== q.val) return false;
+  // check both branches (left & right)
+  return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 };
 
 console.log(isSameTree([1, 2, 3], [1, 2, 3])); // true
