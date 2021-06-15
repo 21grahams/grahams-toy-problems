@@ -16,6 +16,16 @@ const isSymmetric = root => {
   // return true
 
   // recursively call left node and right node and compare
+  if (!root) return false;
+
+  const isSymmetric = (a, b) => {
+    if (!a && !b) return true;
+    if (!a || !b) return false;
+
+    return a.val === b.val && isSymmetric(a.left, b.right) && isSymmetric(a.right, b.left)
+  }
+  return isSymmetric(root.left, root.right)
+
 };
 
 console.log(isSymmetric([1, 2, 2, 3, 4, 4, 3])) // true
