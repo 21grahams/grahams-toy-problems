@@ -10,14 +10,8 @@ Two binary trees are considered the same if they are structurally identical, and
 // constraints: none at this time
 // edge cases: none at this time
 const isSameTree = (p, q) => {
-  // create two arrays, one for ea tree
-  // loop through each item in the tree
-  // collect nodes and push to their selective trees
-  // compare the two arrays. If similar
-  // return true
-  // otherwise
-  // return false
-};
+  // solution one
+  return JSON.stringify(p) === JSON.stringify(q)
 };
 
 console.log(isSameTree([1, 2, 3], [1, 2, 3])); // true
