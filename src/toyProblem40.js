@@ -12,6 +12,11 @@ Two binary trees are considered the same if they are structurally identical, and
 const isSameTree = (p, q) => {
   // solution one
   return JSON.stringify(p) === JSON.stringify(q)
+
+  // solution two (recursion)
+  if (!p && !q) return true;
+  if ((!p && q) || (p && !q) || p.val !== q.val) return false;
+  return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
 };
 
 console.log(isSameTree([1, 2, 3], [1, 2, 3])); // true
