@@ -37,7 +37,7 @@ const isSymmetric = root => {
   return true;
 };
 
-// test 3
+// final test. Should be working now
 
 console.log(isSymmetric([1, 2, 2, 3, 4, 4, 3])) // true
 console.log(isSymmetric([1, 2, 2, null, 3, null, 3])) // false
