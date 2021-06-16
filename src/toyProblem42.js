@@ -12,3 +12,4 @@ const maxDepth = root => {
 console.log(maxDepth([3, 9, 20, null, null, 15, 7])) // 3
 console.log(maxDepth([1, null, 1])) // 2
 console.log(maxDepth([])) // 0
+console.log(maxDepth([0])) // 1
