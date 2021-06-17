@@ -9,6 +9,12 @@ A height-balanced binary tree is a binary tree in which the depth of the two sub
 // output: a height-balanced binary search tree
 // constraints: the depth of the two subtrees of every node never differs by more than one
 // edge cases: if array is empty, return empty BST
+function TreeNode(val, left, right) {
+  this.val = val === undefined ? 0 : val;
+  this.left = left === undefined ? null : left;
+  this.right = right === undefined ? null : right;
+}
+
 const sortedArrayToBST = (nums) => {
   // base cases
   if (nums.length === 1) return new TreeNode(nums[0]);
