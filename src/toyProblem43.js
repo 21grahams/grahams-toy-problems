@@ -10,29 +10,24 @@ A height-balanced binary tree is a binary tree in which the depth of the two sub
 // constraints: the depth of the two subtrees of every node never differs by more than one
 // edge cases: if array is empty, return empty BST
 const sortedArrayToBST = (nums) => {
-  if (nums.length === []) return [];
+  // base cases
+  if (nums.length === 1) return new TreeNode(nums[0]);
+  if (nums.length === 0) return null;
 
-  let rootNum;
-  rootNum = nums[Math.floor((nums.length - 1) / 2)];
+  // create a center index
+  // create a root num
+  let centerIdx = Math.floor(nums.length / 2);
+  let root = new TreeNode(nums[centerIdx]);
 
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] < rootNum) {
-      rootNum.left.val = nums[i];
-    } else {
-      rootNum.right.val = nums[i];
-    }
-    if (nums[i] < rootNum && nums[i] > rootNum.left.val) {
-      rootNum.left.right.val = nums[i];
-    } else {
-      rootNum.left.left.val = nums[i];
-    }
-    if (nums[i] > rootNum && nums[i] < rootNum.right.val) {
-      rootNum.right.left.val = nums[i];
-    } else {
-      rootNum.right.right.val = nums[i];
-    }
-  }
-  return rootNum;
+  // set left node to center of left subtree
+  let leftSubTree = nums.slice(0, centerIdx);
+  root.left = sortedArrayToBST(leftSubTree);
+
+  // set right node to center of right subtree
+  let rightSubTree = nums.slice(centerIdx + 1, nums.length);
+  root.right = sortedArrayToBST(rightSubTree);
+
+  return root;
 };
 
 // [1, 2, 3, 4, 5, 6]
