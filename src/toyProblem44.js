@@ -5,11 +5,12 @@
 // constraints: none at this time
 // edge cases: none of importance
 const countDupes = (letters, target) => {
-  // create an object
+
+  // create an initial object
   let initialObj = {};
+  // create a secondary object
   let masterObj = {};
-  // create a count, start at 0
-  let count = 0;
+
   // loop over the letters string
   for (let i = 0; i < letters.length; i++) {
     // if current letter is undefined
@@ -22,10 +23,13 @@ const countDupes = (letters, target) => {
       initialObj[letters[i]]++;
     }
   }
-  // if the value of the letter in the object is less than target number
+  // loop over initialObj
   for (let key in initialObj) {
+    // create var for value
     let value = initialObj[key];
+    // if the value of the letter in the object is less than target number but greater than 1
     if (value < target && value > 1) {
+      // add key and value to final / secondary object
       masterObj[key] = value;
     }
   }
