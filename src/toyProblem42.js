@@ -46,3 +46,5 @@ console.log(maxDepth([3, 9, 20, null, null, 15, 7])) // 3
 console.log(maxDepth([1, null, 1])) // 2
 console.log(maxDepth([])) // 0
 console.log(maxDepth([0])) // 1
+
+// generally a recursive solution will be depth first serach and an iterative will be breadth first search

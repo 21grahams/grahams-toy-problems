@@ -37,7 +37,6 @@ const countDupes = (letters, target) => {
     return masterObj;
 };
 
-
 console.log(countDupes('aaabbbccdd', 3)) // {c: 2, d: 2}
 console.log(countDupes('mississippi', 3)) // {p: 2}
 console.log(countDupes('abcdefg', 3)) // {} (even though all letters' occurrences are less than target num, there are no duplicates here)
