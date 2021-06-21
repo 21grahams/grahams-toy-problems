@@ -12,6 +12,7 @@ a binary tree in which the left and right subtrees of every node differ in heigh
 // contraints: Only constraint is the constraint of what a height balanced tree is. Child subtree must only differ in height by no more than one
 // edge cases: if root is empty, return true
 const checkHeight = (node) => {
+  // recursive approach
   if (node === null) return 0;
 
   const left = checkHeight(node.left);
@@ -30,9 +31,39 @@ const checkHeight = (node) => {
   // height of a node
   return Math.max(left, right) + 1;
 };
+
+
 const isBalanced = (root) => {
   if (!root) return true;
   return checkHeight(root) !== false;
+
+  // iterative approach
+  if (!root) return true;
+  let depth = new Map();
+  let s = [];
+  let last;
+
+  while (root || s.length) {
+    if (root) {
+      s.push(root);
+      root = root.left;
+    } else {
+      root = s[s.length - 1];
+      if (!root.right || last == root.right) {
+        last = s.pop();
+
+        let left = depth.get(last.left) || 0;
+        let right = depth.get(last.right) || 0;
+        if (Math.abs(left - right) > 1) return false;
+        depth.set(last, 1 + Math.max(left, right));
+
+        root = null;
+      } else {
+        root = root.right;
+      }
+    }
+  }
+  return true;
 };
 
 console.log(root([3, 9, 20, null, null, 15, 7])); // true
