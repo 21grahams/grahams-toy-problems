@@ -45,4 +45,12 @@ var place_next_queen = function (total, queens, columns) {
 }
 
 print_board(place_next_queen(28, 28))
-console.log('\niterations: ', iterations)
+console.log('\niterations for 28x28: ', iterations) // 84175966
+
+print_board(place_next_queen(4, 4))
+console.log('\niterations for 4x4: ', iterations) // 26
+
+print_board(place_next_queen(5, 5))
+console.log('\niterations for 5x5: ', iterations) // 41
+
+
