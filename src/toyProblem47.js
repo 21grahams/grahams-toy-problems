@@ -6,10 +6,12 @@ The minimum depth is the number of nodes along the shortest path from the root n
 
 Note: A leaf is a node with no children */
 
-function TreeNode(val, left, right) {
-  this.val = val === undefined ? 0 : val;
-  this.left = left === undefined ? null : left;
-  this.right = right === undefined ? null : right;
+class Treenode {
+  constructor(val) {
+    this.val = val;
+    this.left = null;
+    this.right = null;
+  }
 }
 
 const minDepth = (root) => {
@@ -30,5 +32,17 @@ const minDepth = (root) => {
   return count;
 };
 
-console.log(minDepth([3, 9, 20, null, null, 15, 7])); // 2
+// test one
+let nodeA = new Treenode(3);
+let nodeB = new Treenode(9);
+let nodeC = new Treenode(15);
+let nodeD = new Treenode(20);
+let nodeE = new Treenode(7);
+
+nodeA.left = nodeB;
+nodeA.right = nodeC;
+nodeC.left = nodeD;
+nodeC.right = nodeE;
+
+console.log(minDepth(nodeA)); // 2
 console.log(minDepth([2, null, 3, null, 4, null, 5, null, 6])); // 5
