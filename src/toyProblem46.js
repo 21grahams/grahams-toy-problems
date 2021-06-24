@@ -44,8 +44,8 @@ var place_next_queen = function (total, queens, columns) {
   return null
 }
 
-print_board(place_next_queen(28, 28))
-console.log('\niterations for 28x28: ', iterations) // 84175966
+// print_board(place_next_queen(28, 28))
+// console.log('\niterations for 28x28: ', iterations) // 84175966
 
 print_board(place_next_queen(4, 4))
 console.log('\niterations for 4x4: ', iterations) // 26
