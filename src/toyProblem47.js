@@ -45,4 +45,3 @@ nodeC.left = nodeD;
 nodeC.right = nodeE;
 
 console.log(minDepth(nodeA)); // 2
-console.log(minDepth([2, null, 3, null, 4, null, 5, null, 6])); // 5
