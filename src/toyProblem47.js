@@ -6,9 +6,25 @@ The minimum depth is the number of nodes along the shortest path from the root n
 
 Note: A leaf is a node with no children */
 
+// input: a binary tree
+// output: the minimum depth of the tree, logged as a number
+// constraints: none at this time
+// edge cases: if there's no root, return 0. If there's just a root without children, log 1
 const minDepth = root => {
-  // do something
-};
+  // account for edge case
 
-console.log(minDepth([3,9,20,null,null,15,7]]) // 2
-console.log(minDepth([2,null,3,null,4,null,5,null,6]]) // 5
+  // create a count
+  // create a node, assign to root
+  // create a queue, assign to [root]
+  // while the queue has a root node
+    // create a cur variable, assign to the length of queue
+    // loop over the cur
+      // re assign node to queue and shift
+      // if there's a node to the left of root
+        // push it to the queue
+      // if there's a node to the right of root
+        // push it to the queue
+    // increment count
+
+  // return count
+};
