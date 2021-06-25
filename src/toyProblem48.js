@@ -4,8 +4,15 @@ Given the root of a binary tree and an integer targetSum, return true if the tre
 
 A leaf is a node with no children */
 
-const hasPathSum = (root, targetSum) => {
-  // do something
+ // input: a binary tree containing a bunch of nodes and children
+ // output: a bool. True if the sum from root to leaf equals targetSum, false if not
+ // constraints: The number of nodes in the tree is in the range [0, 5000]
+ // edge cases: return false if tree is empty, return true if root equals target sum
+ const hasPathSum = (root, targetSum) => {
+  // account for edge cases
+
+  // recursively call function on left side of tree and subtract sum from the root value OR recursively call function on right side of tree and subtract sum from the root value
+
 };
 
 console.log(hasPathSum([5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1], 22)) // true
