@@ -8,8 +8,25 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
 
 */
 
+// input: an array of prices. Each num in the array represents the price of a given stock on that current day
+// output: a single number which is the maximum amount of profit you can achieve from that transaction
+// constraints: 1 <= prices.length <= 10^5. 0 <= prices[i] <= 10^4
+// edge cases: If you cannot get any profit, return 0. If the array is empty, return null
 const maxProfit = prices => {
-  // do something
+  // account for the edge cases
+
+  // create a totalProfit number
+  // create a var for max number
+  // create a var for min number
+
+  // loop over the prices array
+    // collect the min number and store
+    // collect the max number and store
+
+  // if the min number preceeds the max number
+    // subtract the min number from the max number and store in totalProfit number
+
+  // return totalProfit number
 };
 
 console.log(prices([7, 1, 5, 3, 6, 4])) // 5
