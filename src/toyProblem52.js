@@ -10,25 +10,31 @@ Note: You may not engage in multiple transactions simultaneously (i.e., you must
 // output: a single number, which represents the highest possible gain on a stock
 // constraints: 1 <= prices.length <= 3 * 10^4 || 0 <= prices[i] <= 10^4
 // edge cases: if prices are empty, return null
-const maxProfit = prices => {
+const maxProfit = (prices) => {
   // account for edge case
+  if (prices.length === 0) return null;
 
   // create a maxProfit and assign to 0
+  let maxProfit = 0;
 
   // loop over the prices, starting at iteration 1
+  for (let i = 1; i < prices.length; i++) {
     // if currentPrice is greater than currentPrice of previous element
+    if (prices[i] > prices[i - 1])
       // increment maxProfit by currentPrice - currentPrice of previous element
-
+      maxProfit += prices[i] - prices[i - 1];
+  }
   // return maxProfit
+  return maxProfit;
 };
 
-console.log(maxProfit([7, 1, 5, 3, 6, 4])) // 7
+console.log(maxProfit([7, 1, 5, 3, 6, 4])); // 7
 // explanation:  Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
 // Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
 
-console.log(maxProfit([1, 2, 3, 4, 5])) // 4
+console.log(maxProfit([1, 2, 3, 4, 5])); // 4
 // explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
 // Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are engaging multiple transactions at the same time. You must sell before buying again.
 
-console.log(maxProfit([7, 6, 4, 3, 1])) // 0
+console.log(maxProfit([7, 6, 4, 3, 1])); // 0
 // explanation: In this case, no transaction is done, i.e., max profit = 0.
