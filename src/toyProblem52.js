@@ -11,7 +11,19 @@ Note: You may not engage in multiple transactions simultaneously (i.e., you must
 // constraints: 1 <= prices.length <= 3 * 10^4 || 0 <= prices[i] <= 10^4
 // edge cases: if prices are empty, return null
 const maxProfit = prices => {
-  // do something
+  // account for edge case
+
+  // create a lowest variable and assign to first number in prices
+  // create a maxProfit and assign to 0
+
+  // loop over the prices, starting at iteration 1
+    // if currentPrice is less than lowest
+      // reassign lowest to currentPrice
+
+    // if currentElement minus lowest is greater than currentElement plus one
+      // reassign maxProfit to currentElement minus lowest
+
+  // return maxProfit
 };
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4])) // 7
