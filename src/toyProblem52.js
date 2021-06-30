@@ -13,15 +13,11 @@ Note: You may not engage in multiple transactions simultaneously (i.e., you must
 const maxProfit = prices => {
   // account for edge case
 
-  // create a lowest variable and assign to first number in prices
   // create a maxProfit and assign to 0
 
   // loop over the prices, starting at iteration 1
-    // if currentPrice is less than lowest
-      // reassign lowest to currentPrice
-
-    // if currentElement minus lowest is greater than maxProfit
-      // reassign maxProfit to currentElement minus lowest
+    // if currentPrice is greater than currentPrice of previous element
+      // increment maxProfit by currentPrice - currentPrice of previous element
 
   // return maxProfit
 };
