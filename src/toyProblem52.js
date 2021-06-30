@@ -20,7 +20,7 @@ const maxProfit = prices => {
     // if currentPrice is less than lowest
       // reassign lowest to currentPrice
 
-    // if currentElement minus lowest is greater than currentElement plus one
+    // if currentElement minus lowest is greater than maxProfit
       // reassign maxProfit to currentElement minus lowest
 
   // return maxProfit
