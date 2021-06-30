@@ -6,6 +6,10 @@ Find the maximum profit you can achieve. You may complete as many transactions a
 
 Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again) */
 
+// input: an array of prices, each price represents a stock price on that particular day
+// output: a single number, which represents the highest possible gain on a stock
+// constraints: 1 <= prices.length <= 3 * 10^4 || 0 <= prices[i] <= 10^4
+// edge cases: if prices are empty, return null
 const maxProfit = prices => {
   // do something
 };
