@@ -22,6 +22,12 @@ const isPalindrome = (s) => {
   }
 };
 
+// success:
+
+// Runtime: 84 ms, faster than 92.82% of JavaScript online submissions for Valid Palindrome.
+
+// Memory Usage: 42.8 MB, less than 47.04% of JavaScript online submissions for Valid Palindrome
+
 console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
 
 console.log(isPalindrome("race a car")); // false
