@@ -2,6 +2,10 @@
 
 Given a string s, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases */
 
+// input: a string consisting of a set of letters, likely making up a sentence of words
+// output: a bool. True if string is a palindrome, false if not (a palindrome is a word that is spelled the same backwards and forwards)
+// constraints: 1 <= s.length <= 2 * 10^5 || s consists only of printable ASCII characters
+// edge cases: if string is empty, return true?
 const isPalindrome = s => {
   // do something
 };
