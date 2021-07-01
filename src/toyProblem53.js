@@ -10,7 +10,7 @@ const isPalindrome = (s) => {
   // account for edge case
   if (s.length === 1) return true;
 
-  s = s.replace(/[^a-zA-Z ]/g, "").split(' ').join('').toLowerCase();
+  s = s.replace(/[^a-zA-Z0-9]/g, "").split(' ').join('').toLowerCase();
   let otherCopy = s;
 
   let arr = s.split("").reverse().join("");
@@ -27,3 +27,5 @@ console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
 console.log(isPalindrome("race a car")); // false
 
 console.log(isPalindrome("ab@a")); // true
+
+console.log(isPalindrome("0P")); // false
