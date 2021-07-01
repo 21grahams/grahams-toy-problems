@@ -6,19 +6,29 @@ Given a string s, determine if it is a palindrome, considering only alphanumeric
 // output: a bool. True if string is a palindrome, false if not (a palindrome is a word that is spelled the same backwards and forwards)
 // constraints: 1 <= s.length <= 2 * 10^5 || s consists only of printable ASCII characters
 // edge cases: if string is empty, return true?
-const isPalindrome = s => {
+const isPalindrome = (s) => {
   // account for edge case
+  if (s.length === 1) return true;
 
-  // make shallow copy of s
-  // split s into array of letters
-  // reverse array
-  // join array back to string
-  // if reversed string is the same as shallow copy of s
-    // return true
-  // otherwise
-    // return false
+  s = s.split(",").join("");
+  s = s.split(".").join();
+  s = s.split(":").slice().join("").toLowerCase();
+  s = s.split(" ").join("");
+  let otherCopy = s;
+
+  let arr = s.split("");
+
+  let reversed = arr.reverse();
+
+  let joined = reversed.join("");
+
+  if (joined === otherCopy) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-console.log(isPalindrome("A man, a plan, a canal: Panama")) // true
+console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
 
-console.log(isPalindrome("race a car")) // false
+console.log(isPalindrome("race a car")); // false
