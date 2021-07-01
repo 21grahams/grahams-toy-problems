@@ -7,7 +7,16 @@ Given a string s, determine if it is a palindrome, considering only alphanumeric
 // constraints: 1 <= s.length <= 2 * 10^5 || s consists only of printable ASCII characters
 // edge cases: if string is empty, return true?
 const isPalindrome = s => {
-  // do something
+  // account for edge case
+
+  // make shallow copy of s
+  // split s into array of letters
+  // reverse array
+  // join array back to string
+  // if reversed string is the same as shallow copy of s
+    // return true
+  // otherwise
+    // return false
 };
 
 console.log(isPalindrome("A man, a plan, a canal: Panama")) // true
