@@ -11,9 +11,14 @@ You must implement a solution with a linear runtime complexity and use only cons
 const singleNumber = nums => {
   // account for edge case
 
-  // create a new set for the nums array
-  // collect the single number from the new set
-  // return that number
+  // loop over the nums array
+  // if the value is undefined
+    // create a defined variable and store number
+    // set bool to true
+  // if value is undefined and bool is false
+    // assign finalNum to value
+
+  // return finalNum
 };
 
 console.log(nums[2, 2, 1]) // 1
