@@ -9,7 +9,11 @@ You must implement a solution with a linear runtime complexity and use only cons
 // constraints: 1 <= nums.length <= 3 * 10^4 ||| -3 * 10^4 <= nums[i] <= 3 * 10^4 || Each element in the array appears twice except for one element which appears only once.
 // edge cases: if nums array contains only one integer, return that num
 const singleNumber = nums => {
-  // do something
+  // account for edge case
+
+  // create a new set for the nums array
+  // collect the single number from the new set
+  // return that number
 };
 
 console.log(nums[2, 2, 1]) // 1
