@@ -4,6 +4,10 @@ Given a non-empty array of integers nums, every element appears twice except for
 
 You must implement a solution with a linear runtime complexity and use only constant extra space */
 
+// input: an array with a series of numbers
+// output: a single number which is the one number in the array that isn't duplicated
+// constraints: 1 <= nums.length <= 3 * 10^4 ||| -3 * 10^4 <= nums[i] <= 3 * 10^4 || Each element in the array appears twice except for one element which appears only once.
+// edge cases: if nums array contains only one integer, return that num
 const singleNumber = nums => {
   // do something
 };
