@@ -12,7 +12,13 @@ Return true if there is a cycle in the linked list. Otherwise, return false */
 // constraints: The number of the nodes in the list is in the range [0, 10^4]. || 10^5 <= Node.val <= 10^5 || pos is -1 or a valid index in the linked-list.
 // edge cases: if linked list is empty, return false
 const hasCycle = head => {
-  // do something
+  // account for edge case
+
+  // while a head exists
+    // if head.next exists and pos equals the val of head.next
+      // return true
+    // otherwise
+      // return false
 };
 
 console.log(hasCycle([3, 2, 0, -4])) // true
