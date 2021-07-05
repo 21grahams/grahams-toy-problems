@@ -11,25 +11,14 @@ Return true if there is a cycle in the linked list. Otherwise, return false */
 // constraints: The number of the nodes in the list is in the range [0, 10^4]. || 10^5 <= Node.val <= 10^5 || pos is -1 or a valid index in the linked-list.
 // edge cases: if linked list is empty, return false
 const hasCycle = (head) => {
-  // account for edge case
-  if (!head) return false;
+  // create a slow node pointer and a fast node pointer
 
-  // while a head exists
-  while (head) {
-    // if head.next exists and pos equals the val of head.next
-    if (head.next && pos === head.next.val) {
-      // return true
-      return true;
-      // otherwise
-    } else {
-      // continue
-      continue;
-    }
-    // if head.next doesn't exist, break out of while loop
-    if (!head.next) break;
-  }
-  // return false
-  return false;
+  // while the two pointers exist and the fast pointer has a next value
+    // moce the slow pointer by one node and the fast pointer by two nodes
+    // if the slow pointer and the fast pointer are equal
+      // linked list contains a cycle, return true
+
+  // return false if cycle has never been found
 };
 
 console.log(hasCycle([3, 2, 0, -4])); // true
