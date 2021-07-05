@@ -9,7 +9,12 @@ You must implement a solution with a linear runtime complexity and use only cons
 // constraints: 1 <= nums.length <= 3 * 10^4 || -2^31 <= nums[i] <= 2^31 - 1
 // edge cases: if the array contains only one number, return that number
 const singleNumber = nums => {
-  // do something
+  // account for edge case
+
+  // sort the nums array
+
+  // if the element both two and one less than current element don't equal current element AND both two and more greater than current element don't equal current element
+    // return current element
 };
 
 console.log(singleNumber([2, 2, 3, 2])) // 3
