@@ -30,6 +30,9 @@ const hasCycle = (head) => {
   return false;
 };
 
+// Runtime: 76 ms, faster than 96.18% of JavaScript online submissions for Linked List Cycle.
+// Memory Usage: 41.3 MB, less than 51.02% of JavaScript online submissions for Linked List Cycle.
+
 console.log(hasCycle([3, 2, 0, -4])); // true
 
 console.log(hasCycle([1, 2])); // true
