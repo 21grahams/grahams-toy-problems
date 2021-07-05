@@ -12,13 +12,22 @@ Return true if there is a cycle in the linked list. Otherwise, return false */
 // edge cases: if linked list is empty, return false
 const hasCycle = (head) => {
   // create a slow node pointer and a fast node pointer
+  let slow = head;
+  let fast = head;
 
   // while the two pointers exist and the fast pointer has a next value
-    // moce the slow pointer by one node and the fast pointer by two nodes
+  while (slow && fast && fast.next) {
+    // move the slow pointer by one node and the fast pointer by two nodes
+    slow = slow.next;
+    fast = fast.next.next;
     // if the slow pointer and the fast pointer are equal
+    if (slow === fast) {
       // linked list contains a cycle, return true
-
+      return true;
+    }
+  }
   // return false if cycle has never been found
+  return false;
 };
 
 console.log(hasCycle([3, 2, 0, -4])); // true
