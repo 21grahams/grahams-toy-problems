@@ -4,6 +4,10 @@ Given an integer array nums where every element appears three times except for o
 
 You must implement a solution with a linear runtime complexity and use only constant extra space */
 
+// input: an array of numbers, appear to be only positive integers
+// output: a single number which is the only non-repeating integer
+// constraints: 1 <= nums.length <= 3 * 10^4 || -2^31 <= nums[i] <= 2^31 - 1
+// edge cases: if the array contains only one number, return that number
 const singleNumber = nums => {
   // do something
 };
