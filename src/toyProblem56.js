@@ -6,6 +6,11 @@ There is a cycle in a linked list if there is some node in the list that can be 
 
 Return true if there is a cycle in the linked list. Otherwise, return false */
 
+
+// input: a singly-linked list
+// output: a bool. True if there is a cycle in the linked list. False if not
+// constraints: The number of the nodes in the list is in the range [0, 10^4]. || 10^5 <= Node.val <= 10^5 || pos is -1 or a valid index in the linked-list.
+// edge cases: if linked list is empty, return false
 const hasCycle = head => {
   // do something
 };
