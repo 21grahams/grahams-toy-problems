@@ -13,8 +13,9 @@ const singleNumber = nums => {
 
   // sort the nums array
 
-  // if the element both two and one less than current element don't equal current element AND both two and more greater than current element don't equal current element
-    // return current element
+  // loop over nums array
+    // if the element both two and one less than current element don't equal current element AND both two and more greater than current element don't equal current element
+      // return current element
 };
 
 console.log(singleNumber([2, 2, 3, 2])) // 3
