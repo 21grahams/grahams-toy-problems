@@ -13,7 +13,7 @@ const singleNumber = (nums) => {
   if (nums.length === 0) return nums[0];
 
   // sort the nums array
-  nums = nums.sort();
+  nums.sort();
 
   // loop over nums array
   for (let i = 0; i < nums.length; i++) {
