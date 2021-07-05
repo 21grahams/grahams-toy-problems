@@ -18,7 +18,11 @@ const hasCycle = head => {
     // if head.next exists and pos equals the val of head.next
       // return true
     // otherwise
-      // return false
+      // continue
+    // if head.next doesn't exist
+      // break out of while loop
+
+  // return false
 };
 
 console.log(hasCycle([3, 2, 0, -4])) // true
