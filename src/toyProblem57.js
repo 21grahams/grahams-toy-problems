@@ -16,7 +16,18 @@ class Treenode {
 }
 
 const preorderTraversal = root => {
-  // do something
+  // account for edge case
+
+  // create a var to store the values of nodes visited
+  // create helper function which accepts a node
+    // push the values of the node to the variable that stores the values
+    // if the node has a left property
+      // call the helper function with the left property on the node
+    // if the node has a right property
+      // call the helper function with the left property on the node
+
+  // invoke the helper function with the current variable
+  // return the array of values
 };
 
 // test one
