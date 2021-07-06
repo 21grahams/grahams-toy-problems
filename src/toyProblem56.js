@@ -10,6 +10,12 @@ Return true if there is a cycle in the linked list. Otherwise, return false */
 // output: a bool. True if there is a cycle in the linked list. False if not
 // constraints: The number of the nodes in the list is in the range [0, 10^4]. || 10^5 <= Node.val <= 10^5 || pos is -1 or a valid index in the linked-list.
 // edge cases: if linked list is empty, return false
+
+function TreeNode(val) {
+  this.val = val;
+  this.next = next;
+};
+
 const hasCycle = (head) => {
   // create a slow node pointer and a fast node pointer
   let slow = head;
