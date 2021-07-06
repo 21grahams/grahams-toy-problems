@@ -58,9 +58,22 @@ nodeC.right = null;
 
 console.log(preorderTraversal(nodeA)); // [1, 2, 3]
 
-console.log(preorderTraversal([])); // []
+//______________________________________________
 
-console.log(preorderTraversal([1])); // [1]
+// test two
+console.log(preorderTraversal()); // []
+
+//______________________________________________
+
+// test three
+let nodeX = new Treenode(1);
+
+nodeX.left = null;
+nodeX.right = null;
+
+console.log(preorderTraversal(nodeX)); // [1]
+
+//______________________________________________
 
 // test four
 let nodeY = new Treenode(1);
@@ -71,6 +84,8 @@ nodeA.right = null;
 
 console.log(preorderTraversal(nodeY)); // [1, 2]
 
+//______________________________________________
+
 // test five
 
 let nodeG = new Treenode(1);
@@ -79,3 +94,5 @@ let nodeK = new Treenode(2);
 nodeG.left = null;
 nodeG.right = nodeK;
 console.log(preorderTraversal(nodeG)); // [1, 2]
+
+//______________________________________________
