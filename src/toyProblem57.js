@@ -25,4 +25,26 @@ nodeA.right = nodeB;
 nodeB.left = nodeC;
 nodeC.right = null;
 
-console.log(preorderTraversal([1, null, 2, 3])) // [1, 2, 3]
+console.log(preorderTraversal(nodeA)) // [1, 2, 3]
+
+console.log(preorderTraversal([])) // []
+
+console.log(preorderTraversal([1])) // [1]
+
+// test four
+let nodeY = new Treenode(1);
+let nodeZ = new Treenode(2);
+
+nodeY.left = nodeZ;
+nodeA.right = null;
+
+console.log(preorderTraversal(nodeY)) // [1, 2]
+
+// test five
+
+let nodeG = new Treenode(1);
+let nodeK = new Treenode(2);
+
+nodeG.left = null;
+nodeG.right = nodeK;
+console.log(preorderTraversal(nodeG)) // [1, 2]
