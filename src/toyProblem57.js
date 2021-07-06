@@ -54,7 +54,7 @@ let nodeC = new Treenode(3);
 nodeA.left = null;
 nodeA.right = nodeB;
 nodeB.left = nodeC;
-nodeC.right = null;
+nodeB.right = null;
 
 console.log(preorderTraversal(nodeA)); // [1, 2, 3]
 
