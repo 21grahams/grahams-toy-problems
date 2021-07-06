@@ -43,6 +43,9 @@ const preorderTraversal = (root) => {
   return collection;
 };
 
+// Runtime: 64 ms, faster than 98.65% of JavaScript online submissions for Binary Tree Preorder Traversal.
+// Memory Usage: 38.8 MB, less than 36.27% of JavaScript online submissions for Binary Tree Preorder Traversal.
+
 // test one
 let nodeA = new Treenode(1);
 let nodeB = new Treenode(2);
