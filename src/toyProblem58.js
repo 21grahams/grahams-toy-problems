@@ -16,7 +16,20 @@ class TreeNode {
 }
 
 const postOrderTraversal = root => {
-  // do something
+  // account for edge case
+
+  // create a variable to store the collection of nodes visited
+  // create a variable for the root node and label it current
+
+  // create a helper function which accepts a node
+    // if the left node to the root has a node
+      // call the helper function recursively and pass in the left node
+    // if the right node to the root has a node
+      // call the helper function recursively and pass in the right node
+    // push the value of collected nodes into the collection array
+
+  // invoke the helper function and pass in the current value
+  // return the collection
 };
 
 // test one
