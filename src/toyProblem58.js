@@ -40,6 +40,9 @@ const postOrderTraversal = (root) => {
   return collection;
 };
 
+// Runtime: 64 ms, faster than 98.34% of JavaScript online submissions for Binary Tree Postorder Traversal.
+// Memory Usage: 39.1 MB, less than 9.63% of JavaScript online submissions for Binary Tree Postorder Traversal
+
 // test one
 
 var nodeA = new TreeNode(1);
