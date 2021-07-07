@@ -2,6 +2,11 @@
 
 Given the root of a vinary tree, return the posterorder traversal of its nodes' values */
 
+
+// input: a binary tree containing a collection of different nodes
+// output: the POSTORDER of that binary tree (which will entail using recursion)
+// constraints: The number of the nodes in the tree is in the range [0, 100]. || -100 <= Node.val <= 100
+// edge cases: if there's no root, return empty tree/array of nodes
 class TreeNode {
   constructor(val) {
     this.val = val;
