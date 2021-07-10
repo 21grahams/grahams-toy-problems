@@ -15,7 +15,8 @@ int getMin() retrieves the minimum element in the stack */
 // constraints: -2^31 <= val <= 2^31 - 1 || Methods pop, top and getMin operations will always be called on non-empty stacks. At most 3 * 10^4 calls will be made to push, pop, top, and getMin
 // edge cases: none at this time
 const MinStack = () => {
-  // do something
+  // create an array to store the stack
+  // create an array to store the minStack
 };
 
 MinStack.prototype.push = function(val) {
