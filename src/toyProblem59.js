@@ -19,19 +19,35 @@ const MinStack = () => {
 };
 
 MinStack.prototype.push = function(val) {
-
+  // instantiate a new node, pass in val
+  // increment the val node
 };
 
+/**
+* @return {void}
+*/
 MinStack.prototype.pop = function() {
-
+  // create a reference to the node
+  // decrement the node
+  // delete the reference to the node
 };
 
+/**
+* @return {number}
+*/
 MinStack.prototype.top = function() {
-
+  // create a reference to the top node
+  // return that val
 };
 
-MinStack.prototype.getMin = function() {
-
+/**
+* @return {number}
+*/
+MinStack.prototype.getMin = function(val) {
+  // if val is greater than or equal to the minEle
+    // insert val
+  // if val is less than minEle,
+    // insert (2*x - minEle) into stack and make minEle equal to x
 };
 
 MinStack minStack = new MinStack();
