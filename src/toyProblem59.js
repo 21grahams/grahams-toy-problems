@@ -14,48 +14,31 @@ int getMin() retrieves the minimum element in the stack */
 // output: The minStack function and the methods on MinStack completed
 // constraints: -2^31 <= val <= 2^31 - 1 || Methods pop, top and getMin operations will always be called on non-empty stacks. At most 3 * 10^4 calls will be made to push, pop, top, and getMin
 // edge cases: none at this time
-const MinStack = () => {
-  // create an array to store the stack
-  // create an array to store the minStack
+var MinStack = function () {
+  this.stack = [];
 };
 
 MinStack.prototype.push = function(val) {
-  // instantiate a new node, pass in val
-  // increment the val node
+  this.stack.push(val);
 };
 
-/**
-* @return {void}
-*/
 MinStack.prototype.pop = function() {
-  // create a reference to the node
-  // decrement the node
-  // delete the reference to the node
+  this.stack.pop();
 };
 
-/**
-* @return {number}
-*/
 MinStack.prototype.top = function() {
-  // create a reference to the top node
-  // return that val
+  return this.stack[this.stack.length - 1];
 };
 
-/**
-* @return {number}
-*/
-MinStack.prototype.getMin = function(val) {
-  // if val is greater than or equal to the minEle
-    // insert val
-  // if val is less than minEle,
-    // insert (2*x - minEle) into stack and make minEle equal to x
+MinStack.prototype.getMin = function() {
+  return Math.min(...this.stack)
 };
 
-MinStack minStack = new MinStack();
+var minStack = new MinStack();
 minStack.push(-2);
 minStack.push(0);
 minStack.push(-3);
-minStack.getMin(); // return -3
+console.log('first call: ', minStack.getMin()) // -3
 minStack.pop();
 minStack.top();    // return 0
-minStack.getMin(); // return -2
+console.log('second call: ', minStack.getMin()) // -2
