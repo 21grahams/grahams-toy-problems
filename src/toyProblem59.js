@@ -34,6 +34,9 @@ MinStack.prototype.getMin = function() {
   return Math.min(...this.stack)
 };
 
+// Runtime: 324 ms, faster than 10.08% of JavaScript online submissions for Min Stack.
+// Memory Usage: 46.6 MB, less than 30.49% of JavaScript online submissions for Min Stack.
+
 var minStack = new MinStack();
 minStack.push(-2);
 minStack.push(0);
