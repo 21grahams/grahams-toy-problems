@@ -7,7 +7,7 @@ Return the indices of the two numbers (1-indexed) as an integer array answer of 
 The tests are generated such that there is exactly one solution. You may not use the same element twice */
 
 // input: an array of ascending integers and a target integer
-// output: the indicies of two specific numbers that sum to target integer
+// output: the indicies of two specific numbers that sum to target integer inside of an array
 // constraints: the array of numbers, thus the return output of indicies are 1-indexed. NOT 0. The tests are generated such that there is exactly one solution
 // edge cases: none at this time
 const twoSum = (numbers, targets) => {
