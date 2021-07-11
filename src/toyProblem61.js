@@ -13,9 +13,9 @@ The tests are generated such that there is exactly one solution. You may not use
 const twoSum = (numbers, target) => {
   // create a tracker arr
   let tracker = [];
-  // loop over the numbers starting at index 1
+  // loop over the numbers starting at index 0
   for (let i = 0; i < numbers.length; i++) {
-    // loop over the numbers a second time starting at index 2
+    // loop over the numbers a second time starting at index i plus 1
     for (let j = i + 1; j < numbers.length; j++) {
       // if the current element of loop 1 plus the current element of loop 2 equals target
       if (numbers[i] + numbers[j] === target) {
