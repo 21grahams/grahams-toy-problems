@@ -10,19 +10,28 @@ The tests are generated such that there is exactly one solution. You may not use
 // output: the indicies of two specific numbers that sum to target integer inside of an array
 // constraints: the array of numbers, thus the return output of indicies are 1-indexed. NOT 0. The tests are generated such that there is exactly one solution
 // edge cases: none at this time
-const twoSum = (numbers, targets) => {
+const twoSum = (numbers, target) => {
   // create a tracker arr
+  let tracker = [];
   // loop over the numbers starting at index 1
+  for (let i = 0; i < numbers.length; i++) {
     // loop over the numbers a second time starting at index 2
+    for (let j = i + 1; j < numbers.length; j++) {
       // if the current element of loop 1 plus the current element of loop 2 equals target
+      if (numbers[i] + numbers[j] === target) {
         // push both indices to tracker arr
-
+        tracker.push(i + 1, j + 1);
+        break;
+      }
+    }
+  }
   // return tracker arr
+  return tracker;
 };
 
-console.log(twoSum([2, 7, 11, 15], 9)) // [1, 2]
+console.log(twoSum([2, 7, 11, 15], 9)); // [1, 2]
 // Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 
-console.log(twoSum([2, 3, 4], 6)) // [1, 3]
+console.log(twoSum([2, 3, 4], 6)); // [1, 3]
 
-console.log(twoSum([-1, 0], -1)) // [1, 2]
+console.log(twoSum([-1, 0], -1)); // [1, 2]
