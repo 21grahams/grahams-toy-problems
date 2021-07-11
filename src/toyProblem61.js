@@ -29,6 +29,9 @@ const twoSum = (numbers, target) => {
   return tracker;
 };
 
+// Runtime: 452 ms, faster than 5.07% of JavaScript online submissions for Two Sum II - Input array is sorted.
+// Memory Usage: 39 MB, less than 66.97% of JavaScript online submissions for Two Sum II - Input array is sorted
+
 console.log(twoSum([2, 7, 11, 15], 9)); // [1, 2]
 // Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 
