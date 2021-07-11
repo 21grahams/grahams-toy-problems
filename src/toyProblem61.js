@@ -11,7 +11,13 @@ The tests are generated such that there is exactly one solution. You may not use
 // constraints: the array of numbers, thus the return output of indicies are 1-indexed. NOT 0. The tests are generated such that there is exactly one solution
 // edge cases: none at this time
 const twoSum = (numbers, targets) => {
-  // do something
+  // create a tracker arr
+  // loop over the numbers starting at index 1
+    // loop over the numbers a second time starting at index 2
+      // if the current element of loop 1 plus the current element of loop 2 equals target
+        // push both indices to tracker arr
+
+  // return tracker arr
 };
 
 console.log(twoSum([2, 7, 11, 15], 9)) // [1, 2]
