@@ -11,22 +11,19 @@ The tests are generated such that there is exactly one solution. You may not use
 // constraints: the array of numbers, thus the return output of indicies are 1-indexed. NOT 0. The tests are generated such that there is exactly one solution
 // edge cases: none at this time
 const twoSum = (numbers, target) => {
-  // create a tracker arr
-  let tracker = [];
-  // loop over the numbers starting at index 0
+  let numObject = {};
+
   for (let i = 0; i < numbers.length; i++) {
-    // loop over the numbers a second time starting at index i plus 1
-    for (let j = i + 1; j < numbers.length; j++) {
-      // if the current element of loop 1 plus the current element of loop 2 equals target
-      if (numbers[i] + numbers[j] === target) {
-        // push both indices to tracker arr
-        tracker.push(i + 1, j + 1);
-        break;
-      }
+    let thisNum = numbers[i];
+    numObject[thisNum] = i;
+  }
+
+  for (let i = 0; i < numbers.length; i++) {
+    let dif = target - numbers[i];
+    if (numObject.hasOwnProperty(dif) && numObject[dif] !== i) {
+      return [i + 1, numObject[dif] + 1];
     }
   }
-  // return tracker arr
-  return tracker;
 };
 
 // Runtime: 452 ms, faster than 5.07% of JavaScript online submissions for Two Sum II - Input array is sorted.
