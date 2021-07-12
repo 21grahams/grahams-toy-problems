@@ -49,6 +49,9 @@ const getIntersectionNode = (headA, headB) => {
   return curr1;
 };
 
+// Runtime: 124 ms, faster than 25.68% of JavaScript online submissions for Intersection of Two Linked Lists.
+// Memory Usage: 45 MB, less than 99.49% of JavaScript online submissions for Intersection of Two Linked Lists.
+
 console.log(getIntersectionNode([4, 1, 8, 4, 5], [5, 6, 1, 8, 4, 5])) // 8
 // Explanation: The intersected node's value is 8 (note that this must not be 0 if the two lists intersect).
 // From the head of A, it reads as [4,1,8,4,5]. From the head of B, it reads as [5,6,1,8,4,5]. There are 2 nodes before the intersected node in A; There are 3 nodes before the intersected node in B.
