@@ -24,6 +24,7 @@ const getIntersectionNode = (headA, headB) => {
     // if both currents next property exist
       // check if their vals are equal. If so
         // assign finalNum var to value
+    // if none are equal, return null
 
   // return finalNum
 };
