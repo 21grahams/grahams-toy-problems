@@ -15,18 +15,24 @@ class ListNode() {
 
 const getIntersectionNode = (headA, headB) => {
   // account for edge case
-  // create a finalNum
 
-  // create a current variable, assign to headA
-  // create a current variable, assign to headB
+    // create a variable for headA
+  // create a variable for headB
 
-  // while current exists for both heads
-    // if both currents next property exist
-      // check if their vals are equal. If so
-        // assign finalNum var to value
-    // if none are equal, return null
+  // while curr1 is not equal to curr2
+    // set curr1 equal to curr1.next
+    // set curr2 equal to curr2.next
 
-  // return finalNum
+    // if curr1 equals curr2
+      // return curr1
+
+    // if curr1 is equal to null
+      // set curr1 equal to curr2
+
+    // if curr2 is equal to null
+      // set curr2 equal to curr1
+
+  // return curr1
 };
 
 console.log(getIntersectionNode([4, 1, 8, 4, 5], [5, 6, 1, 8, 4, 5])) // 8
