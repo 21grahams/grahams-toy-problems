@@ -2,7 +2,11 @@
 
 Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null */
 
-class Listnode() {
+// input: the heads pf two unsorted linked lists
+// output: the specific node (val) in which both of these linked lists intersect
+// constraints: there are no cycles anywhere in the entire linked structure. Linked lists must retain their original structure after the function returns
+// edge cases:  If the two linked lists do not intersect, then return null
+class ListNode() {
   constructor(val) {
     this.val = val;
     this.next = null;
