@@ -6,33 +6,47 @@ Given the heads of two singly linked-lists headA and headB, return the node at w
 // output: the specific node (val) in which both of these linked lists intersect
 // constraints: there are no cycles anywhere in the entire linked structure. Linked lists must retain their original structure after the function returns
 // edge cases:  If the two linked lists do not intersect, then return null
-class ListNode() {
+class ListNode {
   constructor(val) {
     this.val = val;
     this.next = null;
   }
-}
+};
 
 const getIntersectionNode = (headA, headB) => {
   // account for edge case
+  if (!headA && !headB) return null;
 
-    // create a variable for headA
+  // create a variable for headA
+  let curr1 = headA;
   // create a variable for headB
+  let curr2 = headB;
 
   // while curr1 is not equal to curr2
+  while (curr1 !== curr2) {
     // set curr1 equal to curr1.next
+      curr1 = curr1.next;
     // set curr2 equal to curr2.next
+      curr2 = curr2.next;
 
     // if curr1 equals curr2
+      if (curr1 === curr2) {
       // return curr1
-
+        return curr1;
+      }
     // if curr1 is equal to null
-      // set curr1 equal to curr2
-
+      if (curr1 === null) {
+      // set curr1 equal to headB
+        curr1 = headB;
+      }
     // if curr2 is equal to null
-      // set curr2 equal to curr1
-
+      if (curr2 === null) {
+      // set curr2 equal to headA
+          curr2 = headA;
+      }
+  }
   // return curr1
+  return curr1;
 };
 
 console.log(getIntersectionNode([4, 1, 8, 4, 5], [5, 6, 1, 8, 4, 5])) // 8
