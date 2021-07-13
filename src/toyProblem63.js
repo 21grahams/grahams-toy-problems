@@ -14,9 +14,12 @@ const convertToTitle = columnNumber => {
 
   // if the columnNumber is fewer than 26
     // return the corresponding letter equevilant
-  // if the columnNumber is greater than 26
-    // loop over columnNumber starting at 0, ending at columnNumber and incrementing by 26
-      //
+  // else
+    // loop over columnNumber starting at columnNumber, ending at 0, decrementing
+      // assign number to the Math.pow of 26 and power and multiply by columnNumber at the current element
+      // increment the power
+
+  // return the number
 };
 
 console.log(convertToTitle(1)) // A
