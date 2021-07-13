@@ -2,6 +2,10 @@
 
 Given an integer columnNumber, return its corresponding column title as it appears in an Excel sheet */
 
+// input: any positive integer
+// output: that integers corresponding letter as it appears in an Excel sheet (A -> 1, B -> 2, etc)
+// constraints: 1 <= columnNumber <= 2^31 - 1
+// edge cases: if input is empty, return null
 const convertToTitle = columnNumber => {
   // do something
 };
