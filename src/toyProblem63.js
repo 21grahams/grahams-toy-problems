@@ -7,7 +7,16 @@ Given an integer columnNumber, return its corresponding column title as it appea
 // constraints: 1 <= columnNumber <= 2^31 - 1
 // edge cases: if input is empty, return null
 const convertToTitle = columnNumber => {
-  // do something
+  // account for edge case
+  // create a masterArr
+
+  // create a object with props referring to 1-26 and A-Z respectively
+
+  // if the columnNumber is fewer than 26
+    // return the corresponding letter equevilant
+  // if the columnNumber is greater than 26
+    // loop over columnNumber starting at 0, ending at columnNumber and incrementing by 26
+      //
 };
 
 console.log(convertToTitle(1)) // A
