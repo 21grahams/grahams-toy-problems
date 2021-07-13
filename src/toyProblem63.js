@@ -8,13 +8,14 @@ Given an integer columnNumber, return its corresponding column title as it appea
 // edge cases: if input is empty, return null
 const convertToTitle = columnNumber => {
   // account for edge case
-  // create a masterArr
+  // create a number variable, set equal to 0
 
   // create a object with props referring to 1-26 and A-Z respectively
 
   // if the columnNumber is fewer than 26
     // return the corresponding letter equevilant
   // else
+    // create a power variable. Set equal to 0
     // loop over columnNumber starting at columnNumber, ending at 0, decrementing
       // assign number to the Math.pow of 26 and power and multiply by columnNumber at the current element
       // increment the power
