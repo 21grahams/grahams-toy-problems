@@ -23,7 +23,7 @@ const majorityElement = nums => {
   // loop over the masterObj using a for-in loop
     // grab the value of each key
     // if value is greater than half of length of nums input array
-      // increment count with current element; we've found our majority number
+      // increment count with current key; we've found our majority number
 
   // return count
 };
