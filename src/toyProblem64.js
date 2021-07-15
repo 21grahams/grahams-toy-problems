@@ -9,7 +9,15 @@ The majority element is the element that appears more than ⌊n / 2⌋ times. Yo
 // constraints: n == nums.length | 1 <= n <= 5 * 10^4 | -2^31 <= nums[i] <= 2^31 - 1. Assume there's always a majority element
 // edge cases: if input array is empty, return null
 const majorityElement = nums => {
-  // do something
+  // account for edge case
+  // create a count var, start at 0
+
+  // sort the nums input array
+  // loop over the nums input array
+    // if current element is greater than half of length of nums input array
+      // increment count with current element; we've found our majority number
+
+  // return count
 };
 
 console.log(majorityElement([3, 2, 3])) // 3
