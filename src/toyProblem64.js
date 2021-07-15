@@ -15,7 +15,7 @@ const majorityElement = nums => {
 
   // sort the nums input array
   // loop over the nums input array
-    // if the current element is undefined
+    // if the current element of masterObj is undefined
       // set the masterObj of current element to 1
     // otherwise
       // increment the masterObj of current element
