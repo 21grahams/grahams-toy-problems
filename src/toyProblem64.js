@@ -44,6 +44,9 @@ const majorityElement = (nums) => {
   return count;
 };
 
+// Runtime: 80 ms, faster than 79.95% of JavaScript online submissions for Majority Element.
+// Memory Usage: 42.5 MB, less than 25.47% of JavaScript online submissions for Majority Element.
+
 console.log(majorityElement([3, 2, 3])); // 3
 
 console.log(majorityElement([2, 2, 1, 1, 1, 2, 2])); // 2
