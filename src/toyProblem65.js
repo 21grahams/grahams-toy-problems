@@ -29,10 +29,8 @@ const trailingZeroes = (n) => {
   return count;
 };
 
-// factorCounter = ['1', '2', '0']
-// n = 5
-// i = 2
-// zeroCounter = 1
+// Runtime: 84 ms, faster than 66.28% of JavaScript online submissions for Factorial Trailing Zeroes.
+// Memory Usage: 40.5 MB, less than 16.18% of JavaScript online submissions for Factorial Trailing Zeroes.
 
 console.log(trailingZeroes(3)); // 0
 // Explanation: 3! = 6, no trailing zero.
