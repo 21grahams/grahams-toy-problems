@@ -5,7 +5,7 @@ Given an integer n, return the number of trailing zeroes in n!.
 Follow up: Could you write a solution that works in logarithmic time complexity? */
 
 // input: n which represents an integer. Could be positive or negative
-// output: a number which represents the number of trailing zeroes in n
+// output: a number which represents the number of trailing zeroes in n!
 // constraints: 0 <= n <= 10^4
 // edge cases: if n is 0, return 0
 const trailingZeroes = n => {
