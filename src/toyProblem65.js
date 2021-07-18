@@ -9,32 +9,14 @@ Follow up: Could you write a solution that works in logarithmic time complexity?
 // constraints: 0 <= n <= 10^4
 // edge cases: if n is 0, return 0
 const trailingZeroes = (n) => {
-  // account for edge case
-  if (n === 0) return 0;
+  // acount for edge case
 
-  // create a factorCounter var, start at 1
-  let factorCounter = 1;
-  // loop up to n, increment by 1, start i at 1
-  for (let i = 1; i <= n; i++) {
-    // multiply factorCounter by i each iteration and store
-    factorCounter *= i;
-  }
-  console.log("factorCounter: ", factorCounter);
-  // create a zeroCounter var, start at 0
-  let zeroCounter = 0;
-  // grab factorCounter var, string it, split it by each char
-  factorCounter = factorCounter.toString().split("");
 
-  // loop through factorCounter decrementing
-  for (let i = factorCounter.length - 1; i >= 0; i--) {
-    // if current element is a '0'
-    if (factorCounter[i] === "0") {
-      // increment zeroCounter
-      zeroCounter++;
-    } else if (factorCounter[i] !== "0") break;
-  }
-  // return zeroCounter
-  return zeroCounter;
+  // create a counter var, start at 0
+  // loop over n and set i to equal 5 (prime number of trailing zeroes)
+    // increment count by Math.floor of n divided by i
+
+  // return count
 };
 
 // factorCounter = ['1', '2', '0']
