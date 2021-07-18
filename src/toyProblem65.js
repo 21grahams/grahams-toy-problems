@@ -13,8 +13,7 @@ const trailingZeroes = n => {
 
   // create a factorCounter var, start at 0
   // loop up to n, increment by 1
-    // collect values up to n
-    // store in counter var
+    // multiply factorCounter by i each iteration and store
 
   // create a zeroCounter var, start at 0
   // grab factorCounter var, string it, split it by each char
