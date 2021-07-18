@@ -10,13 +10,23 @@ Follow up: Could you write a solution that works in logarithmic time complexity?
 // edge cases: if n is 0, return 0
 const trailingZeroes = (n) => {
   // acount for edge case
-
-
+  if (n === 0) return 0;
   // create a counter var, start at 0
-  // loop over n and set i to equal 5 (prime number of trailing zeroes)
-    // increment count by Math.floor of n divided by i
+  let count = 0;
 
+  // loop over n and set i to equal 5 (prime number of trailing zeroes)
+  for (let i = 5; i <= n; i += 5) {
+    var num = i;
+    // while num modulo 5 is equal to 0
+    while (num % 5 === 0) {
+      // divide num by 5
+      num /= 5;
+      // increment count
+      count++;
+    }
+  }
   // return count
+  return count;
 };
 
 // factorCounter = ['1', '2', '0']
@@ -34,3 +44,5 @@ console.log(trailingZeroes(7)); // 1
 // Explanation: 5! = 120, one trailing zero.
 
 console.log(trailingZeroes(0)); // 0
+
+console.log(trailingZeroes(30)); // 7
