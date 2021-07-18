@@ -9,7 +9,20 @@ Follow up: Could you write a solution that works in logarithmic time complexity?
 // constraints: 0 <= n <= 10^4
 // edge cases: if n is 0, return 0
 const trailingZeroes = n => {
-  // do something
+  // account for edge case
+
+  // create a factorCounter var, start at 0
+  // loop up to n, increment by 1
+    // collect values up to n
+    // store in counter var
+
+  // create a zeroCounter var, start at 0
+  // grab factorCounter var, string it, split it by each char
+  // loop through factorCounter
+    // if current element is a 0
+      // increment zeroCounter
+
+  // return zeroCounter
 };
 
 console.log(trailingZeroes(3)) // 0
