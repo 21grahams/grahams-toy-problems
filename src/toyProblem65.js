@@ -11,8 +11,8 @@ Follow up: Could you write a solution that works in logarithmic time complexity?
 const trailingZeroes = n => {
   // account for edge case
 
-  // create a factorCounter var, start at 0
-  // loop up to n, increment by 1
+  // create a factorCounter var, start at 1
+  // loop up to n, increment by 1, start i at 1
     // multiply factorCounter by i each iteration and store
 
   // create a zeroCounter var, start at 0
