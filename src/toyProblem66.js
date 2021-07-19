@@ -9,19 +9,14 @@ Given an integer array nums, return true if any value appears at least twice in 
 // edge cases: if input array is empty, return null
 const containsDuplicate = nums => {
   // account for edge case
-  if (nums.length === 0) return null;
+
+  // sort input array
 
   // loop over input array
-  for (let i = 0; i < nums.length; i++) {
-      // loop over input array starting at i + 1
-      for (let j = i + 1; j < nums.length; j++) {
-        // if current element of i === the current element of j
-        // return true - we've found a duplicate
-        if (nums[i] === nums[j]) return true;
-      }
-  }
-  // return false - we've found no duplicates and broken out of the loop
-  return false;
+    // if current element of input array is the same as next element of input array
+      // return true - we've found a dupliate
+
+  // return false - we've found no duplicate and broken out of loop
 };
 
 // Runtime: 876 ms, faster than 13.53% of JavaScript online submissions for Contains Duplicate.
