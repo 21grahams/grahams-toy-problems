@@ -8,7 +8,14 @@ Given an integer array nums, return true if any value appears at least twice in 
 // constaints: 1 <= nums.length <= 10^5 || -10^9 <= nums[i] <= 10^9
 // edge cases: if input array is empty, return null
 const containsDuplicate = nums => {
-  // do something
+  // account for edge case
+
+  // loop over input array
+    // loop over input array starting at i + 1
+      // if current element of i === the current element of j
+        // return true - we've found a duplicate
+
+  // return false - we've found no duplicates and broken out of the loop
 };
 
 console.log(containsDuplicate([1, 2, 3, 1])) // true
