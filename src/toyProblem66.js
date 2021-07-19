@@ -2,6 +2,11 @@
 
 Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct */
 
+
+// input: an array of integers, could be positive or negative
+// output: a boolean. True if any values appear at least twice in the array and false if every element is unique
+// constaints: 1 <= nums.length <= 10^5 || -10^9 <= nums[i] <= 10^9
+// edge cases: if input array is empty, return null
 const containsDuplicate = nums => {
   // do something
 };
