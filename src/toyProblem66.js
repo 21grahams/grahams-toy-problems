@@ -24,6 +24,9 @@ const containsDuplicate = nums => {
   return false;
 };
 
+// Runtime: 876 ms, faster than 13.53% of JavaScript online submissions for Contains Duplicate.
+// Memory Usage: 41.3 MB, less than 89.48% of JavaScript online submissions for Contains Duplicate.
+
 console.log(containsDuplicate([1, 2, 3, 1])) // true
 
 console.log(containsDuplicate([1, 2, 3, 4])) // false
