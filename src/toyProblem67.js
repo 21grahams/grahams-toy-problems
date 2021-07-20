@@ -8,13 +8,20 @@ Given an integer array nums and an integer k, return true if there are two disti
 // edge cases: if nums array is empty, return null
 const containsNearbyDuplicate = (nums, k) => {
   // create a map obj
+  let map = {};
 
   // loop over nums input array
+  for (let i = 0; i < nums.length; i++) {
     // if the current element of the input array of the map obj is greater or equal to 0 and the index minus the current element of the input array of the map obj is less than or equal to k
+    if (map[nums[i]] >= 0 && i - map[nums[i]] <= k) {
       // return true
+      return true;
+    }
     // set the current element of the input array of the map object to the index
-
+    map[nums[i]] = i;
+  }
   // return false
+  return false;
 };
 
 console.log(containsNearbyDuplicate([1, 2, 3, 1], 3)); // true
