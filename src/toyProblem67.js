@@ -7,21 +7,14 @@ Given an integer array nums and an integer k, return true if there are two disti
 // constraints: 1 <= nums.length <= 10^5 | -10^9 <= nums[i] <= 10^9 | 0 <= k <= 10^5
 // edge cases: if nums array is empty, return null
 const containsNearbyDuplicate = (nums, k) => {
-  // account for edge case
-  if (nums.length === 0) return null;
-  // sort the nums array
-  nums.sort();
-  // loop over the input array
-  for (let i = 0; i < nums.length; i++) {
-    // loop over the input array a second time, iterating from first loop + 1
-    for (let j = i + 1; i < nums.length; j++) {
-      // if the current element of first loop is equal to current element of second loop AND current element of first loop minus current element of second loop is less than or equal to k
+  // create a map obj
+
+  // loop over nums input array
+    // if the current element of the input array of the map obj is greater or equal to 0 and the index minus the current element of the input array of the map obj is less than or equal to k
       // return true
-      if (nums[i] === nums[j] && nums[i] - nums[j] <= k) return true;
-    }
-  }
-  // return false - we've found no dupes and broken out of both loops
-  return false;
+    // set the current element of the input array of the map object to the index
+
+  // return false
 };
 
 console.log(containsNearbyDuplicate([1, 2, 3, 1], 3)); // true
