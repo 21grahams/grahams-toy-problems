@@ -24,6 +24,9 @@ const containsNearbyDuplicate = (nums, k) => {
   return false;
 };
 
+// Runtime: 136 ms, faster than 51.64% of JavaScript online submissions for Contains Duplicate II.
+// Memory Usage: 55.5 MB, less than 48.92% of JavaScript online submissions for Contains Duplicate II.
+
 console.log(containsNearbyDuplicate([1, 2, 3, 1], 3)); // true
 
 console.log(containsNearbyDuplicate([1, 0, 1, 1], 1)); // true
