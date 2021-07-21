@@ -11,7 +11,7 @@ const countPrimes = n => {
 
   // create a count variable, start at 0
   // loop over n, incremement by one
-    // if each num up to n modulo 2 is not equal to 0
+    // if each num up to n divided by 2 contains a decimal or each num up to n's square root contains a decimal
       // increment count
 
   // return count
