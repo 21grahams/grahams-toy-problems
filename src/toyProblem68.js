@@ -5,7 +5,7 @@ Count the number of prime numbers less than a non-negative number, n */
 // input: a single non-negative integer, n
 // output: the number of prime numbers less than the input value of n
 // constraints: 0 <= n <= 5 * 10^6
-// edge cases:  if n doesn't exist, return null
+// edge cases:  if n doesn't exist, return null || if n equals 0 or 1, return 0
 const countPrimes = n => {
   // do something
 };
