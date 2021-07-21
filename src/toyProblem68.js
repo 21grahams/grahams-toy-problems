@@ -16,6 +16,9 @@ const countPrimes = (n, count = 0, array = []) => {
   return count;
 };
 
+// Runtime: 428 ms, faster than 39.49% of JavaScript online submissions for Count Primes.
+// Memory Usage: 144.7 MB, less than 26.72% of JavaScript online submissions for Count Primes.
+
 console.log(countPrimes(10)); // 4
 // Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7
 
