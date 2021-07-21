@@ -7,7 +7,14 @@ Count the number of prime numbers less than a non-negative number, n */
 // constraints: 0 <= n <= 5 * 10^6
 // edge cases:  if n doesn't exist, return null || if n equals 0 or 1, return 0
 const countPrimes = n => {
-  // do something
+  // account for edge cases
+
+  // create a count variable, start at 0
+  // loop over n, incremement by one
+    // if each num up to n modulo 2 is not equal to 0
+      // increment count
+
+  // return count
 };
 
 console.log(countPrimes(10)); // 4
