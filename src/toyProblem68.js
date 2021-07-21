@@ -6,15 +6,14 @@ Count the number of prime numbers less than a non-negative number, n */
 // output: the number of prime numbers less than the input value of n
 // constraints: 0 <= n <= 5 * 10^6
 // edge cases:  if n doesn't exist, return null || if n equals 0 or 1, return 0
-const countPrimes = n => {
-  // account for edge cases
+const countPrimes = (n, count = 0, array = []) => {
+  for (let i = 2; i < n; i++) {
+    if (array[i]) continue;
+    else count++;
+    for (let j = i + i; j <= n; j += i) array[j] = true;
+  }
 
-  // create a count variable, start at 0
-  // loop over n, incremement by one
-    // if each num up to n divided by 2 contains a decimal or each num up to n's square root contains a decimal
-      // increment count
-
-  // return count
+  return count;
 };
 
 console.log(countPrimes(10)); // 4
