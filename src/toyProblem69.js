@@ -9,6 +9,10 @@ Each range [a,b] in the list should be output as:
 "a->b" if a != b
 "a" if a == b */
 
+// input: an array of sorted integers
+// output: a list of ranges, that consist of all of the numbers in the array and return the smallest sorted list of all the ranges
+// constraints: 0 <= nums.length <= 20 | -2^31 <= nums[i] <= 2^31 - 1 All the values of nums are unique | nums is sorted in ascending order.
+// edge cases: if the input array is empty, return an empty array. If input array contains one integer, return that integer
 const summaryRanges = nums => {
   // do something
 };
