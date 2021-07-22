@@ -12,3 +12,22 @@ Each range [a,b] in the list should be output as:
 const summaryRanges = nums => {
   // do something
 };
+
+console.log(summaryRanges([0, 1, 2, 4, 5, 7])) // ["0->2","4->5","7"]
+/* explanation: The ranges are:
+[0,2] --> "0->2"
+[4,5] --> "4->5"
+[7,7] --> "7" */
+
+console.log(summaryRanges([0, 2, 3, 4, 6, 8, 9])) // ["0","2->4","6","8->9"]
+/* explanation: The ranges are:
+[0,0] --> "0"
+[2,4] --> "2->4"
+[6,6] --> "6"
+[8,9] --> "8->9" */
+
+console.log(summaryRanges([])) // []
+
+console.log(summaryRanges([-1])) // ["-1"]
+
+console.log(summaryRanges([0])) // [0]
