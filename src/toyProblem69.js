@@ -49,6 +49,9 @@ const summaryRanges = (nums) => {
   return result;
 };
 
+// Runtime: 76 ms, faster than 53.00% of JavaScript online submissions for Summary Ranges.
+// Memory Usage: 38.6 MB, less than 52.04% of JavaScript online submissions for Summary Ranges.
+
 console.log(summaryRanges([0, 1, 2, 4, 5, 7])); // ["0->2","4->5","7"]
 /* explanation: The ranges are:
 [0,2] --> "0->2"
