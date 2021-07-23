@@ -30,6 +30,9 @@ const missingNumber = nums => {
   return total;
 };
 
+// Runtime: 80 ms, faster than 82.56% of JavaScript online submissions for Missing Number.
+// Memory Usage: 41.9 MB, less than 17.67% of JavaScript online submissions for Missing Number.
+
 console.log(missingNumber([3, 0, 1])) // 2
 // Explanation: n = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.
 
