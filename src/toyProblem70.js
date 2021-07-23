@@ -4,6 +4,10 @@ Given an array nums containing n distinct numbers in the range [0, n], return th
 
 Follow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity? */
 
+// Input: an array of integers containing n distinct numbers in a range [0, n]
+// Output: A single integer which is the only number in the range missing from the array
+// Constaints: n == nums.length | 1 <= n <= 10^4 | 0 <= nums[i] <= n | All the numbers of nums are unique.
+// Edge Cases: if the nums array is empty, return null. if nums contains just 0, return 1
 const missingNumber = nums => {
   // do something
 };
