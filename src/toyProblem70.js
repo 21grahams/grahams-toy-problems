@@ -11,21 +11,29 @@ Follow up: Could you implement a solution using only O(1) extra space complexity
 const missingNumber = nums => {
 
   // create a max, assign to total length of input array
+  let max = nums.length;
   // create a total, assign to 0
+  let total = 0;
 
   // loop over the nums input array, up to max
-    // increment sum by the index
+  for (let i = 1; i <= max; i++) {
+    // increment total by the index
+    total += i;
+  }
 
   // loop over nums with for of
-    // decrement sum by num
-
-  // return sum
+  for (let num of nums) {
+    // decrement total by num
+    total -= num;
+  }
+  // return total
+  return total;
 };
 
 console.log(missingNumber([3, 0, 1])) // 2
 // Explanation: n = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.
 
-console.log(missingNumber([0, 1]) // 2
+console.log(missingNumber([0, 1])) // 2
 // Explanation: n = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.
 
 console.log(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1])) // 8
