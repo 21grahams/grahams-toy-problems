@@ -9,17 +9,15 @@ Follow up: Could you implement a solution using only O(1) extra space complexity
 // Constaints: n == nums.length | 1 <= n <= 10^4 | 0 <= nums[i] <= n | All the numbers of nums are unique.
 // Edge Cases: if the nums array is empty, return null. if nums contains just 0, return 1
 const missingNumber = nums => {
-  // account for edge case
-  // create a finalNum, assign to 0
 
-  // collect the length of the input array and assign to numLength
-  // loop over the input array up to numLength
-    // if the next element is not one plus the current element
-      // assign finalNum to that index
-    // if last element is one less than length of array
-      // assign finalNum to that last index
+  // create a missing array
 
-  // return finalNum
+  // sort the input array
+  // loop over the input array
+    // if the index of the current element is equal to -1, meaning it doesn't exist
+      // push that value to the missing array
+
+  // return missing array value
 };
 
 console.log(missingNumber([3, 0, 1])) // 2
