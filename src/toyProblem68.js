@@ -25,9 +25,12 @@ const isPrime = (n) => {
 // Runtime: 428 ms, faster than 39.49% of JavaScript online submissions for Count Primes.
 // Memory Usage: 144.7 MB, less than 26.72% of JavaScript online submissions for Count Primes.
 
-console.log(countPrimes(10)); // 4
+let testOne = countPrimes(10);
+console.log('testOne: ', testOne); // 4
 // Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7
 
-console.log(countPrimes(0)); // 0
+let testTwo = countPrimes(0);
+console.log('testTwo: ', testTwo); // 0
 
-console.log(countPrimes(1)); // 0
+let testThree = countPrimes(1);
+console.log('testThree: ', testThree); // 0
