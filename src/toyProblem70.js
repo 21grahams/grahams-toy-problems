@@ -10,14 +10,16 @@ Follow up: Could you implement a solution using only O(1) extra space complexity
 // Edge Cases: if the nums array is empty, return null. if nums contains just 0, return 1
 const missingNumber = nums => {
 
-  // create a missing array
+  // create a max, assign to total length of input array
+  // create a total, assign to 0
 
-  // sort the input array
-  // loop over the input array
-    // if the index of the current element is equal to -1, meaning it doesn't exist
-      // push that value to the missing array
+  // loop over the nums input array, up to max
+    // increment sum by the index
 
-  // return missing array value
+  // loop over nums with for of
+    // decrement sum by num
+
+  // return sum
 };
 
 console.log(missingNumber([3, 0, 1])) // 2
