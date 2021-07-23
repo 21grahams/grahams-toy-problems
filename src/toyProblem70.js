@@ -12,10 +12,12 @@ const missingNumber = nums => {
   // account for edge case
   // create a finalNum, assign to 0
 
-  // sort the nums input array
-    // loop over the input array
-      // if the next element is not one plus the current element
-        // assign next index to finalNum
+  // collect the length of the input array and assign to numLength
+  // loop over the input array up to numLength
+    // if the next element is not one plus the current element
+      // assign finalNum to that index
+    // if last element is one less than length of array
+      // assign finalNum to that last index
 
   // return finalNum
 };
