@@ -4,6 +4,10 @@ Given an integer array nums, move all 0's to the end of it while maintaining the
 
 Note that you must do this in-place without making a copy of the array */
 
+// input: an array of integers
+// output: the same array (not a copy), that moves all the 0's to the end of the array
+// constraints: 1 <= nums.length <= 10^4 | -231 <= nums[i] <= 2^31 - 1
+// edge cases: if the input array is empty, return null
 const moveZeroes = nums => {
   // do something
 };
