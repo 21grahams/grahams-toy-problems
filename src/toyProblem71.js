@@ -9,7 +9,15 @@ Note that you must do this in-place without making a copy of the array */
 // constraints: 1 <= nums.length <= 10^4 | -231 <= nums[i] <= 2^31 - 1
 // edge cases: if the input array is empty, return null
 const moveZeroes = nums => {
-  // do something
+  // accout for edge case
+
+  // sort the input array
+  // loop over the array
+    // if the current element is a zero
+      // splice that out
+      // splice in a zero to the back of the array
+
+  // return the same input array
 };
 
 console.log(moveZeroes([0, 1, 0, 3, 12])) // [1,3,12,0,0]
