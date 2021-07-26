@@ -51,6 +51,9 @@ const moveZeroes = (nums) => {
   return nums;
 };
 
+// Runtime: 80 ms, faster than 81.02% of JavaScript online submissions for Move Zeroes.
+// Memory Usage: 40.8 MB, less than 11.45% of JavaScript online submissions for Move Zeroes.
+
 console.log(moveZeroes([0, 1, 0, 3, 12])); // [1, 3, 12, 0, 0]
 
 console.log(moveZeroes([0])); // [0]
