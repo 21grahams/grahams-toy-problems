@@ -5,3 +5,7 @@ Given two strings s and t, return true if t is an anagram of s, and false otherw
 const isAnagram = (s, t) => {
   // do something
 };
+
+console.log(isAnagram('anagram', 'nagaram')) // true
+
+console.log(isAnagram('rat', 'car')) // false
