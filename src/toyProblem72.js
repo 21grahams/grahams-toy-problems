@@ -7,7 +7,12 @@ Given two strings s and t, return true if t is an anagram of s, and false otherw
 // constraints: 1 <= s.length, t.length <= 5 * 10^4 | s and t consist of lowercase English letters
 // edge cases: if s and t are empty, return true
 const isAnagram = (s, t) => {
-  // do something
+  // account for edge case
+
+  // split string into an array of letters
+  // sort the array of letters ascendingly
+
+  // return comparing setOne to setTwo
 };
 
 console.log(isAnagram('anagram', 'nagaram')) // true
