@@ -8,13 +8,19 @@ Given two strings s and t, return true if t is an anagram of s, and false otherw
 // edge cases: if s and t are empty, return true
 const isAnagram = (s, t) => {
   // account for edge case
+  if (s === undefined && t === undefined) return true;
 
   // split string into an array of letters
+  let setOne = s.split("");
+  let setTwo = t.split("");
   // sort the array of letters ascendingly
+  setOne.sort();
+  setTwo.sort();
 
-  // return comparing setOne to setTwo by joining arrays to strings
+  // return comparing setOne to setTwo
+  return setOne.join("") === setTwo.join("");
 };
 
-console.log(isAnagram('anagram', 'nagaram')) // true
+console.log(isAnagram("anagram", "nagaram")); // true
 
-console.log(isAnagram('rat', 'car')) // false
+console.log(isAnagram("rat", "car")); // false
