@@ -21,6 +21,9 @@ const isAnagram = (s, t) => {
   return setOne.join("") === setTwo.join("");
 };
 
+// Runtime: 112 ms, faster than 32.41% of JavaScript online submissions for Valid Anagram.
+// Memory Usage: 45.6 MB, less than 5.57% of JavaScript online submissions for Valid Anagram.
+
 console.log(isAnagram("anagram", "nagaram")); // true
 
 console.log(isAnagram("rat", "car")); // false
