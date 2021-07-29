@@ -12,7 +12,7 @@ const isAnagram = (s, t) => {
   // split string into an array of letters
   // sort the array of letters ascendingly
 
-  // return comparing setOne to setTwo
+  // return comparing setOne to setTwo by joining arrays to strings
 };
 
 console.log(isAnagram('anagram', 'nagaram')) // true
