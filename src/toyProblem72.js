@@ -14,8 +14,8 @@ const isAnagram = (s, t) => {
   return true;
 };
 
-// Runtime: 112 ms, faster than 32.41% of JavaScript online submissions for Valid Anagram.
-// Memory Usage: 45.6 MB, less than 5.57% of JavaScript online submissions for Valid Anagram.
+// Runtime: 76 ms, faster than 98.45% of JavaScript online submissions for Valid Anagram.
+// Memory Usage: 41.2 MB, less than 56.36% of JavaScript online submissions for Valid Anagram.
 
 console.log(isAnagram("anagram", "nagaram")); // true
 
