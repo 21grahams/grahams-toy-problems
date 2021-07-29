@@ -7,18 +7,11 @@ Given two strings s and t, return true if t is an anagram of s, and false otherw
 // constraints: 1 <= s.length, t.length <= 5 * 10^4 | s and t consist of lowercase English letters
 // edge cases: if s and t are empty, return true
 const isAnagram = (s, t) => {
-  // account for edge case
-  if (s === undefined && t === undefined) return true;
-
-  // split string into an array of letters
-  let setOne = s.split("");
-  let setTwo = t.split("");
-  // sort the array of letters ascendingly
-  setOne.sort();
-  setTwo.sort();
-
-  // return comparing setOne to setTwo
-  return setOne.join("") === setTwo.join("");
+  const map = {};
+  for (let a of s) map[a] = (map[a] || 0) + 1;
+  for (let a of t) map[a] = (map[a] || 0) - 1;
+  for (let a in map) if (map[a] !== 0) return false;
+  return true;
 };
 
 // Runtime: 112 ms, faster than 32.41% of JavaScript online submissions for Valid Anagram.
