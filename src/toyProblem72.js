@@ -24,3 +24,5 @@ const isAnagram = (s, t) => {
 console.log(isAnagram("anagram", "nagaram")); // true
 
 console.log(isAnagram("rat", "car")); // false
+
+console.log(isAnagram("", "")); // true
