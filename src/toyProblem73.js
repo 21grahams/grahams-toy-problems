@@ -23,12 +23,8 @@ const intersection = (nums1, nums2) => {
       }
     }
   }
-  // create a newSet of secondaryArr
-  let newSet = new Set(secondaryArr);
-  // create an array from newSet and assign to resultArr
-  let resultArr = Array.from(newSet);
-  // return resultArr
-  return resultArr;
+  // return new Set using spread operator of secondaryArr
+  return [...new Set(secondaryArr)];
 };
 
 // Runtime: 80 ms, faster than 59.83% of JavaScript online submissions for Intersection of Two Arrays.
