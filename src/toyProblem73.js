@@ -31,6 +31,9 @@ const intersection = (nums1, nums2) => {
   return resultArr;
 };
 
+// Runtime: 80 ms, faster than 59.83% of JavaScript online submissions for Intersection of Two Arrays.
+// Memory Usage: 40.1 MB, less than 58.78% of JavaScript online submissions for Intersection of Two Arrays.
+
 console.log(intersection([1, 2, 2, 1], [2, 2])); // [2]
 
 console.log(intersection([4, 9, 5], [9, 4, 9, 8, 4])); // [9, 4]
