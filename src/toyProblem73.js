@@ -7,7 +7,17 @@ Given two integer arrays nums1 and nums2, return an array of their intersection.
 // constraints: each element in the result must be unique. Can return result in any order | 1 <= nums1.length, nums2.length <= 1000 | 0 <= nums1[i], nums2[i] <= 1000
 // edge cases: if input arrays are empty, return empty array
 const intersection = (nums1, nums2) => {
-  // do something
+  // account for edge case
+  // create a secondaryArr
+  // create a resultArr
+
+  // loop over the first input array
+    // loop over the second input array
+      // if current element of nums1 is equal to current element of nums2
+        // push to secondaryArr
+
+  // create a newSet of secondaryArr and push to resultArr
+  // return resultArr
 };
 
 console.log(intersection([1, 2, 2, 1], [2, 2])) // [2]
