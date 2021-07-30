@@ -9,14 +9,14 @@ Given two integer arrays nums1 and nums2, return an array of their intersection.
 const intersection = (nums1, nums2) => {
   // account for edge case
   // create a secondaryArr
-  // create a resultArr
 
   // loop over the first input array
     // loop over the second input array
       // if current element of nums1 is equal to current element of nums2
         // push to secondaryArr
 
-  // create a newSet of secondaryArr and push to resultArr
+  // create a newSet of secondaryArr
+  // create an array from newSet and assign to resultArr
   // return resultArr
 };
 
