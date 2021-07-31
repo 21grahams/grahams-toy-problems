@@ -10,16 +10,22 @@ Given two integer arrays nums1 and nums2, return an array of their intersection.
 const intersect = (nums1, nums2) => {
   // account for the edge case
   // create a resultArr
+  // sort the input arrays
+  // create a var for i and j, initialize to 0
 
-  // loop over nums1 input array
-    // loop over nums2 input array
-      // if current element of nums1 equals current element of nums2
-        // push current element of nums1 to resultArr
+  // while nums1 length is less than i and nums2 length is less than j
+    // if current element of nums1 equals current element of nums2
+      // push current element of nums1 to resultArr
+      // increment i and j
+    // otherwise if current element of nums1 is less than current element of nums2
+      // increment i
+    // otherwise
+      // increment j
 
   // return resultArr
-};
+}
 
 console.log(intersect([1, 2, 2, 1], [2, 2])) // [2, 2]
 
-console.log(intersect([4, 9, 5], [9, 4, 9, 8, 4])) // [4 9]
-// Explanation: [9,4] is also accepted
+console.log(intersect([4, 9, 5], [9, 4, 9, 8, 4])) // [4, 9]
+// Explanation: [9, 4] is also accepted
