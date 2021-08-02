@@ -29,6 +29,9 @@ const thirdMax = (nums) => {
   }
 };
 
+// Runtime: 68 ms, faster than 96.92% of JavaScript online submissions for Third Maximum Number.
+// Memory Usage: 40 MB, less than 75.17% of JavaScript online submissions for Third Maximum Number.
+
 console.log(thirdMax([3, 2, 1])); // 1
 // Explanation: The third maximum is 1.
 
