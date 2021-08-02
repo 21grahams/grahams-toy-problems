@@ -2,6 +2,11 @@
 
 Given integer array nums, return the third maximum number in this array. If the third maximum does not exist, return the maximum number */
 
+
+// input: an array of integers
+// output: a single integer, which is the third maximum number in the array
+// constraints: if the third maximum does not exist, return the maximum number
+// edge cases: if the array is empty, return null
 const thirdMax = nums => {
   // do something
 };
