@@ -8,7 +8,12 @@ Given integer array nums, return the third maximum number in this array. If the 
 // constraints: if the third maximum does not exist, return the maximum number
 // edge cases: if the array is empty, return null
 const thirdMax = nums => {
-  // do something
+  // account for edge case
+
+  // sort the input array
+  // create an array from a new set to drop the duplicate values assign to variable
+
+  // return the 3rd value in the array
 };
 
 console.log(thirdMax([3, 2, 1])) // 1
