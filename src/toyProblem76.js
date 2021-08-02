@@ -29,6 +29,10 @@ const findDisappearedNumbers = (nums) => {
 // Runtime: 128 ms, faster than 60.33% of JavaScript online submissions for Find All Numbers Disappeared in an Array.
 // Memory Usage: 50.3 MB, less than 29.15% of JavaScript online submissions for Find All Numbers Disappeared in an Array.
 
-console.log(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])); // [5, 6]
+let testOne = [4, 3, 2, 7, 8, 2, 3, 1]
+let solutionOne = findDisappearedNumbers(testOne);
+console.log('solutionOne: ', solutionOne); // [5, 6]
 
-console.log(findDisappearedNumbers([1, 1])); // [2]
+let testTwo = [1, 1]
+let solutionTwo = findDisappearedNumbers(testTwo);
+console.log('solutionTwo: ', solutionTwo); // [2]
