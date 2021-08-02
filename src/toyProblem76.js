@@ -9,15 +9,12 @@ Given an array nums of n integers where nums[i] is in the range [1, n], return a
 const findDisappearedNumbers = nums => {
   // account for edge case
   // create a resultArr
+  // create a new set to drop dupes
+  // create a max, assign to length of nums
 
-  // sort the input array
-  // create a max, assign to length of input array
-
-  // loop over input array of to max
-    // if current element of input array is not one greater than current element minus one
-      // push current element minus one plus one to the resultArr
-    // otherwise
-      // push the number of the length of the array onto the resultArr
+  // loop over new set, up to max
+    // if new set doesn't have/contain i
+      // push to resultArr
 
   // return resultArr
 };
