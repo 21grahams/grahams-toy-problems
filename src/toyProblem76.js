@@ -16,6 +16,8 @@ const findDisappearedNumbers = nums => {
   // loop over input array of to max
     // if current element of input array is not one greater than current element minus one
       // push current element minus one plus one to the resultArr
+    // otherwise
+      // push the number of the length of the array onto the resultArr
 
   // return resultArr
 };
