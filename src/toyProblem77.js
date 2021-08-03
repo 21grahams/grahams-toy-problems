@@ -4,6 +4,10 @@ Given the root of a binary tree, return all root-to-leaf paths in any order.
 
 A leaf is a node with no children */
 
+// input: the root of a binary tree
+// output: all root-to-leaf paths in any order
+// constraints: A leaf is a node with no children. The number of nodes in the tree is in the range [1, 100]. -100 <= Node.val <= 100
+// edge cases: if root has no children, return just the root node
 class TreeNode {
   constructor(val) {
     this.val = val;
