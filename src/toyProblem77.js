@@ -16,10 +16,10 @@ class TreeNode {
   }
 }
 
+//============================
+//=====RECURSIVE APPROACH=====
+//============================
 const binaryTreePaths = (root) => {
-  //============================
-  //=====RECURSIVE APPROACH=====
-  //============================
 
   // account for edge cases
   if (!root) return null;
@@ -44,10 +44,13 @@ const binaryTreePaths = (root) => {
   return resultArr;
 };
 
+// Runtime: 76 ms, faster than 80.72% of JavaScript online submissions for Binary Tree Paths.
+// Memory Usage: 40.5 MB, less than 17.27% of JavaScript online submissions for Binary Tree Paths.
+
+//================================
+//=====NON RECURSIVE APPROACH=====
+//================================
 const binaryTreePaths = (root) => {
-  //================================
-  //=====NON RECURSIVE APPROACH=====
-  //================================
   var result = [];
   var stack = [[root, [root.val]]];
   while (stack.length) {
@@ -60,8 +63,8 @@ const binaryTreePaths = (root) => {
   return result;
 };
 
-// Runtime: 76 ms, faster than 80.72% of JavaScript online submissions for Binary Tree Paths.
-// Memory Usage: 40.5 MB, less than 17.27% of JavaScript online submissions for Binary Tree Paths.
+// Runtime: 80 ms, faster than 62.16% of JavaScript online submissions for Binary Tree Paths.
+// Memory Usage: 40.5 MB, less than 30.22% of JavaScript online submissions for Binary Tree Paths.
 
 // test one
 let nodeA = new TreeNode(1);
