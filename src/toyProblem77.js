@@ -14,21 +14,30 @@ class TreeNode {
     this.left = null;
     this.right = null;
   }
-};
+}
 
-const binaryTreePaths = root => {
+const binaryTreePaths = (root) => {
   // account for edge cases
+  if (!root) return null;
 
   // create a resultArr literal
+  let resultArr = [];
   // create a helper function with two arguments, node and cur
+  let helperFunc = (node, cur) => {
     // increment cur and node val
+    cur += node.val;
     // if there's no left or right node
-      // push cur onto resultArr
+    // push cur onto resultArr
+    if (!node.left && !node.right) resultArr.push(cur);
     // call left node and recursive call to helper and pass in left node, cur and '->'
+    node.left && helperFunc(node.left, cur + "->");
     // call right node and recursive call to helper and pass in right node, cur and '->'
-
+    node.right && helperFunc(node.right, cur + "->");
+  };
   // invoke helper, pass in root and empty string
+  helperFunc(root, "");
   // return resultArr
+  return resultArr;
 };
 
 // test one
@@ -42,9 +51,9 @@ nodeA.right = nodeC;
 nodeB.left = null;
 nodeB.right = nodeD;
 
-console.log(binaryTreePaths(nodeA)) // ["1->2->5", "1->3"]
+console.log(binaryTreePaths(nodeA)); // ["1->2->5", "1->3"]
 
 // test two
 let nodeG = new TreeNode(1);
 
-console.log(binaryTreePaths(nodeG)) // ["1"]
+console.log(binaryTreePaths(nodeG)); // ["1"]
