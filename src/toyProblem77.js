@@ -17,17 +17,18 @@ class TreeNode {
 };
 
 const binaryTreePaths = root => {
-  // account for edge case
+  // account for edge cases
 
-  // create a queue variable, assign to root's length
-  // while queue exists
-    // create an result array literal
-    // if a left value exists
-      // push to result array plus -> in template literal
-    // if a right value exists
-      // push to result array plus -> in template literal
+  // create a resultArr literal
+  // create a helper function with two arguments, node and cur
+    // increment cur and node val
+    // if there's no left or right node
+      // push cur onto resultArr
+    // call left node and recursive call to helper and pass in left node, cur and '->'
+    // call right node and recursive call to helper and pass in right node, cur and '->'
 
-  // return result array
+  // invoke helper, pass in root and empty string
+  // return resultArr
 };
 
 // test one
