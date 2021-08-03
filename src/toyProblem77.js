@@ -40,6 +40,9 @@ const binaryTreePaths = (root) => {
   return resultArr;
 };
 
+// Runtime: 76 ms, faster than 80.72% of JavaScript online submissions for Binary Tree Paths.
+// Memory Usage: 40.5 MB, less than 17.27% of JavaScript online submissions for Binary Tree Paths.
+
 // test one
 let nodeA = new TreeNode(1);
 let nodeB = new TreeNode(2);
