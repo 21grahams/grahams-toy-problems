@@ -17,6 +17,10 @@ class TreeNode {
 }
 
 const binaryTreePaths = (root) => {
+  //============================
+  //=====RECURSIVE APPROACH=====
+  //============================
+
   // account for edge cases
   if (!root) return null;
 
@@ -38,6 +42,22 @@ const binaryTreePaths = (root) => {
   helperFunc(root, "");
   // return resultArr
   return resultArr;
+};
+
+const binaryTreePaths = (root) => {
+  //================================
+  //=====NON RECURSIVE APPROACH=====
+  //================================
+  var result = [];
+  var stack = [[root, [root.val]]];
+  while (stack.length) {
+    var element = stack.pop();
+    var node = element[0];
+    if (!node.left && !node.right) result.push(element[1].join("->"));
+    if (node.left) stack.push([node.left, [...element[1], node.left.val]]);
+    if (node.right) stack.push([node.right, [...element[1], node.right.val]]);
+  }
+  return result;
 };
 
 // Runtime: 76 ms, faster than 80.72% of JavaScript online submissions for Binary Tree Paths.
