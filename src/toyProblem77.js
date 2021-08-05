@@ -83,3 +83,15 @@ console.log(binaryTreePaths(nodeA)); // ["1->2->5", "1->3"]
 let nodeG = new TreeNode(1);
 
 console.log(binaryTreePaths(nodeG)); // ["1"]
+
+// test three
+let nodeX = new TreeNode(1);
+let nodeY = new TreeNode(2);
+let nodeZ = new TreeNode(3);
+
+nodeX.left = null;
+nodeX.right = nodeY;
+nodeY.left = null;
+nodeY.right = nodeZ;
+
+console.log(binaryTreePaths(nodeX)) // ["1->2->3"]
