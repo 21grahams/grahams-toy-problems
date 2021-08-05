@@ -37,6 +37,9 @@ const addStrings = (num1, num2) => {
   return sum;
 };
 
+// Runtime: 84 ms, faster than 71.35% of JavaScript online submissions for Add Strings.
+// Memory Usage: 41.1 MB, less than 44.88% of JavaScript online submissions for Add Strings.
+
 console.log(addStrings("11", "123")); // '134'
 
 console.log(addStrings("456", "77")); // '533'
