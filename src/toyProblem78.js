@@ -7,3 +7,9 @@ You must solve the problem without using any built-in library for handling large
 const addStrings = (num1, num2) => {
   // do something
 };
+
+console.log(addStrings('11', '123')) // '134'
+
+console.log(addStrings('456', '77')) // '533'
+
+console.log(addStrings('0', '0')) // '0'
