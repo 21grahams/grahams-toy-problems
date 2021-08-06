@@ -9,7 +9,16 @@ In one move, you can increment n - 1 elements of the array by 1 */
 // constraints: In one move, you can increment n - 1 elements of the array by 1. n == nums.length. 1 <= nums.length <= 10^5. -10^9 <= nums[i] <= 10^9. The answer is guaranteed to fit in a 32-bit integer.
 // edge cases: if input array is empty, return null
 const minMoves = nums => {
-  // do something
+  // account for edge case
+  // create a count, start at 0
+
+  // sort the array
+  // loop through the array starting at index 1
+    // while current element minus one doesn't equal current element AND current element plus one doesn't equal current element
+      // add one to previous element and current element
+      // increment count
+
+  // return count
 };
 
 console.log(minMoves([1, 2, 3])) // 3
