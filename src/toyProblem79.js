@@ -10,14 +10,20 @@ In one move, you can increment n - 1 elements of the array by 1 */
 // edge cases: if input array is empty, return null
 const minMoves = nums => {
   // set a sum variable equal to first value of array
+  let sum = nums[0];
   // set a min variable equal to first value of array
+  let min = nums[0];
 
   // loop over nums, start at index 1
+  for (let i = 1; i < nums.length; i++) {
     // if the current element is less than min
       // re-assign min to that current element
+      if (nums[i] < min) min = nums[i];
       // increment sum and current element
-
+      sum += nums[i];
+  }
   // return sum minus the length of the nums input array multiplied by the min
+  return sum - (nums.length * min);
 };
 
 console.log(minMoves([1, 2, 3])) // 3
