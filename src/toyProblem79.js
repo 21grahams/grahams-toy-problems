@@ -15,8 +15,15 @@ const minMoves = nums => {
   // sort the array
   // loop through the array starting at index 1
     // while current element minus one doesn't equal current element AND current element plus one doesn't equal current element
-      // add one to previous element and current element
-      // increment count
+      // if prev element is less than current AND current is less than next
+        // add one to previous element and current element
+          // increment count
+      // otherwise if prev is less than current and current is greater than next
+        // add one to previous element and next element
+        // increment count
+      // otherwise
+        // add one to previous and current element
+          // increment count
 
   // return count
 };
