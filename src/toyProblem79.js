@@ -26,6 +26,9 @@ const minMoves = nums => {
   return sum - (nums.length * min);
 };
 
+// Runtime: 84 ms, faster than 68.42% of JavaScript online submissions for Minimum Moves to Equal Array Elements.
+// Memory Usage: 42.4 MB, less than 54.97% of JavaScript online submissions for Minimum Moves to Equal Array Elements.
+
 console.log(minMoves([1, 2, 3])) // 3
 // Explanation: Only three moves are needed (remember each move increments two elements):
 // [1,2,3]  =>  [2,3,3]  =>  [3,4,3]  =>  [4,4,4]
