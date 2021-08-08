@@ -4,6 +4,10 @@ Assume you are an awesome parent and want to give your children some cookies. Bu
 
 Each child i has a greed factor g[i], which is the minimum size of a cookie that the child will be content with; and each cookie j has a size s[j]. If s[j] >= g[i], we can assign the cookie j to the child i, and the child i will be content. Your goal is to maximize the number of your content children and output the maximum number */
 
+// input: children, represented as an array of integers, each number in the array is a greed factor. g[i] represents the minimum size of a cookie that the child will be content with. And cookies, represented as an array of integers, each number in the array represents the amount of the cookies for the respective child
+// output: a single integer which represents the maximum amount of content children given the amount of total possible cookies
+// constraints: 1 <= g.length <= 3 * 10^4. 0 <= s.length <= 3 * 10^4. 1 <= g[i], s[j] <= 2^31 - 1
+// edge case(s): if both arrays are empty, return 0
 const findContentChildren = (g, s) => {
   // do something
 };
