@@ -9,15 +9,13 @@ Each child i has a greed factor g[i], which is the minimum size of a cookie that
 // constraints: 1 <= g.length <= 3 * 10^4. 0 <= s.length <= 3 * 10^4. 1 <= g[i], s[j] <= 2^31 - 1
 // edge case(s): if both arrays are empty, return 0
 const findContentChildren = (g, s) => {
-  // account for edge case
-  // create a count variable, assign to 0
+  // sort both arrays
+  // create a count, start at 0
+  // loop over s
+    // if current element of s is greater than equal to g at count
+      // increment count
 
-  // loop over the first array
-    // loop over the second array
-      // if the current element of g input array matches the current element of s input array
-        // increment that current element to the count variable
-
-  // return count variable
+  // return count
 };
 
 console.log(findContentChildren([1, 2, 3], [1, 1])) // 1
