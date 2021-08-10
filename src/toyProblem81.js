@@ -7,7 +7,19 @@ Given a binary array nums, return the maximum number of consecutive 1's in the a
 // constraints: 1 <= nums.length <= 10^5. nums[i] is either 0 or 1.
 // edge cases: if input array is empty, return 0
 const findMaxConsecutiveOnes = nums => {
-  // do something
+  // account for edge case
+
+  // create a count variable, set to 0
+  // creatre a max variable, set to 0
+  // loop over the input array, start at index 0
+    // if current element is one
+      // if next element is one
+        // increment count
+        // continue
+    // if count is greater than max
+      // assign max to count
+
+  // return max
 };
 
 
