@@ -10,12 +10,11 @@ const findMaxConsecutiveOnes = nums => {
   // account for edge case
 
   // create a count variable, set to 0
-  // creatre a max variable, set to 0
+  // create a max variable, set to 0
   // loop over the input array, start at index 0
-    // if current element is one
-      // if next element is one
-        // increment count
-        // continue
+    // while current number is 1
+      // increment count
+      // increment index
     // if count is greater than max
       // assign max to count
 
