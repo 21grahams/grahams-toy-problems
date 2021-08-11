@@ -34,6 +34,9 @@ const findMaxConsecutiveOnes = (nums) => {
   return max;
 };
 
+// Runtime: 76 ms, faster than 90.23% of JavaScript online submissions for Max Consecutive Ones.
+// Memory Usage: 41.3 MB, less than 60.91% of JavaScript online submissions for Max Consecutive Ones.
+
 console.log(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1])); // 3
 // Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
 
