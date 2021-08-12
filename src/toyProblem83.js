@@ -6,6 +6,10 @@ The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit int
 
 You must write an algorithm that runs in O(n) time and without using the division operation */
 
+// input: an array of integers
+// output: an array of integers 'answer' such that answer[i] is equal to the product of all the elements of nums except nums[i]
+// constraints: you must write an algorithm that runs in O(n) time and without using the division operation
+// edge cases: none at this time
 const productExceptSelf = nums => {
   // do something
 };
