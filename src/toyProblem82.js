@@ -8,6 +8,10 @@ For each 0 <= i < nums1.length, find the index j such that nums1[i] == nums2[j] 
 
 Return an array ans of length nums1.length such that ans[i] is the next greater element as described above */
 
+// input: two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2
+// output: an array ans of length nums1.length so that ans[i] is next greater element
+// constraints: 1 <= nums1.length <= nums2.length <= 1000. 0 <= nums1[i], nums2[i] <= 10^4. All integers in nums1 and nums2 are unique. All the integers of nums1 also appear in nums2.
+// edge cases:if there is no next greater element, return -1
 const nextGreaterElement = (nums1, nums2) => {
   // do something
 };
