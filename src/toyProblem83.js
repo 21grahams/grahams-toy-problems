@@ -41,6 +41,9 @@ const productExceptSelf = (nums) => {
   return result;
 };
 
+// Runtime: 182 ms, faster than 14.93% of JavaScript online submissions for Product of Array Except Self.
+// Memory Usage: 51.2 MB, less than 44.70% of JavaScript online submissions for Product of Array Except Self.
+
 console.log(productExceptSelf([1, 2, 3, 4])); // [24, 12, 8, 6]
 
 console.log(productExceptSelf([-1, 1, 0, -3, 3])); // [0, 0, 9, 0, 0]
