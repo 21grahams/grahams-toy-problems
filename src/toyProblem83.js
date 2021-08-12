@@ -11,7 +11,16 @@ You must write an algorithm that runs in O(n) time and without using the divisio
 // constraints: you must write an algorithm that runs in O(n) time and without using the division operation
 // edge cases: none at this time
 const productExceptSelf = nums => {
-  // do something
+  // create an answer array
+  // create a result var, initialize to 0
+  // create an resultObj and assign to nums
+
+  // loop over the resultObj
+    // delete the current value from the equation
+    // calculate the product of each value, assign to result var
+    // push to answer array
+
+  // return answer array
 };
 
 console.log(productExceptSelf([1, 2, 3, 4])) // [24, 12, 8, 6]
