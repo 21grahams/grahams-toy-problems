@@ -41,6 +41,9 @@ const nextGreaterElement = (nums1, nums2) => {
   return nums1;
 };
 
+// Runtime: 76 ms, faster than 87.61% of JavaScript online submissions for Next Greater Element I.
+// Memory Usage: 40.2 MB, less than 78.10% of JavaScript online submissions for Next Greater Element I.
+
 console.log(nextGreaterElement([4, 1, 2], [1, 3, 4, 2])); // [-1, 3, -1]
 /* Explanation: The next greater element for each value of nums1 is as follows:
 - 4 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
