@@ -9,3 +9,7 @@ You must write an algorithm that runs in O(n) time and without using the divisio
 const productExceptSelf = nums => {
   // do something
 };
+
+console.log(productExceptSelf([1, 2, 3, 4])) // [24, 12, 8, 6]
+
+console.log(productExceptSelf([-1, 1, 0, -3, 3)) // [0, 0, 9, 0, 0]
