@@ -13,3 +13,12 @@ You must write an algorithm that runs in O(log n) time */
 const findMin = nums => {
   // do something
 };
+
+console.log(findMin([3, 4, 5, 1, 2])) // 1
+// Explanation: The original array was [1,2,3,4,5] rotated 3 times.
+
+console.log(findMin([4, 5, 6, 7, 0, 1, 2])) // 0
+// Explanation: The original array was [0,1,2,4,5,6,7] and it was rotated 4 times.
+
+console.log(findMin([11, 13, 15, 17])) // 11
+// Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
