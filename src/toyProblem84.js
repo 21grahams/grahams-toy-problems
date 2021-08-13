@@ -10,6 +10,10 @@ Given the sorted rotated array nums of unique elements, return the minimum eleme
 
 You must write an algorithm that runs in O(log n) time */
 
+// input: an array of integers
+// output: a number which corresponds to the minimum element in the array
+// constraints: must use O(log n) time (logarithmic time)
+// edge cases: none at this time
 const findMin = nums => {
   // do something
 };
