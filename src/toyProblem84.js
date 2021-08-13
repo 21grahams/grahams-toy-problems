@@ -16,7 +16,9 @@ You must write an algorithm that runs in O(log n) time */
 // edge cases: none at this time
 const findMin = nums => {
   // sort array
+  nums.sort((a, b) => a - b);
   // return first value in sorted array
+  return nums[0];
 };
 
 console.log(findMin([3, 4, 5, 1, 2])) // 1
