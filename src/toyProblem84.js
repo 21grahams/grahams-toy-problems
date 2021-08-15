@@ -13,8 +13,11 @@ You must write an algorithm that runs in O(log n) time */
 // input: an array of integers
 // output: a number which corresponds to the minimum element in the array
 // constraints: must use O(log n) time (logarithmic time)
-// edge cases: none at this time
+// edge cases: if input array is empty, return 0
 const findMin = (nums) => {
+
+  // account for edge case
+  if (nums.length === 0) return 0;
 
   // create a start var, assign to 0
   // create an end var, assign to last value in array
@@ -45,6 +48,9 @@ console.log(findMin([4, 5, 6, 7, 0, 1, 2])); // 0
 // Explanation: The original array was [0,1,2,4,5,6,7] and it was rotated 4 times.
 
 console.log(findMin([11, 13, 15, 17])); // 11
+// Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
+
+console.log(findMin([])); // 0
 // Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 
 console.log(
