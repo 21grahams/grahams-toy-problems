@@ -14,6 +14,7 @@ You must write an algorithm that runs in O(log n) time */
 // output: a number which corresponds to the minimum element in the array
 // constraints: must use O(log n) time (logarithmic time)
 // edge cases: if input array is empty, then return 0
+// test two
 const findMin = (nums) => {
 
   // account for edge case
