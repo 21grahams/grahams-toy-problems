@@ -62,6 +62,9 @@ const threeSum = (nums, target = 0) => {
   return result;
 };
 
+// Runtime: 132 ms, faster than 95.17% of JavaScript online submissions for 3Sum.
+// Memory Usage: 49.1 MB, less than 82.53% of JavaScript online submissions for 3Sum.
+
 console.log(threeSum([-1, 0, 1, 2, -1, -4])); // [[-1, -1, 2], -1, 0, 1]
 
 console.log(threeSum([])); // []
