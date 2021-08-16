@@ -7,3 +7,9 @@ Notice that the solution set must not contain duplicate triplets */
 const threeSum = (nums) => {
   // do something
 };
+
+console.log(threeSum([-1, 0, 1, 2, -1, -4])) // [[-1, -1, 2], -1, 0, 1]
+
+console.log(threeSum([])) // []
+
+console.log(threeSum([0])) // []
