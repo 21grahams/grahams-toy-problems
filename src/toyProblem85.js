@@ -39,6 +39,9 @@ const search = (nums, target) => {
   return -1;
 };
 
+// Runtime: 76 ms, faster than 64.31% of JavaScript online submissions for Search in Rotated Sorted Array.
+// Memory Usage: 40.3 MB, less than 16.96% of JavaScript online submissions for Search in Rotated Sorted Array.
+
 console.log(search([4, 5, 6, 7, 0, 1, 2], 0)); // 4
 
 console.log(search([4, 5, 6, 7, 0, 1, 2], 3)); // -1
