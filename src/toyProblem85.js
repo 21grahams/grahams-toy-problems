@@ -13,27 +13,34 @@ You must write an algorithm with O(log n) runtime complexity */
 // constraints: 1 <= nums.length <= 5000. -10^4 <= nums[i] <= 10^4. All values of nums are unique. nums is guaranteed to be rotated at some pivot. -10^4 <= target <= 10^4
 // edge cases: if the target number doesn't exist in the input, return -1
 const search = (nums, target) => {
-  // create a min, assign to 0
-  // create a max, assign to last index in input array
-  // create a midpoint, assign to the middle of the input array
+  let left = 0;
+  let right = nums.length - 1;
 
-  // while the min is less than or equal to the max
-    // if the target is equal to the array at the midpoint
-      // return the midpoint, we've found the index we want
+  while (left < right - 1) {
+    let mid = left + Math.floor((right - left) / 2);
+    if (nums[mid] === target) return mid;
 
-    // if the target is greater than the array at the midpoint
-      // reassign the min to be the midpoint plus 1
-
-  // if the target is smaller than the array at the midpoint
-        // reassign the max to be the midpoint minus 1
-
-  // recalibrate the midpoint
-
-  // return -1
+    if (nums[left] < nums[mid]) {
+      if (target >= nums[left] && target <= nums[mid]) {
+        right = mid;
+      } else {
+        left = mid + 1;
+      }
+    } else {
+      if (target >= nums[mid] && target <= nums[right]) {
+        left = mid + 1;
+      } else {
+        right = mid;
+      }
+    }
+  }
+  if (nums[left] === target) return left;
+  if (nums[right] === target) return right;
+  return -1;
 };
 
-console.log(search([4, 5, 6, 7, 0, 1, 2], 0))  // 4
+console.log(search([4, 5, 6, 7, 0, 1, 2], 0)); // 4
 
-console.log(search([4, 5, 6, 7, 0, 1, 2], 3))  // -1
+console.log(search([4, 5, 6, 7, 0, 1, 2], 3)); // -1
 
-console.log(search([1], 0))  // -1
+console.log(search([1], 0)); // -1
