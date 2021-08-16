@@ -13,7 +13,23 @@ You must write an algorithm with O(log n) runtime complexity */
 // constraints: 1 <= nums.length <= 5000. -10^4 <= nums[i] <= 10^4. All values of nums are unique. nums is guaranteed to be rotated at some pivot. -10^4 <= target <= 10^4
 // edge cases: if the target number doesn't exist in the input, return -1
 const search = (nums, target) => {
-  // do something
+  // create a min, assign to 0
+  // create a max, assign to last index in input array
+  // create a midpoint, assign to the middle of the input array
+
+  // while the min is less than or equal to the max
+    // if the target is equal to the array at the midpoint
+      // return the midpoint, we've found the index we want
+
+    // if the target is greater than the array at the midpoint
+      // reassign the min to be the midpoint plus 1
+
+  // if the target is smaller than the array at the midpoint
+        // reassign the max to be the midpoint minus 1
+
+  // recalibrate the midpoint
+
+  // return -1
 };
 
 console.log(search([4, 5, 6, 7, 0, 1, 2], 0))  // 4
