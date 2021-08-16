@@ -8,33 +8,58 @@ Notice that the solution set must not contain duplicate triplets */
 // output: all the triplets of values [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 // constraints: 0 <= nums.length <= 3000. -10^5 <= nums[i] <= 10^5
 // edge cases: if nums input array is empty, return empty array
-const threeSum = (nums) => {
+const threeSum = (nums, target = 0) => {
+  let result = [];
   // we need 3 values for this to work
   // so return an empty array if we have less than 3
+  if (nums.length < 3) return result;
 
   // sorting is ok because the function is already O(n^2)
   // and sort is O(nlogn)
   // this also lets us stop iterating once weve passed the target value
+  nums.sort((a, b) => a - b);
 
   // well use i as our anchor as we move through the array
   // we stop at nums.length - 2 to prevent undefined for k
+  for (let i = 0; i < nums.length - 2; i++) {
+    // because we sorted the array already
+    // we can stop here if the current iterator is greater than the target value
+    if (nums[i] > target) break;
+    // if our iterator is the same as the previous value
+    // skip it to prevent duplicate results
+    if (nums[i] === nums[i - 1]) continue;
 
-  // because we sorted the array already
-  // we can stop here if the current iterator is greater than the target value
+    // start j at i + 1
+    let j = i + 1;
 
-  // if our iterator is the same as the previous value
-  // skip it to prevent duplicate results
+    // start k at end of array
+    let k = nums.length - 1;
 
-  // start j at i + 1
+    // walking j and k towards each other to find all possible values
+    // with i as our anchor value
+    while (j < k) {
+      let sum = nums[i] + nums[j] + nums[k];
+      if (sum === target) result.push([nums[i], nums[j], nums[k]]);
 
-  // start k at end of array
+      // skip duplicate values of j and k
+      while (nums[j] === nums[j + 1]) j++;
+      while (nums[k] === nums[k - 1]) k--;
+      // move j and k inward
+      j++;
+      k--;
+      continue;
 
-  // walking j and k towards each other to find all possible values
-  // with i as our anchor value
-
-  // skip duplicate values of j and k
-
-  // move j and k inward
+      if (sum < target) {
+        j++;
+        continue;
+      }
+      if (sum > target) {
+        k--;
+        continue;
+      }
+    }
+  }
+  return result;
 };
 
 console.log(threeSum([-1, 0, 1, 2, -1, -4])); // [[-1, -1, 2], -1, 0, 1]
