@@ -11,3 +11,9 @@ You must write an algorithm with O(log n) runtime complexity */
 const search = (nums, target) => {
   // do something
 };
+
+console.log(search([4, 5, 6, 7, 0, 1, 2], 0))  // 4
+
+console.log(search([4, 5, 6, 7, 0, 1, 2], 3))  // -1
+
+console.log(search([1], 0))  // -1
