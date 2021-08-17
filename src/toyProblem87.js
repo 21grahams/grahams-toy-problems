@@ -5,3 +5,8 @@ Given two integers a and b, return the sum of the two integers without using the
 const getSum = (a, b) => {
   // do something
 };
+
+
+console.log(getSum(1, 2)) // 3
+
+console.log(getSum(2, 3)) // 5
