@@ -8,16 +8,21 @@ Given two integers a and b, return the sum of the two integers without using the
 // edge cases: if a and b both equal 0, return 0
 const getSum = (a, b) => {
   // account for edge case
+  if (a === 0 && b === 0) return 0;
 
   // while b is not 0
+  while (b !== 0) {
     // create a carry variable, set equal to a and b
+    let carry = a & b;
     // assign a to a to the power of b
+    a = a ^ b;
     // assign b to carry smaller than 1
-
+    b = carry << 1;
+  }
   // return a
+  return a;
 };
 
+console.log(getSum(1, 2)); // 3
 
-console.log(getSum(1, 2)) // 3
-
-console.log(getSum(2, 3)) // 5
+console.log(getSum(2, 3)); // 5
