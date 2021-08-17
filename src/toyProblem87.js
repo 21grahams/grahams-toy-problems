@@ -7,9 +7,11 @@ Given two integers a and b, return the sum of the two integers without using the
 // constraints: cannot use the + or - operator. -1000 <= a, b <= 1000
 // edge cases: if a and b both equal 0, return 0
 const getSum = (a, b) => {
+//============================
+//=====ITERATIVE APPROACH=====
+//============================
   // account for edge case
   if (a === 0 && b === 0) return 0;
-
   // while b is not 0
   while (b !== 0) {
     // create a carry variable, set equal to a and b
@@ -21,6 +23,12 @@ const getSum = (a, b) => {
   }
   // return a
   return a;
+
+//============================
+//=====RECURSIVE APPROACH=====
+//============================
+  if (b === 0) return a;
+  else return getSum(a ^ b, (a & b) << 1);
 };
 
 // Runtime: 68 ms, faster than 78.34% of JavaScript online submissions for Sum of Two Integers.
