@@ -23,6 +23,9 @@ const getSum = (a, b) => {
   return a;
 };
 
+// Runtime: 68 ms, faster than 78.34% of JavaScript online submissions for Sum of Two Integers.
+// Memory Usage: 38.6 MB, less than 52.64% of JavaScript online submissions for Sum of Two Integers.
+
 console.log(getSum(1, 2)); // 3
 
 console.log(getSum(2, 3)); // 5
