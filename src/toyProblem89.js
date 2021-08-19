@@ -8,19 +8,54 @@ You are given a 2D integer array edges where each edges[i] = [ui, vi] indicates 
 // output: an integer which corresponds to the center of the given star graph
 // constraints: 3 <= n <= 10^5. edges.length == n - 1. edges[i].length == 2. 1 <= ui, vi <= n. ui != vi. The given edges represent a valid star graph.
 // edge cases: none at this time
-const findCenter = edges => {
-
+const findCenter = (edges) => {
   // create a result var, assign to 0
-  // create a boolean, assign to false
-  // loop over the input edges
-    // look at each edge. If value has been seen before
-      // flip bool to true
-      // increment value with result
+  let result = 0;
+  // create a resultObj
+  let resultObj = {};
+  // create a largest var, assign to 0
+  let largest = 0;
 
-// return result
+  // loop over the input edges twice
+  for (let i = 0; i < edges.length; i++) {
+    for (let j = 0; j < edges[i].length; j++) {
+      // look at each edge. If value hasn't been seen before
+      if (resultObj[edges[i][j]] === undefined) {
+        // assign to 1
+        resultObj[edges[i][j]] = 1;
+        // otherwise
+      } else {
+        // increment
+        resultObj[edges[i][j]]++;
+      }
+    }
+  }
+  // find the largest value in the resultObj by looping
+    // store that value's key in the result
+  for (let key in resultObj) {
+    if (resultObj[key] > largest) {
+      largest = resultObj[key];
+      result = key;
+    }
+  }
+  // return result
+  return result;
 };
 
-console.log(findCenter([[1, 2], [2, 3], [4, 2]])) // 2
+console.log(
+  findCenter([
+    [1, 2],
+    [2, 3],
+    [4, 2],
+  ])
+); // 2
 // Explanation: As shown in the figure above, node 2 is connected to every other node, so 2 is the center.
 
-console.log(findCenter([[1, 2], [5, 1], [1, 3], [1, 4]])) // 1
+console.log(
+  findCenter([
+    [1, 2],
+    [5, 1],
+    [1, 3],
+    [1, 4],
+  ])
+); // 1
