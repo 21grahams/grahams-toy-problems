@@ -23,6 +23,9 @@ const coinChange = (coins, amount) => {
   return dp[amount] === Infinity ? -1 : dp[amount]; // If the last element is Infinity, then we cannot make the amount.
 };
 
+// Runtime: 100 ms, faster than 96.47% of JavaScript online submissions for Coin Change.
+// Memory Usage: 44.7 MB, less than 44.62% of JavaScript online submissions for Coin Change.
+
 console.log(coinChange([1, 2, 5], 11)); // 3
 // Explanation: 11 = 5 + 5 + 1
 
