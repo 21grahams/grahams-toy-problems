@@ -7,3 +7,8 @@ You are given a 2D integer array edges where each edges[i] = [ui, vi] indicates 
 const findCenter = edges => {
   // do something
 };
+
+console.log(findCenter([[1, 2], [2, 3], [4, 2]])) // 2
+// Explanation: As shown in the figure above, node 2 is connected to every other node, so 2 is the center.
+
+console.log(findCenter([[1, 2], [5, 1], [1, 3], [1, 4]])) // 1
