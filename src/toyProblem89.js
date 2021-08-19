@@ -4,6 +4,10 @@ There is an undirected star graph consisting of n nodes labeled from 1 to n. A s
 
 You are given a 2D integer array edges where each edges[i] = [ui, vi] indicates that there is an edge between the nodes ui and vi. Return the center of the given star graph */
 
+// input: a series of n edges on an undirected star graph labeled from 1 to n
+// output: an integer which corresponds to the center of the given star graph
+// constraints: 3 <= n <= 10^5. edges.length == n - 1. edges[i].length == 2. 1 <= ui, vi <= n. ui != vi. The given edges represent a valid star graph.
+// edge cases: none at this time
 const findCenter = edges => {
   // do something
 };
