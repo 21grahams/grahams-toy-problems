@@ -42,6 +42,9 @@ const findCenter = (edges) => {
   return result;
 };
 
+// Runtime: 184 ms, faster than 24.25% of JavaScript online submissions for Find Center of Star Graph.
+// Memory Usage: 63.3 MB, less than 20.04% of JavaScript online submissions for Find Center of Star Graph.
+
 console.log(
   findCenter([
     [1, 2],
