@@ -9,7 +9,15 @@ You are given a 2D integer array edges where each edges[i] = [ui, vi] indicates 
 // constraints: 3 <= n <= 10^5. edges.length == n - 1. edges[i].length == 2. 1 <= ui, vi <= n. ui != vi. The given edges represent a valid star graph.
 // edge cases: none at this time
 const findCenter = edges => {
-  // do something
+
+  // create a result var, assign to 0
+  // create a boolean, assign to false
+  // loop over the input edges
+    // look at each edge. If value has been seen before
+      // flip bool to true
+      // increment value with result
+
+// return result
 };
 
 console.log(findCenter([[1, 2], [2, 3], [4, 2]])) // 2
