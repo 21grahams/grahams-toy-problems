@@ -32,7 +32,17 @@ class Node {
 }
 
 const cloneGraph = node => {
-  return node;
+  // create a map object
+
+  // return traverse function passing in node (base case)
+
+  // create a traverse function passing in node
+    // if there's no node, return node
+    // if there's no map at the value of the current node
+      // assign current map at the val of node to the new Node of the value of node
+      // assign current map at the val of node's neighbors to a mapped version of node.neighbors passing in neighbor and recursively calling traverse with neighbor passed in
+
+  // return map at the node val
 };
 
 // test one
