@@ -25,9 +25,10 @@ The given node will always be the first node with val = 1. You must return the c
 // constraints: The number of nodes in the graph is in the range [0, 100]. 1 <= Node.val <= 100. Node.val is unique for each node. There are no repeated edges and no self-loops in the graph. The Graph is connected and all nodes can be visited starting from the given node.
 // edge cases: if the graph is empty, return empty graph
 class Node {
-  constructor(val, neighbors) {
+  constructor(val) {
     this.val = val;
-    this.neighbors = neighbors;
+    this.neighbors1 = [];
+    this.neighbors2 = [];
   }
 }
 
@@ -61,14 +62,14 @@ let nodeB = new Node(2);
 let nodeC = new Node(3);
 let nodeD = new Node(4);
 
-nodeA.neighbors = nodeB;
-nodeA.neighbors = nodeD;
-nodeB.neighbors = nodeA;
-nodeB.neighbors = nodeC;
-nodeC.neighbors = nodeB;
-nodeC.neighbors = nodeD;
-nodeD.neighbors = nodeA;
-nodeD.neighbors = nodeC;
+nodeA.neighbors1 = nodeB;
+nodeA.neighbors2 = nodeD;
+nodeB.neighbors1 = nodeA;
+nodeB.neighbors2 = nodeC;
+nodeC.neighbors1 = nodeB;
+nodeC.neighbors2 = nodeD;
+nodeD.neighbors1 = nodeA;
+nodeD.neighbors2 = nodeC;
 
 console.log(
   cloneGraph([
