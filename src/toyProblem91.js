@@ -1,0 +1,7 @@
+/* count SubArrays
+
+Given an array of integers and a target value, return the maximum number of subarrays that sum to equal the target number */
+
+const subArrays = (nums, target) => {
+  // do something
+};
