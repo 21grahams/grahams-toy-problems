@@ -31,18 +31,28 @@ class Node {
   }
 }
 
-const cloneGraph = node => {
+var cloneGraph = (node) => {
   // create a map object
-
+  let map = {};
   // return traverse function passing in node (base case)
+  return traverse(node);
 
   // create a traverse function passing in node
+  function traverse(node) {
     // if there's no node, return node
+    if (!node) return node;
     // if there's no map at the value of the current node
+    if (!map[node.val]) {
       // assign current map at the val of node to the new Node of the value of node
+      map[node.val] = new Node(node.val);
       // assign current map at the val of node's neighbors to a mapped version of node.neighbors passing in neighbor and recursively calling traverse with neighbor passed in
-
-  // return map at the node val
+      map[node.val].neighbors = node.neighbors.map((neighbor) =>
+        traverse(neighbor)
+      );
+    }
+    // return map at the node val
+    return map[node.val];
+  };
 };
 
 // test one
@@ -60,17 +70,24 @@ nodeC.neighbors = nodeD;
 nodeD.neighbors = nodeA;
 nodeD.neighbors = nodeC;
 
-console.log(cloneGraph([[2,4],[1,3],[2,4],[1,3]])); // [[2,4],[1,3],[2,4],[1,3]]
+console.log(
+  cloneGraph([
+    [2, 4],
+    [1, 3],
+    [2, 4],
+    [1, 3],
+  ])
+); // [[2,4],[1,3],[2,4],[1,3]]
 
 // test two
 let nodeE = new Node();
 
 nodeE.neighbors = null;
 
-console.log(cloneGraph([[]])) // [];
+console.log(cloneGraph([[]])); // [];
 
 // test three
-console.log(cloneGraph([])) // [];
+console.log(cloneGraph([])); // [];
 
 // test four
 let nodeG = new Node(1);
@@ -79,4 +96,4 @@ let nodeK = new Node(2);
 nodeG.neighbors = nodeK;
 nodeK.neighbors = nodeG;
 
-console.log(cloneGraph([[2], [1]])) // [[2], [1]];
+console.log(cloneGraph([[2], [1]])); // [[2], [1]];
