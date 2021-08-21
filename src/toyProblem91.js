@@ -7,36 +7,21 @@ Given an array of integers and a target value, return the maximum number of suba
 // constraints: all integers will be positive
 // edge cases: if there are no numbers in the input array, return 0. If there is no target number, return null
 const subArrays = (nums, target) => {
-  // account for edge cases
+
   if (nums.length === 0) return 0;
   if (target === 0) return null;
-  // create a sum variable, assign to 0
-  let sum = 0;
-  // create a result, assign to 0
-  let result = 0;
 
-  // loop over array to use as a pointer
+  let map = new Map();
+  let sum = 0;
+  let count = 0;
+  map.set(0, 1);
   for (let i = 0; i < nums.length; i++) {
-    // reset sum
-    sum = 0;
-    // loop over array a second time starting at i index
-    for (let j = i; j < nums.length; j++) {
-      // if sum plus current element equals target
-      if (sum + nums[j] === target) {
-        // increment result
-        result++;
-        // break
-        break;
-      }
-      // otherwise
-      else {
-        // increment sum and current element
-        sum += nums[j];
-      }
-    }
+    sum += nums[i];
+    if (map.has(sum - target)) count += map.get(sum - target);
+    if (map.has(sum)) map.set(sum, map.get(sum) + 1);
+    else map.set(sum, 1);
   }
-  // return result
-  return result;
+  return count;
 };
 
 console.log(subArrays([1, 5, 15, 25, 25, 50, 100], 100)); // 2
