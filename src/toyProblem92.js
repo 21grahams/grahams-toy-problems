@@ -67,7 +67,7 @@ var DFS = function (v) {
   return false;
 };
 
-// Runtime: 128 ms, faster than 26.11% of JavaScript online submissions for Course Schedule.
+// Runtime: 84 ms, faster than 90.05% of JavaScript online submissions for Course Schedule.
 // Memory Usage: 43.9 MB, less than 56.72% of JavaScript online submissions for Course Schedule.
 
 console.log(canFinish(2, [[1, 0]])); // true
