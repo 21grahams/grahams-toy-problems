@@ -75,6 +75,9 @@ const canFinish = (numCourses, prerequisites) => {
   return count === numCourses;
 };
 
+// Runtime: 128 ms, faster than 26.11% of JavaScript online submissions for Course Schedule.
+// Memory Usage: 43.9 MB, less than 56.72% of JavaScript online submissions for Course Schedule.
+
 console.log(canFinish(2, [[1, 0]])); // true
 // Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0. So it is possible.
 
