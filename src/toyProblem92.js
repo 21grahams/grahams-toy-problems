@@ -9,70 +9,62 @@ Return true if you can finish all courses. Otherwise, return false */
 // output: boolean. True if you can finish all the courses given the prerequisites constraints. False if not
 // constraints: 1 <= numCourses <= 10^5. 0 <= prerequisites.length <= 5000. prerequisites[i].length == 2. 0 <= ai, bi < numCourses. All the pairs prerequisites[i] are unique.
 // edge cases: if there are no courses to take, return false
-const canFinish = (numCourses, prerequisites) => {
-  //========================================
-  //      UNSOLVED ANSWER USING MAP
-  //========================================
-  // const map = new Map(prerequisites);
 
-  // for (const [key, value] of prerequisites) {
-  //   let pre = value;
-  //   let arr = [key];
-  //   while (pre || pre === 0) {
-  //     if (arr.includes(pre)) {
-  //       return false;
-  //     }
-  //     arr.push(pre);
-  //     pre = map.get(pre);
-  //   }
-  // }
-  // return true;
+let visiting; // is being explored
+let visited; // is already explored
+let graph;
 
-  //========================================
-  //      SOLVED ANSWER USING QUEUES
-  //========================================
+var canFinish = function (numCourses, prerequisites) {
+  graph = new Map();
+  visiting = new Set();
+  visited = new Set();
 
-  const indegree = new Array(numCourses).fill(0);
-  const queue = [];
-  /*
-   The goal is to find whether the course graph has cycles.
-
-   We are looking for the number of indgree for each course and
-   put the course with no indegree into the queue. As we go
-   through the courses in queue, we break off the dependency(edge)
-   from the current course in queue in all the prerequisite
-   pairs. Then we put all the courses with zero indegree into
-   the queue. Repeat until the queue is empty. We maintain a
-   count and increment it each time we pop the queue. The count
-   will equal to the number of courses when there's no cycle and it
-   is possible to take all the courses.
-
-   directed graph denotes: [prereq] --> [course]
-   */
-  for (const [course, prereq] of prerequisites) {
-    indegree[course] += 1;
-  }
-  for (let i = 0; i < indegree.length; i++) {
-    if (indegree[i] === 0) {
-      queue.push(i);
+  for (let [v, e] of prerequisites) {
+    if (graph.has(v)) {
+      let edges = graph.get(v);
+      edges.push(e);
+      graph.set(v, edges);
+    } else {
+      graph.set(v, [e]);
     }
   }
-  let count = 0;
 
-  while (queue.length !== 0) {
-    const c = queue.pop();
-    count += 1;
+  for (const [v, e] of graph) {
+    if (DFS(v)) {
+      return false; //if cyclic it will not finish so it is false
+    }
+  }
 
-    for (const [course, prereq] of prerequisites) {
-      if (prereq === c) {
-        indegree[course] -= 1;
-        if (indegree[course] === 0) {
-          queue.push(course);
-        }
+  return true;
+};
+
+var DFS = function (v) {
+  visiting.add(v);
+  let edges = graph.get(v); // get all the edges to explore
+
+  if (edges) {
+    //console.log(edges)
+    for (let e of edges) {
+      if (visited.has(e)) {
+        //skip if it is explored already
+        continue;
+      }
+
+      if (visiting.has(e)) {
+        //found e is being explored
+        return true;
+      }
+
+      if (DFS(e)) {
+        // DFS deeper if this e is cyclic
+        return true;
       }
     }
   }
-  return count === numCourses;
+
+  visiting.delete(v); // remove from visiting set when all decedant v are visited
+  visited.add(v);
+  return false;
 };
 
 // Runtime: 128 ms, faster than 26.11% of JavaScript online submissions for Course Schedule.
@@ -81,7 +73,7 @@ const canFinish = (numCourses, prerequisites) => {
 console.log(canFinish(2, [[1, 0]])); // true
 // Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0. So it is possible.
 
-console.log(canFinish(2, [[1, 0],[0, 1]])); // false
-  // Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
+console.log(canFinish(2, [[1, 0], [0, 1]])); // false
+// Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
 
-console.log(canFinish(13, [[1,2],[2,3],[2,10],[3,4],[4,5],[4,11],[5,1]])); // false
+console.log(canFinish(13, [[1, 2], [2, 3], [2, 10], [3, 4], [4, 5], [4, 11], [5, 1]])); // false
