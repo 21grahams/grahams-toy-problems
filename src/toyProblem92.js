@@ -5,6 +5,10 @@ There are a total of numCourses courses you have to take, labeled from 0 to numC
 For example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.
 Return true if you can finish all courses. Otherwise, return false */
 
+// input: an integer representing the courses you have to take and an array of integers, representing prerequisites, which indicate that you MUST take course b^i first, if you want to take course a^i
+// output: boolean. True if you can finish all the courses given the prerequisites constraints. False if not
+// constraints: 1 <= numCourses <= 10^5. 0 <= prerequisites.length <= 5000. prerequisites[i].length == 2. 0 <= ai, bi < numCourses. All the pairs prerequisites[i] are unique.
+// edge cases: if there are no courses to take, return false
 const canFinish = (numCourses, prerequisites) => {
   // do something
 };
