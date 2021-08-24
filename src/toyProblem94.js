@@ -10,29 +10,41 @@ class Node {
   constructor(val) {
     this.val = val;
     this.next = null;
-  };
-};
+  }
+}
 
 const removeNthFromEnd = (head, n) => {
   // create a left var, assign to head
+  let left = head;
   // create a right var, assign to head
+  let right = head;
 
   // while the next var of right exists
+  while (right.next) {
     // if there's no n
+    if (!n) {
       // assign left to equal left.next
-    // otherwise
+      left = left.next;
+      // otherwise
+    } else {
       // decrement n
-
+      n--;
+    }
     // assign right to right.next
-
+    right = right.next;
+  }
   // if n exists
+  if (n) {
     // return left.next
-  // otherwise
+    return left.next;
+    // otherwise
+  } else {
     // assign left.next to equal left.next.next
-
+    left.next = left.next.next;
+  }
   // return head
+  return head;
 };
-
 
 // test one
 var nodeA = new Node(1);
