@@ -2,6 +2,10 @@
 
 Given the head of a linked list, remove the nth node from the end of the list and return its head */
 
+// input: the head of a linked list and n which represents the nth node from the end of the list
+// output: the same head of the linked list with the nth node removed
+// constraints: The number of nodes in the list is sz. 1 <= sz <= 30. 0 <= Node.val <= 100. 1 <= n <= sz
+// edge cases: if there's no head, return null. If there's no nth value, return head
 class Node {
   constructor(val) {
     this.val = val;
@@ -27,14 +31,14 @@ nodeC.next = nodeD;
 nodeD.next = nodeE;
 nodeE.next = null;
 
-console.log(nodeA, 2) // [1, 2, 3, 5]
+console.log(removeNthFromEnd(nodeA, 2)); // [1, 2, 3, 5]
 
 // test two
 var nodeK = new Node(1);
 
 nodeK.next = null;
 
-console.log(nodeK, 1) // []
+console.log(removeNthFromEnd(nodeK, 1)); // []
 
 // test three
 var nodeX = new Node(1);
@@ -43,4 +47,4 @@ var nodeY = new Node(2);
 nodeX.next = nodeY;
 nodeY.next = null;
 
-console.log(nodeX, 1) // [1]
+console.log(removeNthFromEnd(nodeX, 1)); // [1]
