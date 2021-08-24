@@ -46,6 +46,9 @@ const removeNthFromEnd = (head, n) => {
   return head;
 };
 
+// Runtime: 80 ms, faster than 54.50% of JavaScript online submissions for Remove Nth Node From End of List.
+// Memory Usage: 40.1 MB, less than 72.81% of JavaScript online submissions for Remove Nth Node From End of List.
+
 // test one
 var nodeA = new Node(1);
 var nodeB = new Node(2);
