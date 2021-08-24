@@ -14,7 +14,28 @@ class Node {
 };
 
 const removeNthFromEnd = (head, n) => {
-  // do something
+  // account for edge cases
+  // create a cur var, assign to head
+  // create a length var, assign to 0
+
+  // while cur exists
+    // increment length
+    // if cur has a next value
+      // increment length
+
+  // subtract length from n, assign to result
+
+  // while cur exists
+    // if val of head equals result
+      // assign cur.next to null
+      // assign cur to cur.next
+    // otherwise
+      // if cur has a next value
+        // if cur.next.val equals result
+          // assign cur.next to null
+          // assign cur to cur.nex
+
+  // return cur
 };
 
 
