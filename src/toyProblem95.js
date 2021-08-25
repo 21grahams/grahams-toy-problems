@@ -20,7 +20,25 @@ class Node {
 }
 
 const reorderList = head => {
-  // do something
+  // account for edge cases
+  // create a resultArr
+  // create a ariable for cur, assign to head
+
+  // while cur exists
+    // if cur.next is not null
+      // push cur onto resultArr
+      // assign cur to cur.next
+  // create var for left, assign to 0
+  // create var for right, assign to end of resultArr
+
+  // while left is less than right
+    // assign resultArr at left index.next to arr at right index
+    // increment left
+    // assign resultArr at right index.next to arr at left index
+    // decrement right
+
+  // assign resultArr at left index.next to null
+  // return resultArr at 0 index
 };
 
 // test one
