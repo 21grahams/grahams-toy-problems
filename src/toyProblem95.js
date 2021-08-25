@@ -56,6 +56,9 @@ const reorderList = (head) => {
   return resultArr[0];
 };
 
+// Runtime: 112 ms, faster than 43.23% of JavaScript online submissions for Reorder List.
+// Memory Usage: 46.3 MB, less than 78.46% of JavaScript online submissions for Reorder List.
+
 // test one
 let nodeA = new Node(1);
 let nodeB = new Node(2);
