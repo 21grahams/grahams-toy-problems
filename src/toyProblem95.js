@@ -8,6 +8,10 @@ Reorder the list to be on the following form:
 L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
 You may not modify the values in the list's nodes. Only nodes themselves may be changed */
 
+// input: the head of a singly linkedList
+// output: the same linkedList reordered to follow this pattern: L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
+// constraints: The number of nodes in the list is in the range [1, 5 * 104]. 1 <= Node.val <= 1000
+// edge cases: if there's no head, return null. If there's no nth value, return head
 class Node {
   constructor(val) {
     this.val = val;
