@@ -11,7 +11,7 @@ You may not modify the values in the list's nodes. Only nodes themselves may be 
 // input: the head of a singly linkedList
 // output: the same linkedList reordered to follow this pattern: L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
 // constraints: The number of nodes in the list is in the range [1, 5 * 104]. 1 <= Node.val <= 1000
-// edge cases: if there's no head, return null. If there's no nth value, return head
+// edge cases: if there's no head, return null
 class Node {
   constructor(val) {
     this.val = val;
@@ -19,26 +19,41 @@ class Node {
   }
 }
 
-const reorderList = head => {
+const reorderList = (head) => {
   // account for edge cases
+  if (!head) return null;
   // create a resultArr
-  // create a ariable for cur, assign to head
+  let resultArr = [],
+    cur = head;
+  // create a variable for cur, assign to head
 
   // while cur exists
-    // if cur.next is not null
-      // push cur onto resultArr
-      // assign cur to cur.next
+  while (cur) {
+    // push cur onto resultArr
+    resultArr.push(cur);
+    // assign cur to cur.next
+    cur = cur.next;
+  }
   // create var for left, assign to 0
   // create var for right, assign to end of resultArr
+  let left = 0, right = resultArr.length - 1;
 
   // while left is less than right
+  while (left < right) {
     // assign resultArr at left index.next to arr at right index
+    resultArr[left].next = resultArr[right];
     // increment left
+    left++;
     // assign resultArr at right index.next to arr at left index
+    resultArr[right].next = resultArr[left];
     // decrement right
+    right--;
+  }
 
   // assign resultArr at left index.next to null
+  resultArr[left].next = null;
   // return resultArr at 0 index
+  return resultArr[0];
 };
 
 // test one
@@ -52,7 +67,7 @@ nodeB.next = nodeC;
 nodeC.next = nodeD;
 nodeD.next = null;
 
-console.log(reorderList(nodeA)) // [1, 4, 2, 3]
+console.log(reorderList(nodeA)); // [1, 4, 2, 3]
 
 // test two
 let nodeG = new Node(1);
@@ -67,4 +82,4 @@ nodeI.next = nodeJ;
 nodeJ.next = nodeK;
 nodeK.next = null;
 
-console.log(reorderList(nodeG)) // [1, 5, 2, 4, 3]
+console.log(reorderList(nodeG)); // [1, 5, 2, 4, 3]
