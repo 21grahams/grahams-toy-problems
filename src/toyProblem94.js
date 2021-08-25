@@ -44,6 +44,28 @@ const removeNthFromEnd = (head, n) => {
   }
   // return head
   return head;
+
+  //==================================
+  // another solution using a for-loop
+  //==================================
+
+  let prev = null,
+    cur = head,
+    ahead = head;
+  for (let i = 0; i < n; i++) {
+    ahead = ahead.next;
+  }
+  while (ahead !== null) {
+    prev = cur;
+    cur = cur.next;
+    ahead = ahead.next;
+  }
+  // Now, cur points to the n-th node from the end and prev points to the previous node
+  if (!prev) return cur.next; // this is when head node is the node to be deleted
+  prev.next = cur.next;
+  return head;
+  // Time Complexity: O(N)
+  // Space Complexity: O(1)
 };
 
 // Runtime: 80 ms, faster than 54.50% of JavaScript online submissions for Remove Nth Node From End of List.
