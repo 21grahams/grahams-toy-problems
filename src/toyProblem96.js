@@ -35,6 +35,9 @@ const setZeroes = matrix => {
   return matrix;
 };
 
+// Runtime: 88 ms, faster than 94.33% of JavaScript online submissions for Set Matrix Zeroes.
+// Memory Usage: 41 MB, less than 78.08% of JavaScript online submissions for Set Matrix Zeroes.
+
 
 console.log(setZeroes([[1, 1, 1], [1, 0, 1], [1, 1, 1]])) // [[1,0,1],[0,0,0],[1,0,1]]
 
