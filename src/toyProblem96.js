@@ -4,6 +4,10 @@ Given an m x n integer matrix matrix, if an element is 0, set its entire row and
 
 You must do it in place */
 
+// input: an m, x and n matrix of integers
+// output: the same matrix, although wherever the input matrix had a 0, the output must have that entire column and row contain 0's as well
+// constraints: must return the matrix in place. m == matrix.length. n == matrix[0].length. 1 <= m, n <= 200. -2^31 <= matrix[i][j] <= 2^31 - 1
+// edge cases: none at this time
 const setZeroes = matrix => {
   // do something
 };
