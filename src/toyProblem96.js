@@ -13,13 +13,26 @@ const setZeroes = matrix => {
   // create a var for cols, assign to rows[0]
   // create a var for rowIndex, assign to a new Array, pass in rows and fill -1
   // create a var for colIndex, assign to a new Array, pass in cols and fill -1
+  let rows = matrix.length, cols = matrix[0].length, rowIndex = new Array(rows).fill(-1), colIndex = new Array(cols).fill(-1);
 
   // traverse all elements of input matrix
-    // if 0 is found, updated the indexes of rowIndex and colIndex to 0
-
-
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
+      // if 0 is found, updated the indexes of rowIndex and colIndex to 0
+      if (matrix[i][j] === 0) {
+        rowIndex[i] = 0;
+        colIndex[j] = 0;
+      }
+    }
+  }
   // traverse the matrix again
-    // if there is 0 in either rowIndex or colIndex matrix and if data in origin input matrix is not 0, then change to 0
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
+      // if there is 0 in either rowIndex or colIndex matrix and if data in origin input matrix is not 0, then change to 0
+      if ((rowIndex[i] === 0 || colIndex[j] === 0) && matrix[j] !== 0) matrix[i][j] = 0;
+    }
+  }
+  return matrix;
 };
 
 
