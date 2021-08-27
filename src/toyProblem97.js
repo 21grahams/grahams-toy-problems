@@ -14,19 +14,12 @@ const spiralOrder = matrix => {
   // loop over rows
     // push all values to resultArr
     // increment rows
-    // loop over cols
-      // push last value to resultArr
-      // if this is the last row
-        // loop over rows decrementing
-          // push values to resultArr
-          // decrement cols
-          // push values at current level to resultArr
-      // otherwise
-        // increment cols
-          // loop over rows decrementing
-            // push values to resultArr
-              // decrement cols
-              // push values at current level to resultArr
+    // push last value to resultArr
+    // increment row
+      // loop over rows decrementing
+        // push values to resultArr
+          // decrement row
+          // push values at current level to resultArr, stopping before last value in row
 
   // return resultArr
 };
