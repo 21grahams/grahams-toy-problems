@@ -2,6 +2,10 @@
 
 Given an m x n matrix, return all elements of the matrix in spiral order. */
 
+// input: an m by x by n matrix (array of arrays)
+// output: the matrix in spiral order
+// constraints: m == matrix.length. n == matrix[i].length. 1 <= m, n <= 10. -100 <= matrix[i][j] <= 100
+// edge cases: none at this time
 const spiralOrder = matrix => {
   // do something
 };
