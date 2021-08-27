@@ -7,19 +7,31 @@ Given an m x n matrix, return all elements of the matrix in spiral order. */
 // constraints: m == matrix.length. n == matrix[i].length. 1 <= m, n <= 10. -100 <= matrix[i][j] <= 100
 // edge cases: none at this time
 const spiralOrder = matrix => {
+  // create a rowStart var, assign to 0;
+  // create a rowEnd var, assign to last index in matrix row
+  // create colStart var, assign to 0
+  // create colEnd var, assign to last index in matrix col
   // create a resultArr
-  // create a row var, assign to length of matrix
-  // create a cols var, assign to length of matrix at index 0
 
-  // loop over rows
-    // push all values to resultArr
-    // increment rows
-    // push last value to resultArr
-    // increment row
-      // loop over rows decrementing
-        // push values to resultArr
-          // decrement row
-          // push values at current level to resultArr, stopping before last value in row
+  // while rowStart is less than or equal to rowEnd and colStart is less than or equal to colEnd
+    // loop over colEnd, set i to colStart, increment
+      // push matrix at rowStart current index to resultArr
+    // increment rowStart
+
+    // loop over rowEnd, set i to rowStart, increment
+      // push matrix at colEnd current index to resultArr
+    // decrement colEnd
+
+    // if rowStart is less than or equal to rowEnd
+      // loop over colStart, set i to colEnd, decrement
+        // push matrix at rowEnd current index to resultArr
+      // decrement rowEnd
+
+    // if colStart is less than or equal to colEnd
+      // loop over rowStart, set i to rowEnd, decrement
+        // push current element of matrix at colStart to resultArr
+      // increment colStart
+
 
   // return resultArr
 };
