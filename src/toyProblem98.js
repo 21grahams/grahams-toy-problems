@@ -10,14 +10,22 @@ You have to rotate the image in-place, which means you have to modify the input 
 // edge cases: if matrix contains just one integer (this a 1x1 matrix), return the matrix with just that number
 const rotate = matrix => {
   // reverse matrix
+  matrix.reverse();
 
   // loop over outer matrix
+  for (let i = 0; i < matrix.length; i++) {
     // loop over inner matrix
+    for (let j = 0; j < i; j++) {
       // create a switch var, assign to matrix at current index of i and j
+      let switched = matrix[i][j];
       // assign matrix at i and j to matrix at j and i
-      // assign matrix and j and i to temp
-
+      matrix[i][j] = matrix[j][i];
+      // assign matrix and j and i to switch
+      matrix[j][i] = switched;
+    }
+  }
   // return matrix
+  return matrix;
 };
 
 console.log(rotate([[1, 2, 3], [4, 5, 6], [7, 8, 9]])) // [ [7, 4, 1], [8, 5, 2], [9, 6, 3] ]
