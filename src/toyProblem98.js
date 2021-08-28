@@ -9,16 +9,15 @@ You have to rotate the image in-place, which means you have to modify the input 
 // constraints: matrix.length == n. matrix[i].length == n. 1 <= n <= 20. -1000 <= matrix[i][j] <= 1000
 // edge cases: if matrix contains just one integer (this a 1x1 matrix), return the matrix with just that number
 const rotate = matrix => {
-  // account for edge case
+  // reverse matrix
 
-  // create a var for row, assign to matrix length
-  // create a var for col, assign to matrix at index 0 length
+  // loop over outer matrix
+    // loop over inner matrix
+      // create a switch var, assign to matrix at current index of i and j
+      // assign matrix at i and j to matrix at j and i
+      // assign matrix and j and i to temp
 
-  // while row is less than length of matrix
-    // loop over matrix
-      // loop over cols decrementing
-        // set each row to equal the current cols
-        // increment row
+  // return matrix
 };
 
 console.log(rotate([[1, 2, 3], [4, 5, 6], [7, 8, 9]])) // [ [7, 4, 1], [8, 5, 2], [9, 6, 3] ]
