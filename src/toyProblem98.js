@@ -4,6 +4,10 @@ You are given an n x n 2D matrix representing an image, rotate the image by 90 d
 
 You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation */
 
+// input: a 2d n x n matrix of integers
+// output: the same matrix rotated 90 degrees clockwise
+// constraints: matrix.length == n. matrix[i].length == n. 1 <= n <= 20. -1000 <= matrix[i][j] <= 1000
+// edge cases: if matrix contains just one integer (this a 1x1 matrix), return the matrix with just that number
 const rotate = matrix => {
   // do something
 };
