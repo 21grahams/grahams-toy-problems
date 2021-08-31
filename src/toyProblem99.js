@@ -3,3 +3,9 @@
 const solution = A => {
   // do something
 };
+
+console.log(solution([1, 3, 6, 4, 1, 2])) // 5
+
+console.log(solution([1, 2, 3])) // 4
+
+console.log(solution([-1, -3])) // 1
