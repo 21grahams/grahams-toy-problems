@@ -6,7 +6,14 @@
 // constraints: none at this time
 // edge cases: none at this time
 const solution = A => {
-  // do something
+  // create a sort to sort through only positive values
+  // create a var x, assign to 1
+
+  // loop over A
+    // if we find a smaller number, no need to continue, cause array is sorted, return x
+    // assign x to current element at current index of A plus 1
+
+  // return x
 };
 
 console.log(solution([1, 3, 6, 4, 1, 2])) // 5
