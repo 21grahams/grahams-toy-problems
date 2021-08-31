@@ -3,3 +3,9 @@
 const solution = N => {
   // do something
 };
+
+console.log(solution(15958)); // 1958
+
+console.log(solution(-5859)); // -589
+
+console.log(solution(-5000)); // 0
