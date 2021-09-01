@@ -11,43 +11,57 @@ const dice = (a, b) => {
   // create an sumB var, assign to 0
   // create a diff var, assign to 0
   // create a result var, assign to 0
+  let sumA = 0, sumB = 0, diff = 0, result = 0;
 
-  // if length of array A is only one
-    // set sumA equal to the value
-  // else if length of array B is only one
-    // set sumB equal to that value
-  // else
-    // loop through array A
-      // increment sum to sumA
-      // increment sum of array B to sumB
-
-
-      // loop over array A
-      // loop over array B
+  // loop through array A
+  for (let i = 0; i < a.length; i++) {
+    // increment sum to sumA
+    sumA += a[i];
+  }
+  for (let i = 0; i < b.length; i++) {
+    // increment sum to sumB
+    sumB += b[i];
+  }
+  // loop over array A
+  for (let i = 0; i < a.length; i++) {
+    // loop over array B
+    for (let j = 0; j < b.length; j++) {
       // if sumA is smaller than sumB
+      if (sumA < sumB) {
         // find difference between sums, store to diff variable
+        diff = sumB - sumA;
         // if array B at j minus array A at i is greater than 0 and less than or equal to 6
-          // increment result
+        // increment result
+        if (b[j] - a[i] > 0 && b[j] - a[i] <= 6) result++;
         // else
-          // return -1
-        // if sumA is larger than sumB
-          // find difference between sums, store to diff variable
-          // if array A at i minus array B at j is greater than 0 and less than or equal to 6
-            // increment result
-          // else
-            // return -1
-
+        // return -1
+        else return -1;
+      }
+      // if sumA is larger than sumB
+      if (sumA > sumB) {
+        // find difference between sums, store to diff variable
+        diff = sumA - sumB;
+        // if array A at i minus array B at j is greater than 0 and less than or equal to 6
+        // increment result
+        if (a[i] - b[j] > 0 && a[i] - b[j] <= 6) result++;
+        // else
+        // return -1
+        else return -1;
+      }
+    }
+  }
   // return result
+  return result;
 };
 
-console.log(dice([5], [1, 1, 6])) // 1
+console.log(dice([5], [1, 1, 6])); // 1
 // explanation: we have to turn the third die in B from 6 to 3; then the arrays will have the same sums (5 = 1 + 1 + 3)
 
-console.log(dice([2, 3, 1, 1, 2], [5, 4, 6])) // 2
+console.log(dice([2, 3, 1, 1, 2], [5, 4, 6])); // 2
 // explanation: we can turn last two dice in B to get [5, 1, 3]; then the arrays will have the same sums
 
-console.log(dice([5, 4, 1, 2, 6, 5], [2])) // 6
+console.log(dice([5, 4, 1, 2, 6, 5], [2])); // 6
 // explanation: we can turn five dice in A to get [1, 1, 1, 1, 1, 1] and one dice in B to get [6]; then then arrays will have the same sums
 
-console.log(dice([1, 2, 3, 4, 3, 2, 1], [6])) // -1
+console.log(dice([1, 2, 3, 4, 3, 2, 1], [6])); // -1
 // explanation: not possible for the arrays to have the same sums
