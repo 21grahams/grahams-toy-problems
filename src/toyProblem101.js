@@ -7,7 +7,37 @@ Write a function that given two arrays A and B, returns the minimum number of di
 // constraints: N and M are integers within the range [1-100,000]. Each element of arrays A, B is an integer within the range [1, 6]
 // edge cases: if it's not possible to sum dice up to be equal, return -1
 const dice = (a, b) => {
-  // do something
+  // create an sumA var, assign to 0
+  // create an sumB var, assign to 0
+  // create a diff var, assign to 0
+  // create a result var, assign to 0
+
+  // if length of array A is only one
+    // set sumA equal to the value
+  // else if length of array B is only one
+    // set sumB equal to that value
+  // else
+    // loop through array A
+      // increment sum to sumA
+      // increment sum of array B to sumB
+
+
+      // loop over array A
+      // loop over array B
+      // if sumA is smaller than sumB
+        // find difference between sums, store to diff variable
+        // if array B at j minus array A at i is greater than 0 and less than or equal to 6
+          // increment result
+        // else
+          // return -1
+        // if sumA is larger than sumB
+          // find difference between sums, store to diff variable
+          // if array A at i minus array B at j is greater than 0 and less than or equal to 6
+            // increment result
+          // else
+            // return -1
+
+  // return result
 };
 
 console.log(dice([5], [1, 1, 6])) // 1
