@@ -2,6 +2,10 @@
 
 Write a function that given two arrays A and B, returns the minimum number of dice to be turned in order to make the sums of dice in both sets equal, or -1 if that is not possible */
 
+// input: two different dies (dices), represented as an array each, A and B, consisting of N and M integers respectively
+// output: a number which represents the minimum number of dice to be turned in order to make the sums of dice in both sets equal
+// constraints: N and M are integers within the range [1-100,000]. Each element of arrays A, B is an integer within the range [1, 6]
+// edge cases: if it's not possible to sum dice up to be equal, return -1
 const dice = (a, b) => {
   // do something
 };
