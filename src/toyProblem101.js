@@ -5,3 +5,15 @@ Write a function that given two arrays A and B, returns the minimum number of di
 const dice = (a, b) => {
   // do something
 };
+
+console.log(dice([5], [1, 1, 6])) // 1
+// explanation: we have to turn the third die in B from 6 to 3; then the arrays will have the same sums (5 = 1 + 1 + 3)
+
+console.log(dice([2, 3, 1, 1, 2], [5, 4, 6])) // 2
+// explanation: we can turn last two dice in B to get [5, 1, 3]; then the arrays will have the same sums
+
+console.log(dice([5, 4, 1, 2, 6, 5], [2])) // 6
+// explanation: we can turn five dice in A to get [1, 1, 1, 1, 1, 1] and one dice in B to get [6]; then then arrays will have the same sums
+
+console.log(dice([1, 2, 3, 4, 3, 2, 1], [6])) // -1
+// explanation: not possible for the arrays to have the same sums
