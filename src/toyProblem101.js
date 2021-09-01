@@ -18,39 +18,17 @@ const dice = (a, b) => {
     // increment sum to sumA
     sumA += a[i];
   }
+  // loop through array B
   for (let i = 0; i < b.length; i++) {
     // increment sum to sumB
     sumB += b[i];
   }
-  // loop over array A
-  for (let i = 0; i < a.length; i++) {
-    // loop over array B
-    for (let j = 0; j < b.length; j++) {
-      // if sumA is smaller than sumB
-      if (sumA < sumB) {
-        // find difference between sums, store to diff variable
-        diff = sumB - sumA;
-        // if array B at j minus array A at i is greater than 0 and less than or equal to 6
-        // increment result
-        if (b[j] - a[i] > 0 && b[j] - a[i] <= 6) result++;
-        // else
-        // return -1
-        else return -1;
-      }
-      // if sumA is larger than sumB
-      if (sumA > sumB) {
-        // find difference between sums, store to diff variable
-        diff = sumA - sumB;
-        // if array A at i minus array B at j is greater than 0 and less than or equal to 6
-        // increment result
-        if (a[i] - b[j] > 0 && a[i] - b[j] <= 6) result++;
-        // else
-        // return -1
-        else return -1;
-      }
-    }
-  }
-  // return result
+  // while sums are not the same
+    // get max element from larger array, get min element from smaller array
+    // determine which has more "potential" to equalize the sum, e.g. a 5 in the "larger" array can be changed to 1, or a 3 in the smaller array can be changed to 6
+    // pick the element that has more "potential" and change it (all the way to 1 or 6, or as needed)
+
+    // return result
   return result;
 };
 
