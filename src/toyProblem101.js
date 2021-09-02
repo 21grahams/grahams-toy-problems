@@ -6,30 +6,23 @@ Write a function that given two arrays A and B, returns the minimum number of di
 // output: a number which represents the minimum number of dice to be turned in order to make the sums of dice in both sets equal
 // constraints: N and M are integers within the range [1-100,000]. Each element of arrays A, B is an integer within the range [1, 6]
 // edge cases: if it's not possible to sum dice up to be equal, return -1
-const dice = (a, b) => {
-  // create an sumA var, assign to 0
-  // create an sumB var, assign to 0
-  // create a diff var, assign to 0
-  // create a result var, assign to 0
-  let sumA = 0, sumB = 0, diff = 0, result = 0;
+const dice = (nums1, nums2) => {
+  // if length of nums1 * 6 is less than length of nums2 OR length of nums2 * 6 is less than length of nums1
+    // making dice sum equally is not possible, return -1
 
-  // loop through array A
-  for (let i = 0; i < a.length; i++) {
-    // increment sum to sumA
-    sumA += a[i];
-  }
-  // loop through array B
-  for (let i = 0; i < b.length; i++) {
-    // increment sum to sumB
-    sumB += b[i];
-  }
-  // while sums are not the same
-    // get max element from larger array, get min element from smaller array
-    // determine which has more "potential" to equalize the sum, e.g. a 5 in the "larger" array can be changed to 1, or a 3 in the smaller array can be changed to 6
-    // pick the element that has more "potential" and change it (all the way to 1 or 6, or as needed)
+  // create one var, assign to reduce of sum of nums1
+  // create two var, assign to reduce of sum of nums1
 
-    // return result
-  return result;
+  // if two is greater than one, set [one, two] to equal [two, one], [nums1, nums2] = [nums2, nums1]
+  // sort nums1 and nums 2
+  // create a var for i and j, assign each to 0
+  // while one is greater than two
+    // if current element at nums 1 - 1 is greater than 6 minus current element at nums2 OR j is equal to length of nums2
+      // assign one as decrementing current element of nums1 - 1, and increment i
+  // otherwise
+    // increment 2 plus 6 minus current element of nums2 at j, increment j
+
+  // return i + j
 };
 
 console.log(dice([5], [1, 1, 6])); // 1
