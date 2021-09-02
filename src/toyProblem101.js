@@ -44,6 +44,9 @@ Write a function that given two arrays A and B, returns the minimum number of di
 //   return i + j;
 // };
 
+// Runtime: 299 ms, faster than 10.00% of JavaScript online submissions for Equal Sum Arrays With Minimum Number of Operations.
+// Memory Usage: 55.8 MB, less than 40.00% of JavaScript online submissions for Equal Sum Arrays With Minimum Number of Operations.
+
 const dice = (nums1, nums2) => {
   /*
     Two impossible cases:
@@ -102,8 +105,8 @@ function helper(A, B, sumA, sumB) {
   return count;
 }
 
-// Runtime: 299 ms, faster than 10.00% of JavaScript online submissions for Equal Sum Arrays With Minimum Number of Operations.
-// Memory Usage: 55.8 MB, less than 40.00% of JavaScript online submissions for Equal Sum Arrays With Minimum Number of Operations.
+// Runtime: 174 ms, faster than 80.00% of JavaScript online submissions for Equal Sum Arrays With Minimum Number of Operations.
+// Memory Usage: 49.2 MB, less than 70.00% of JavaScript online submissions for Equal Sum Arrays With Minimum Number of Operations.
 
 console.log(dice([5], [1, 1, 6])); // 1
 // explanation: we have to turn the third die in B from 6 to 3; then the arrays will have the same sums (5 = 1 + 1 + 3)
