@@ -7,3 +7,9 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 const exist = (board, word) => {
   // do something
 };
+
+console.log(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], 'ABCCED')) // true
+
+console.log(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], 'SEE')) // true
+
+console.log(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], 'ABCB')) // false
