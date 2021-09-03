@@ -9,23 +9,21 @@ The word can be constructed from letters of sequentially adjacent cells, where a
 // constraints: m == board.length. n = board[i].length. 1 <= m, n <= 6. 1 <= word.length <= 15. board and word consists of only lowercase and uppercase English letters.
 // edge cases: if board is empty, return false
 const exist = (board, word) => {
-  // create a rows, assign to length of matrix
-  // create a cols, assign to length of matrix at 0 index
-  // split the input word into a series of letters
+  // loop over rows of board
+    // loop over cols of board
+      // if current board square equals first letter of word AND we have found a DFS path of our word
+        // return true
 
-  // traverse board, loop over rows
-    // loop over cols
-      // loop over splitter
-        // while current letter in splitter exists on board
-          // increment splitter current element
-          // if next letter in splitter equals next vertical element in board (i 1 j 0)
-            // increment rows
-          // else if next letter in splitter equals next horizontal element in board (i 0 j 1)
-            // increment cols
-          // if we have reached end of splitter
-            // return true
+  // if we haven't found our path, it doesn't exist, return false
 
-  // return false
+  // create the DFS helper function, takes in the board, i, j, word and set count to -
+    // if count equals the length of the word, return true (edge case)
+    // ensure we don't go outside the boundaries of our grid. If so, return false
+    // create a temp var, assign to current square of board
+    // assign current square of board to empty string
+    // create a found var, assign to every possible DFS search
+    // assign current square of board to temp
+    // return found
 };
 
 console.log(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], 'ABCCED')) // true
