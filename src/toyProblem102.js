@@ -40,6 +40,9 @@ const exist = (board, word) => {
   return false;
 };
 
+// Runtime: 795 ms, faster than 24.15% of JavaScript online submissions for Word Search.
+// Memory Usage: 39 MB, less than 90.17% of JavaScript online submissions for Word Search
+
 console.log(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], 'ABCCED')) // true
 
 console.log(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], 'SEE')) // true
