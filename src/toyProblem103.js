@@ -72,16 +72,28 @@ const lengthOfLongestSubstring = (s) => {
   // account for edge case
   // create a scope var, assign to first char of s
   // create a max var, assign to 1
+  if (!s.length) return 0;
+  if (s.length === 1) return 1;
+  let scope = [s[0]], max = 1;
 
   // loop over s
+  for (let i = 0; i < s.length; i++) {
     // if scope doesn't include current letter
+    if (!scope.includes(s[i])) {
       // push into scope
+      scope.push(s[i])
       // assign max to Math.max of max and length of scope
-    // otherwise
+      max = Math.max(max, scope.length);
+      // otherwise
+    } else {
       // shift first val of scope
+      scope.shift();
       // decrement i
-
+      i--;
+    }
+  }
   // return max
+  return max;
 };
 
 
