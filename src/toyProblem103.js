@@ -14,14 +14,22 @@ const lengthOfLongestSubstring = (s) => {
   // create a hash table object
   // create a max length, assign to 0
   // create a start, assign to 0
+  let hashMap = {}, max = 0, start = 0;
 
   // loop over s
+  for (let i = 0; i < s.length; i++) {
     // if hash table object at current character is string is NOT undefined and hash table at current character is greater or equal to start
+    if (hashMap[s[i]] !== undefined && hashMap[s[i]] >= start) {
       // assign start to be hash table at current character plus one
-    // assign hash table at current character to be current index
-    // assign max to be Math.max of max and index minus start plus one
-
+      start = hashMap[s[i]] + 1;
+    }
+      // assign hash table at current character to be current index
+      hashMap[s[i]] = i;
+      // assign max to be Math.max of max and index minus start plus one
+      max = Math.max(max, (i - start + 1));
+  }
   // return max
+  return max;
 };
 
 console.log(lengthOfLongestSubstring("abcabcbb")); // 3
