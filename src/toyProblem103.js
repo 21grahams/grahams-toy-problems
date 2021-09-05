@@ -42,30 +42,48 @@ const lengthOfLongestSubstring = (s) => {
   // create a max var, assign to 0
   // create a result var, assign to new map
   // create a start var, assign to 0
-  let letters = s.split(''), max = 0, result = new Map(), start = 0;
+  // let letters = s.split(''), max = 0, result = new Map(), start = 0;
 
-  // loop over letters
-  for (let i = 0; i < letters.length; i++) {
-    // if result doesn't have curent letter
-    // set result with current letters
-    if (!result.has(letters[i])) result.set(letters[i], i);
+  // // loop over letters
+  // for (let i = 0; i < letters.length; i++) {
+  //   // if result doesn't have curent letter
+  //   // set result with current letters
+  //   if (!result.has(letters[i])) result.set(letters[i], i);
+  //   // otherwise
+  //   else {
+  //     // assign index to result of getting current letter index
+  //     i = result.get(letters[i]);
+  //     // clear result map
+  //     result.clear();
+  //   }
+  //   // if max is smaller than size of result
+  //   // assign max to size of result
+  //   if (max < result.size) max = result.size;
+  // }
+  // // return max
+  // return max;
+  // Runtime: 308 ms, faster than 25.51% of JavaScript online submissions for Longest Substring Without Repeating Characters.
+  // Memory Usage: 45 MB, less than 41.48% of JavaScript online submissions for Longest Substring Without Repeating Characters.
+
+  //=========================================
+  // OPTION THREE USING SHIFT, INCLUDES, PUSH
+  //=========================================
+
+  // account for edge case
+  // create a scope var, assign to first char of s
+  // create a max var, assign to 1
+
+  // loop over s
+    // if scope doesn't include current letter
+      // push into scope
+      // assign max to Math.max of max and length of scope
     // otherwise
-    else {
-      // assign index to result of getting current letter index
-      i = result.get(letters[i]);
-      // clear result map
-      result.clear();
-    }
-    // if max is smaller than size of result
-    // assign max to size of result
-    if (max < result.size) max = result.size;
-  }
+      // shift first val of scope
+      // decrement i
+
   // return max
-  return max;
 };
 
-// Runtime: 308 ms, faster than 25.51% of JavaScript online submissions for Longest Substring Without Repeating Characters.
-// Memory Usage: 45 MB, less than 41.48% of JavaScript online submissions for Longest Substring Without Repeating Characters.
 
 
 console.log(lengthOfLongestSubstring("abcabcbb")); // 3
