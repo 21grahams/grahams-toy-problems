@@ -32,6 +32,9 @@ const lengthOfLongestSubstring = (s) => {
   return max;
 };
 
+// Runtime: 132 ms, faster than 48.27% of JavaScript online submissions for Longest Substring Without Repeating Characters.
+// Memory Usage: 45.2 MB, less than 34.93% of JavaScript online submissions for Longest Substring Without Repeating Characters.
+
 console.log(lengthOfLongestSubstring("abcabcbb")); // 3
 // Explanation: The answer is "abc", with the length of 3.
 
