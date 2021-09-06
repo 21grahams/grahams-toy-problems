@@ -9,7 +9,16 @@ Return the length of the longest substring containing the same letter you can ge
 // constraints: 1 <= s.length <= 10^5. s consists of only uppercase English letters. 0 <= k <= s.length
 // edge cases: none at this time, may add in something for either s or k being empty, but not right now
 const characterReplacement = (s, k) => {
-  // do something
+  // create a count var, assign to k
+
+  // create a helperFunc called sort, takes in s
+    // assign len to length of s
+    // assign newArr to a new Array and pass in len
+    // loop over len
+      // assign newArr to equal the characterReplacement and pass in s and s[i]
+      // sort newArr
+
+  // return newArr
 };
 
 console.log(characterReplacement('ABAB', 2)) // 4
@@ -18,3 +27,12 @@ console.log(characterReplacement('ABAB', 2)) // 4
 console.log(characterReplacement('AABABBA', 1)) // 4
 // Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA".
 // The substring "BBBB" has the longest repeating letters, which is 4.
+
+/*
+count = 0
+max = 0
+letters = ['A', 'B', 'A', 'B']
+result = {}
+i =
+
+*/
