@@ -37,6 +37,9 @@ const characterReplacement = (s, k) => {
   return right - left;
 };
 
+// Runtime: 174 ms, faster than 17.40% of JavaScript online submissions for Longest Repeating Character Replacement.
+// Memory Usage: 39.6 MB, less than 85.06% of JavaScript online submissions for Longest Repeating Character Replacement.
+
 console.log(characterReplacement('ABAB', 2)) // 4
 // Explanation: Replace the two 'A's with two 'B's or vice versa.
 
