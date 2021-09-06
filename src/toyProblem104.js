@@ -13,19 +13,28 @@ const characterReplacement = (s, k) => {
   // create a right var, assign to 0
   // create a maxCharCount var, assign to 0
   // create a visited obj
+  let left = 0, right = 0, maxCharCount = 0, visited = {};
 
   // while right is less than length of s
+  while ( right < s.length ) {
     // create a char const, assign to s at right
+    const char = s[right];
     // assign visited at char to equal result of visited at char either visited at char + 1 OR 1
-
+    visited[char] = visited[char] ? visited[char] + 1 : 1;
     // if visited at char is greater than maxCharCount, assign maxCharCount to visited at char
-
+    if (visited[char] > maxCharCount) maxCharCount = visited[char];
     // if right minus left plus 1 minus maxCharCount is greater than k
+    if (right - left + 1 - maxCharCount > k) {
       // assign visited at s at left to decrement
+      visited[s[left]]--;
       // increment left
+      left++;
+    }
     // increment right
-
+    right++;
+  }
   // return right minus left
+  return right - left;
 };
 
 console.log(characterReplacement('ABAB', 2)) // 4
