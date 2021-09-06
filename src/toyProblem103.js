@@ -111,8 +111,6 @@ console.log(lengthOfLongestSubstring("pwwkew")); // 3
 
 console.log(lengthOfLongestSubstring("")); // 0
 
-seen = false[("p", "w", "w", "k", "e", "w")];
-i = 0;
-masterObj = {
-  p: 1,
-};
+console.log(lengthOfLongestSubstring("a")); // 1
+
+console.log(lengthOfLongestSubstring("1234512345")); // 5
