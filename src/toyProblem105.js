@@ -10,19 +10,18 @@ An Anagram is a word or phrase formed by rearranging the letters of a different 
 // edge cases: if the input is empty, return empty string. if the input only has one letter, return that letter
 const groupAnagrams = strs => {
   // account for edge cases
-  // create a resultArr
-  // create a currentArr
+  if (strs.length === 0) return [['']];
+  if (strs.length === 1) return [[strs[0]]];
+  // create a new map
 
-  // loop over strs array
-    // split into arrayOfLetters
-      // sort arrayOfLetters
-      // join arrayOfLetters back to words
-      // loop over each word starting at word 1
-        // if a word is the same as another
-          // add to currentArr
-          // spread into resultArr
+  // for of loop
+    // create a sortedList, assign to str split, sort, join
+    // if new map has sortedList
+      // assign new map to get sortedList and push str
+    // otherwise
+      // set new map with sortedList and [str]
 
-  // return resultArr
+  // return an Array from new maps values
 };
 
 console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])) // [ ["bat"], ["nat", "tan"], ["ate", "eat", "tea"] ]
