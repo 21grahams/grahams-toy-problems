@@ -13,15 +13,21 @@ const groupAnagrams = strs => {
   if (strs.length === 0) return [['']];
   if (strs.length === 1) return [[strs[0]]];
   // create a new map
+  let resultMap = new Map();
 
   // for of loop
+  for (str of strs) {
     // create a sortedList, assign to str split, sort, join
+    const sortedList = str.split('').sort().join('');
     // if new map has sortedList
       // assign new map to get sortedList and push str
+    if (resultMap.has(sortedList)) resultMap.get(sortedList).push(str);
     // otherwise
       // set new map with sortedList and [str]
-
+    else resultMap.set(sortedList, [str]);
+  }
   // return an Array from new maps values
+  return Array.from(resultMap.values());
 };
 
 console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])) // [ ["bat"], ["nat", "tan"], ["ate", "eat", "tea"] ]
