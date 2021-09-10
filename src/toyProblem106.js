@@ -8,15 +8,21 @@ Given a string s, return the longest palindromic substring in s */
 // edge cases: if string is empty, return empty null. If string contains just one letter, return that letter
 const longestPalindrome = s => {
   // account for edge case
+  if (s.length === 0) return '';
+  if (s.length === 1) return s[0];
 
-  // split s into an array of letters
-  // create a result, assign as a string
+  // create a result var, assign to empty string
 
-  // create a helperFunc using recursion
-    // base case - if letter length is 1, increment result and letter
+  // loop over s
+    // recursively call helperFunc on index, index
+    // recursively call helperFunc on index, index plus 1
 
-    // recursive case - if letters reversed joined doesn't equal arrayOfLetters
-      // call recursive function with slice
+  // create helperFunc recursive func, takes in left and right
+    // while left is greater or equal to 0 and right is less than length of s AND s and left is equal to s at right
+      // if right minus left + 1 is greater than length of result string
+        // assign result to s.slice of left and right plus one
+
+  // return result
 };
 
 console.log(longestPalindrome('babad')) // 'bab' ('aba' is also a valid answer)
@@ -24,5 +30,7 @@ console.log(longestPalindrome('babad')) // 'bab' ('aba' is also a valid answer)
 console.log(longestPalindrome('cbbd')) // 'bb'
 
 console.log(longestPalindrome('a')) // 'a'
+
+console.log(longestPalindrome('')) // ''
 
 console.log(longestPalindrome('ac')) // 'a'
