@@ -38,6 +38,9 @@ const longestPalindrome = s => {
   return result;
 };
 
+// Runtime: 127 ms, faster than 66.15% of JavaScript online submissions for Longest Palindromic Substring.
+// Memory Usage: 41.8 MB, less than 65.61% of JavaScript online submissions for Longest Palindromic Substring.
+
 console.log(longestPalindrome('babad')) // 'bab' ('aba' is also a valid answer)
 
 console.log(longestPalindrome('cbbd')) // 'bb'
