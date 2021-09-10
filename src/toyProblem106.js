@@ -12,17 +12,30 @@ const longestPalindrome = s => {
   if (s.length === 1) return s[0];
 
   // create a result var, assign to empty string
-
-  // loop over s
-    // recursively call helperFunc on index, index
-    // recursively call helperFunc on index, index plus 1
+  let result = '';
 
   // create helperFunc recursive func, takes in left and right
-    // while left is greater or equal to 0 and right is less than length of s AND s and left is equal to s at right
+  const helperFunc = (left, right) => {
+    // while left is greater or equal to 0 and right is less than length of s AND s at left is equal to s at right
+    while (left >= 0 && right < s.length && s[left] === s[right]) {
       // if right minus left + 1 is greater than length of result string
-        // assign result to s.slice of left and right plus one
+      // assign result to s.slice of left and right plus one
+      if (right - left + 1 > result.length) result = s.slice(left, right + 1);
+      // decrement left, increment right
+      left--;
+      right++;
+    }
+  }
 
+  // loop over s
+  for (let i = 0; i < s.length; i++) {
+    // recursively call helperFunc on index, index
+    // recursively call helperFunc on index, index plus 1
+    helperFunc(i, i);
+    helperFunc(i, i + 1);
+  }
   // return result
+  return result;
 };
 
 console.log(longestPalindrome('babad')) // 'bab' ('aba' is also a valid answer)
