@@ -11,7 +11,18 @@ A substring is a contiguous sequence of characters within the string */
 // constraints: 1 <= s.length <= 1000. s consists of lowercase English letters.
 // edge cases: if the string is empty, return 0. If the string contains one letter, return one
 const countSubstrings = s => {
-  // do something
+  // account for edge cases
+  // create a count var, assign to 0
+  // assign count to length of string
+
+  // create a helperFunc, takes in s
+    // while the string has length
+      // loop over string
+        // if s reversed equals s
+          // increment count
+          // call helperFunc on s and slice out 1 at a time
+
+  // return count
 };
 
 console.log(countSubstrings('abc')) // 3
