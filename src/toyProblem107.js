@@ -39,6 +39,9 @@ const countSubstrings = s => {
   return count;
 };
 
+// Runtime: 80 ms, faster than 81.39% of JavaScript online submissions for Palindromic Substrings.
+// Memory Usage: 39 MB, less than 98.08% of JavaScript online submissions for Palindromic Substrings.
+
 console.log(countSubstrings('')) // 0
 
 console.log(countSubstrings('a')) // 1
