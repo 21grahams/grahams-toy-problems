@@ -18,18 +18,30 @@ const countSubstrings = s => {
   let count = 0;
 
   // create a helperFunc, takes in start and end
-  const helperFunc = s => {
+  const helperFunc = (start, end) => {
     // while start is greater or equal to 0 and end is less than length of s and s at start is equal to s at end
+    while (start >= 0 && end < s.length && s[start] === s[end]) {
       // increment count, decrement start, increment end
+      count++;
+      start--;
+      end++;
+    }
   }
 
   // loop over s
+  for (let i = 0; i < s.length; i++) {
     // call helperFunc and pass in i, i
+    helperFunc(i, i);
     // call helperFunc and pass in i, i + 1
-
+    helperFunc(i, i + 1);
+  }
   // return count
   return count;
 };
+
+console.log(countSubstrings('')) // 0
+
+console.log(countSubstrings('a')) // 1
 
 console.log(countSubstrings('abc')) // 3
 // Explanation: Three palindromic strings: "a", "b", "c"
