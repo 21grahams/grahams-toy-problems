@@ -11,21 +11,23 @@ A substring is a contiguous sequence of characters within the string */
 // constraints: 1 <= s.length <= 1000. s consists of lowercase English letters.
 // edge cases: if the string is empty, return 0. If the string contains one letter, return one
 const countSubstrings = s => {
+  // account for edge cases
+  // create a count var, assign to 0
   if (s.length === 0) return 0;
   if (s.length === 1) return 1;
   let count = 0;
-  count = s.length;
 
+  // create a helperFunc, takes in start and end
   const helperFunc = s => {
-      for (let i = 0; i < s.length; i++) {
-        if (s.split('').reverse().join('') === s) {
-          count++;
-          helperFunc(s.slice(1));
-        }
-        break;
-      }
+    // while start is greater or equal to 0 and end is less than length of s and s at start is equal to s at end
+      // increment count, decrement start, increment end
   }
-  helperFunc(s);
+
+  // loop over s
+    // call helperFunc and pass in i, i
+    // call helperFunc and pass in i, i + 1
+
+  // return count
   return count;
 };
 
