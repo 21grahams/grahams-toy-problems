@@ -16,20 +16,36 @@ class TreeNode {
 };
 
 const invertTree = root => {
+
+  // iterative solution
   // account for edge case
+  if (!root) return null;
 
   // create a node var, assign to root
   // create a queue var, assign to [root]
+  const queue = [root];
   // while node exists
-    // create a cur variable, assign to length of queue
-    // loop over cur
-      // shift out first node in queue
+  while (queue.length) {
+    // shift out first node in queue
+    const node = queue.shift();
+    [node.left, node.right] = [node.right, node.left];
       // if node at left exists
-        // push to queue.right
+      // push to queue.right
+      if (node.left) queue.push(node.left);
       // if node at right exists
-        // push to queue.left
+      // push to queue.left
+      if (node.right) queue.push(node.right);
+  }
+  // return root
+  return root;
 
-  // return queue
+  // recrusive solution
+  // if (!root) return [];
+  // if (root.left === null && root.right === null) return 1;
+
+  // let l = invertTree(root.left);
+  // let r = invertTree(root.right);
+  // return l
 };
 
 // test one
