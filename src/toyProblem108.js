@@ -15,41 +15,44 @@ class TreeNode {
   };
 };
 
-const invertTree = root => {
+// iterative solution
+// const invertTree = root => {
 
-  // iterative solution
-  // account for edge case
-  if (!root) return null;
+//   // account for edge case
+//   if (!root) return null;
 
-  // create a node var, assign to root
-  // create a queue var, assign to [root]
-  const queue = [root];
-  // while node exists
-  while (queue.length) {
-    // shift out first node in queue
-    const node = queue.shift();
-    [node.left, node.right] = [node.right, node.left];
-      // if node at left exists
-      // push to queue.right
-      if (node.left) queue.push(node.left);
-      // if node at right exists
-      // push to queue.left
-      if (node.right) queue.push(node.right);
-  }
-  // return root
-  return root;
-
-  // recrusive solution
-  // if (!root) return [];
-  // if (root.left === null && root.right === null) return 1;
-
-  // let l = invertTree(root.left);
-  // let r = invertTree(root.right);
-  // return l
-};
+//   // create a node var, assign to root
+//   // create a queue var, assign to [root]
+//   const queue = [root];
+//   // while node exists
+//   while (queue.length) {
+//     // shift out first node in queue
+//     const node = queue.shift();
+//     [node.left, node.right] = [node.right, node.left];
+//       // if node at left exists
+//       // push to queue.right
+//       if (node.left) queue.push(node.left);
+//       // if node at right exists
+//       // push to queue.left
+//       if (node.right) queue.push(node.right);
+//   }
+//   // return root
+//   return root;
+// };
 
 // Runtime: 76 ms, faster than 62.54% of JavaScript online submissions for Invert Binary Tree.
 // Memory Usage: 39.8 MB, less than 71.66% of JavaScript online submissions for Invert Binary Tree.
+
+// recursive solution
+const invertTree = root => {
+
+  if (!root) return null;
+  [root.left, root.right] = [root.right, root.left];
+  invertTree(root.left);
+  invertTree(root.right);
+
+  return root;
+}
 
 // test one
 let nodeA = new TreeNode(4);
