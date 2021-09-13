@@ -2,6 +2,10 @@
 
 Given the root of a binary tree, invert the tree, and return its root */
 
+// input: the root of a binary tree
+// output: the same binary tree, inverted, starting with the root
+// constraints: The number of nodes in the tree is in the range [0, 100]. -100 <= Node.val <= 100
+// edge cases: if the root is empty, return an empty tree (empty array)
 const invertTree = root => {
   // do something
 };
