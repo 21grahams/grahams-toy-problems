@@ -52,7 +52,10 @@ const invertTree = root => {
   invertTree(root.right);
 
   return root;
-}
+};
+
+// Runtime: 72 ms, faster than 81.08% of JavaScript online submissions for Invert Binary Tree.
+// Memory Usage: 40.1 MB, less than 40.23% of JavaScript online submissions for Invert Binary Tree.
 
 // test one
 let nodeA = new TreeNode(4);
