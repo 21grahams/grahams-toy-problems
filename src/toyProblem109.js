@@ -41,18 +41,37 @@ const charSwap = s => {
   // optimized solution
 
   // account for edge case
+  if (s.length === 0) return null;
   // create a resultStr
   // create a new Map
+  let resultStr = '', newMap = new Map();
   // lower case all letters
+  let lowerCase = s.toLowerCase();
 
   // set a => 1, e => 2, i => 3, o => 4 u => 5 to the map
+  newMap.set('a', '1');
+  newMap.set('e', '2');
+  newMap.set('i', '3');
+  newMap.set('o', '4');
+  newMap.set('u', '5');
   // loop over s
+  for (let i = 0; i < lowerCase.length; i++) {
     // if current element of s of new map has key
-      // add resultStr with it's value
-
+    // add resultStr with it's value
+    if (lowerCase[i] === 'a') resultStr += newMap.get('a');
+    else if (lowerCase[i] === 'e') resultStr += newMap.get('e');
+    else if (lowerCase[i] === 'i') resultStr += newMap.get('i');
+    else if (lowerCase[i] === 'o') resultStr += newMap.get('o');
+    else if (lowerCase[i] === 'u') resultStr += newMap.get('u');
+    else resultStr += lowerCase[i];
+  }
   // uppercase the first letter of each word
-  // return resultStr
-};
+  resultStr = resultStr.split(' ');
+  for (let i = 0; i < resultStr.length; i++) {
+    resultStr[i] = resultStr[i][0].toUpperCase() + resultStr[i].substr(1);
+  }
+  return resultStr.join(' ');
+}
 
 console.log(charSwap('Avatar')) // '1v1t1r'
 
