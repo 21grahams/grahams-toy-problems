@@ -15,7 +15,18 @@ class TreeNode {
 };
 
 const levelOrder = root => {
-  // do something
+  // account for edge case
+
+  // create a queue, assign to [root]
+  // create a node, assign to root
+  // while root exists (queue.length)
+    // assign node to a removal (shift) of queue
+    // create a cur var, assign length of queue
+    // loop over cur
+      // if there's a left value, push it to queue
+      // if there's a right value, push it to queue
+
+  // return root
 };
 
 // test one
