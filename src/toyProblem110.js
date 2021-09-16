@@ -47,6 +47,9 @@ const levelOrder = (root) => {
   return result;
 };
 
+// Runtime: 84 ms, faster than 44.07% of JavaScript online submissions for Binary Tree Level Order Traversal.
+// Memory Usage: 41 MB, less than 12.68% of JavaScript online submissions for Binary Tree Level Order Traversal.
+
 // test one
 let nodeA = new TreeNode(3);
 let nodeB = new TreeNode(9);
