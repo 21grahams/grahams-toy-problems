@@ -18,19 +18,20 @@ class TreeNode {
 
 const isSubtree = (root, subRoot) => {
   // account for edge case
+  if (!root && !subRoot) return true;
+  if (!root || !subRoot) return false;
 
-  // create a result array
-  // create a queue, assign to [root]
-  // while there's length in queue
-    // create a node var, assign to queue shift
-    // create a cur var, assign to root
-    // loop over cur
-      // if there's not a node to left, push left node into queue
-      // if there's not a node to right, push right node into queue
-    // push onto result
+  // return root.val === subRoot.val AND isSubtree on root.left, subRoot.left AND isSubtree on root.right, subRoot.right
 
-  // if stringified version of result is equal to stringified version of subTree, return true
-  // else return false
+  // create a result var, assign to []
+  // create a current var, assign to root
+
+  // create helperFunc, accepts two arguments, one, two
+    // if one is null, return true
+    // if two is null, return false
+    // if subTree on one and two is true, return true
+
+  // return helperFunc, pass in one.left and two OR helperFunc on one.right and two
 };
 
 // test one
