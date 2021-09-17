@@ -32,6 +32,9 @@ const isSubtree = (root, subRoot) => {
   return check(root, subRoot) || isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
 };
 
+// Runtime: 100 ms, faster than 54.89% of JavaScript online submissions for Subtree of Another Tree.
+// Memory Usage: 45.8 MB, less than 31.08% of JavaScript online submissions for Subtree of Another Tree.
+
 // test one
 // root
 let nodeA = new TreeNode(3);
