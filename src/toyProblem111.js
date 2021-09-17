@@ -16,22 +16,20 @@ class TreeNode {
   };
 };
 
+// create helperFunc, accepts two arguments, one, two
+const check = (root, subRoot) => {
+  // if one is null, return true
+  if (!root && !subRoot) return true;
+  if (!root || !subRoot) return false;
+  return (root.val === subRoot.val) && check(root.left, subRoot.left) && check(root.right, subRoot.right);
+};
+
 const isSubtree = (root, subRoot) => {
   // account for edge case
   if (!root && !subRoot) return true;
   if (!root || !subRoot) return false;
-
   // return root.val === subRoot.val AND isSubtree on root.left, subRoot.left AND isSubtree on root.right, subRoot.right
-
-  // create a result var, assign to []
-  // create a current var, assign to root
-
-  // create helperFunc, accepts two arguments, one, two
-    // if one is null, return true
-    // if two is null, return false
-    // if subTree on one and two is true, return true
-
-  // return helperFunc, pass in one.left and two OR helperFunc on one.right and two
+  return check(root, subRoot) || isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
 };
 
 // test one
