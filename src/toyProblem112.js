@@ -41,6 +41,9 @@ const buildTree = (preorder, inorder) => {
   return helper(0, inorder.length - 1)
 };
 
+// Runtime: 154 ms, faster than 36.87% of JavaScript online submissions for Construct Binary Tree from Preorder and Inorder Traversal.
+// Memory Usage: 41.6 MB, less than 96.30% of JavaScript online submissions for Construct Binary Tree from Preorder and Inorder Traversal.
+
 // test one
 console.log(buildTree([3, 9, 20, 15, 7], [9, 3, 15, 20, 7])) // [3, 9, 20, null, null, 15, 7]
 
