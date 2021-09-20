@@ -9,13 +9,20 @@ Given two integer arrays preorder and inorder where preorder is the preorder tra
 class TreeNode {
   constructor(val) {
     this.val = val;
-    this.left = left;
-    this.right = right;
+    this.left = null;
+    this.right = null;
   }
 }
 
 const buildTree = (preorder, inorder) => {
-  // do something
+  // create a variable to store the values of nodes visited
+  // store the root of the BST in a variable called current
+  // write a helper function which accepts a node
+    // push the values of the node to the variable that stores the values
+    // if the node has a left property, call helper function with the left property on the node
+    // if the node has a right property, call helper function with the right property on the node
+  // invoke the helper function with the current variable
+  // return array of values
 };
 
 // test one
