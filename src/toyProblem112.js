@@ -15,14 +15,19 @@ class TreeNode {
 }
 
 const buildTree = (preorder, inorder) => {
-  // create a variable to store the values of nodes visited
-  // store the root of the BST in a variable called current
-  // write a helper function which accepts a node
-    // push the values of the node to the variable that stores the values
-    // if the node has a left property, call helper function with the left property on the node
-    // if the node has a right property, call helper function with the right property on the node
-  // invoke the helper function with the current variable
-  // return array of values
+  // create a new map
+  // loop over inorder with a forEach, takes in element and index
+    // set element and index to map
+
+  // create a helper function, takes in start and end
+    // if start is greater than end, return null
+    // create a curr var, assign to preorder.shift()
+    // create a node var, assign to new TreeNode(curr)
+    // assign left node to helper function, takes in start, map.get on curr - 1
+    // assign left node to helper function, takes in map.get on curr + 1 and end
+    // return node
+
+  // return helper, takes in 0 and inorder.length - 1
 };
 
 // test one
