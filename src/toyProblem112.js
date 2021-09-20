@@ -2,6 +2,10 @@
 
 Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree */
 
+// input: two integer arrays, preorder and inorder of a binary tree
+// output: the binary tree from the preorder and inorder of the same binary tree
+// constraints: 1 <= preorder.length <= 3000. inorder.length == preorder.length. -3000 <= preorder[i], inorder[i] <= 3000. preorder and inorder consist of unique values. Each value of inorder also appears in preorder. preorder is guaranteed to be the preorder traversal of the tree. inorder is guaranteed to be the inorder traversal of the tree.
+// edge cases: return null if binary tree root is empty
 class TreeNode {
   constructor(val) {
     this.val = val;
