@@ -22,6 +22,7 @@ console.log('newMap Size: ', newMap.size); // 2
 console.log(newMap.has(5)); // false
 console.log(newMap.has('Matthew')); // true
 console.log(newMap.has('Graham')); // true
+console.log(newMap.has('')); // false
 
 // get
 console.log(newMap.get('Graham')); // needs job
