@@ -7,7 +7,15 @@ You may assume that each input would have exactly one solution, and you may not 
 You can return the answer in any order */
 
 const twoSum = (nums, target) => {
-    // do something
+    // naive solution first //
+
+  // create result array
+  // loop over array
+    // loop over array a second time with i + 1 as index
+    // if current index of i plus current index of j equals target
+        // push indices of i and j to result array
+
+  // return result array
 };
 
 
