@@ -26,13 +26,15 @@ You can return the answer in any order */
 
 // optimized solution
 const twoSum = (nums, target) => {
-  // create a map function, assign nums
   // create a resultArr
-  // loop over nums
-    // if map at first value plus map at second values equals target
-      // push indices to resultArr
+  // create a hash map
+  
+  // loop over nums array
+    // create a pairIndex var, assign to hash map of target minus current element of nums
+    // if pairIndex is not undefined
+      // return [pairIndex, i]
 
-  // return resultArr
+    // assign hash at nums[i] = i
 };
 
 // Runtime: 189 ms, faster than 16.82% of JavaScript online submissions for Two Sum.
