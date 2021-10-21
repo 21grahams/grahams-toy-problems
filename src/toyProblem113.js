@@ -26,15 +26,15 @@ You can return the answer in any order */
 
 // optimized solution
 const twoSum = (nums, target) => {
-  // create a resultArr
-  // create a hash map
-  
-  // loop over nums array
-    // create a pairIndex var, assign to hash map of target minus current element of nums
-    // if pairIndex is not undefined
-      // return [pairIndex, i]
+  const newMap = new Map();
 
-    // assign hash at nums[i] = i
+  for (let i = 0; i < nums.length; i++) {
+    const num = nums[i];
+    const diff = target - num;
+
+    if (newMap.has(diff)) return [newMap.get(diff), i];
+    newMap.set(num, i);
+  }
 };
 
 // Runtime: 189 ms, faster than 16.82% of JavaScript online submissions for Two Sum.
