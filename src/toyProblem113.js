@@ -10,12 +10,18 @@ const twoSum = (nums, target) => {
     // naive solution first //
 
   // create result array
+  const resultArr = [];
   // loop over array
-    // loop over array a second time with i + 1 as index
-    // if current index of i plus current index of j equals target
-        // push indices of i and j to result array
-
+  for (let i = 0; i < nums.length; i++) {
+      // loop over array a second time with i + 1 as index
+      for (let j = i + 1; j < nums.length; j++) {
+          // if current index of i plus current index of j equals target
+          // push indices of i and j to result array
+          if (nums[i] + nums[j] === target) resultArr.push(i, j);
+      }
+    }
   // return result array
+  return resultArr;
 };
 
 
