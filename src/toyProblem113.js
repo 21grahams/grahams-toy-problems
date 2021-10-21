@@ -6,22 +6,33 @@ You may assume that each input would have exactly one solution, and you may not 
 
 You can return the answer in any order */
 
-const twoSum = (nums, target) => {
-    // naive solution first //
+// naive solution first //
+// const twoSum = (nums, target) => {
 
-  // create result array
-  const resultArr = [];
-  // loop over array
-  for (let i = 0; i < nums.length; i++) {
-      // loop over array a second time with i + 1 as index
-      for (let j = i + 1; j < nums.length; j++) {
-          // if current index of i plus current index of j equals target
-          // push indices of i and j to result array
-          if (nums[i] + nums[j] === target) resultArr.push(i, j);
-      }
-    }
-  // return result array
-  return resultArr;
+//   // create result array
+//   const resultArr = [];
+//   // loop over array
+//   for (let i = 0; i < nums.length; i++) {
+//       // loop over array a second time with i + 1 as index
+//       for (let j = i + 1; j < nums.length; j++) {
+//           // if current index of i plus current index of j equals target
+//           // push indices of i and j to result array
+//           if (nums[i] + nums[j] === target) resultArr.push(i, j);
+//       }
+//     }
+//   // return result array
+//   return resultArr;
+// };
+
+// optimized solution
+const twoSum = (nums, target) => {
+  // create a map function, assign nums
+  // create a resultArr
+  // loop over nums
+    // if map at first value plus map at second values equals target
+      // push indices to resultArr
+
+  // return resultArr
 };
 
 // Runtime: 189 ms, faster than 16.82% of JavaScript online submissions for Two Sum.
