@@ -24,6 +24,9 @@ You can return the answer in any order */
 //   return resultArr;
 // };
 
+// Runtime: 189 ms, faster than 16.82% of JavaScript online submissions for Two Sum.
+// Memory Usage: 39.2 MB, less than 89.44% of JavaScript online submissions for Two Sum.
+
 // optimized solution
 const twoSum = (nums, target) => {
   const newMap = new Map();
@@ -37,9 +40,8 @@ const twoSum = (nums, target) => {
   }
 };
 
-// Runtime: 189 ms, faster than 16.82% of JavaScript online submissions for Two Sum.
-// Memory Usage: 39.2 MB, less than 89.44% of JavaScript online submissions for Two Sum.
-
+// Runtime: 145 ms, faster than 32.76% of JavaScript online submissions for Two Sum.
+// Memory Usage: 40.8 MB, less than 30.71% of JavaScript online submissions for Two Sum.
 
 console.log(twoSum([2, 7, 11, 15], 9)) // [0, 1]
 // explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
