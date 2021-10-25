@@ -37,6 +37,9 @@ const minMovesToSeat = (seats, students) => {
   return finalCount;
 };
 
+// Runtime: 113 ms, faster than 40.00% of JavaScript online submissions for Minimum Number of Moves to Seat Everyone.
+// Memory Usage: 40.3 MB, less than 52.22% of JavaScript online submissions for Minimum Number of Moves to Seat Everyone.
+
 console.log(minMovesToSeat([3, 1, 5], [2, 7, 4])) // 4
 /* Explanation: The students are moved as follows:
 - The first student is moved from from position 2 to position 1 using 1 move.
