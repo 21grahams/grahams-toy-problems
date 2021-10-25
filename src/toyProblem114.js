@@ -12,11 +12,19 @@ Return the minimum number of moves required to move each student to a seat such 
 Note that there may be multiple seats or students in the same position at the beginning */
 
 // input: n number of seats and x number of students represented as separate arrays
-// output: the minimum number of moves required to move each student to a seat such that no two students are in the same seat
+// output: the minimum number of moves required to move each student to a seat such that no two students are in the same seat. Increase or decrease the position of the ith student by 1 (i.e., moving the ith student from position x to x + 1 or x - 1)
 // constaints: n == seats.length == students.length. 1 <= n <= 100. 1 <= seats[i], students[j] <= 100
 // edge cases: none at this time
 const minMovesToSeat = (seats, students) => {
-  // do something  
+  // create a finalCount, assign to 0
+
+  // loop over seats
+    // loop over students
+      // add curCount to finalCount
+      // if current student minus current seat is less than count and greater than 0
+        // set that num to curCount
+
+  // return finalCount
 };
 
 console.log(minMovesToSeat([3, 1, 5], [2, 7, 4])) // 4
