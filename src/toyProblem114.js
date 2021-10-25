@@ -16,13 +16,13 @@ Note that there may be multiple seats or students in the same position at the be
 // constaints: n == seats.length == students.length. 1 <= n <= 100. 1 <= seats[i], students[j] <= 100
 // edge cases: none at this time
 const minMovesToSeat = (seats, students) => {
-  // create a finalCount, assign to 0
+  // sort seats and students
+  // create a finalCount and currCount
 
   // loop over seats
     // loop over students
-      // add curCount to finalCount
-      // if current student minus current seat is less than count and greater than 0
-        // set that num to curCount
+      // assign currCount to current student minus current seat
+    // add currCount to finalCount
 
   // return finalCount
 };
