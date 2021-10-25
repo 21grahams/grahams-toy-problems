@@ -16,15 +16,25 @@ Note that there may be multiple seats or students in the same position at the be
 // constaints: n == seats.length == students.length. 1 <= n <= 100. 1 <= seats[i], students[j] <= 100
 // edge cases: none at this time
 const minMovesToSeat = (seats, students) => {
-  // sort seats and students
   // create a finalCount and currCount
+  let finalCount = 0, currCount = 0;
+  // sort seats and students
+  seats.sort((a, b) => { return a - b });
+  students.sort((a, b) => { return a - b});
 
   // loop over seats
+  for (let i = 0; i < seats.length; i++) {
     // loop over students
+    for (let j = i; j < students.length; j++) {
       // assign currCount to current student minus current seat
+      currCount = students[j] - seats[i];
+      break;
+    }
     // add currCount to finalCount
-
+    finalCount += Math.abs(currCount);
+  }
   // return finalCount
+  return finalCount;
 };
 
 console.log(minMovesToSeat([3, 1, 5], [2, 7, 4])) // 4
