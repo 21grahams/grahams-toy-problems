@@ -23,6 +23,22 @@ const threeSumClosest = (nums, target) => {
       etc
   */
 
+  // create several variables ranging from 3 under target to 3 above target
+  // create sum var, assign to 0
+
+  // loop over input array
+    // loop a second time with first array index plus one
+      // if sum of first three ints equals withinOneUp
+        // add to sum
+      // else if sum of first three ints equals withinOneDown
+        // add to sum
+      // else if sum of first three ints equals withinTwoUp
+        // add to sum
+      // else if sum of first three ints equals withinTwoDown
+        // add to sum
+
+  
+  // return sum
 };
 
 console.log(threeSumClosest([-1, 2, 1, -4], 1)) // 2
