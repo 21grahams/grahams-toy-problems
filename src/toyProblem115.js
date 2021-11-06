@@ -40,6 +40,9 @@ const threeSumClosest = (nums, target) => {
   return minDiffSum;
 };
 
+// Runtime: 180 ms, faster than 15.77% of JavaScript online submissions for 3Sum Closest.
+// Memory Usage: 39.5 MB, less than 94.53% of JavaScript online submissions for 3Sum Closest.
+
 console.log(threeSumClosest([-1, 2, 1, -4], 1)) // 2
 // The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 
