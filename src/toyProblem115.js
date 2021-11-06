@@ -11,19 +11,21 @@ You may assume that each input would have exactly one solution */
 // constaints: 3 <= nums.length <= 1000. -1000 <= nums[i] <= 1000. -104 <= target <= 104
 // edge cases: none at this time
 const threeSumClosest = (nums, target) => {
+  // bruteforce pesudocode //
 
-  // create closestToTarget variable
-  // create sum var, assign to 0
-  let closestToTarget = 0, sum = 0;
+  // create a MminDiffSum and minDiff, assign to infinity
 
-  // sort input array then loop
-    // collect sum of first three values
-      // store in closestToTarget variable
-        // repeat process for all combinations of 3 ints
-        // if any three ints are closer to target
-          // add those 3 to sum
-  
-  // return sum
+  // loop over input array
+    // loop a second time
+      // loop a third time
+        // create a sum var, assign to all three current elements
+        // create a diff var, assign to absolute value of sum minus target
+
+        // if the diff is less than minDiff
+          // assign minDiff to diff
+          // assign minDiffSum to sum
+
+  // return minDiffSum
 };
 
 console.log(threeSumClosest([-1, 2, 1, -4], 1)) // 2
