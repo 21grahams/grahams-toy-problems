@@ -14,26 +14,42 @@ const threeSumClosest = (nums, target) => {
   // two pointer method //
 
   // sort input array
+  nums = nums.sort((a, b) => a - b)
   // set minDiff and minDiffSum to Infinity
+  let minDiff = Infinity, minDiffSum = Infinity;
 
   // loop over input array
+  for (let i = 0; i < nums.length; i++) {
     // set a j var, assign to i + 1
     // set a k var, assign to last index of input array
-
+    let j = i + 1, k = nums.length - 1;
+    
     // while j is less than k
+    while (j < k) {
       // create a sum var, assign to current val of nums and i, j and k
       // create a diff var, assign to absolute value of sum minus target
-
+      let sum = nums[i] + nums[j] + nums[k], diff = Math.abs(sum - target);
+      
       // if diff is less than minDiff
+      if (diff < minDiff) {
         // assign minDiff to diff
+        minDiff = diff;
         // assign minDiffSum to sum
-
+        minDiffSum = sum;
+      }
       // if sum is less than target
+      if (sum < target) {
         // increment j
-      // otherwise
+        j++;
+        // otherwise
+      } else {
         // decrement k
-
-  // return minDiffSum
+        k--;
+      }
+    }
+  }
+    // return minDiffSum
+    return minDiffSum;
 };
 
 // Runtime: 180 ms, faster than 15.77% of JavaScript online submissions for 3Sum Closest.
