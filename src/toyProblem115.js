@@ -11,33 +11,29 @@ You may assume that each input would have exactly one solution */
 // constaints: 3 <= nums.length <= 1000. -1000 <= nums[i] <= 1000. -104 <= target <= 104
 // edge cases: none at this time
 const threeSumClosest = (nums, target) => {
-  // bruteforce pesudocode //
+  // two pointer method //
 
-  // create a minDiffSum and minDiff, assign to infinity
-  let minDiffSum = Infinity, minDiff = Infinity;
+  // sort input array
+  // set minDiff and minDiffSum to Infinity
 
   // loop over input array
-  for (let i = 0; i < nums.length; i++) {
-    // loop a second time
-    for (let j = i + 1; j < nums.length; j++) {
-      // loop a third time
-      for (let k = j + 1; k < nums.length; k++) {
-        // create a sum var, assign to all three current elements
-        let sum = nums[i] + nums[j] + nums[k];
-        // create a diff var, assign to absolute value of sum minus target
-        let diff = Math.abs(sum - target);
-        // if the diff is less than minDiff
-        if (diff < minDiff) {
-          // assign minDiff to diff
-          minDiff = diff;
-          // assign minDiffSum to sum
-          minDiffSum = sum;
-        }
-      }
-    }
-  }
+    // set a j var, assign to i + 1
+    // set a k var, assign to last index of input array
+
+    // while j is less than k
+      // create a sum var, assign to current val of nums and i, j and k
+      // create a diff var, assign to absolute value of sum minus target
+
+      // if diff is less than minDiff
+        // assign minDiff to diff
+        // assign minDiffSum to sum
+
+      // if sum is less than target
+        // increment j
+      // otherwise
+        // decrement k
+
   // return minDiffSum
-  return minDiffSum;
 };
 
 // Runtime: 180 ms, faster than 15.77% of JavaScript online submissions for 3Sum Closest.
