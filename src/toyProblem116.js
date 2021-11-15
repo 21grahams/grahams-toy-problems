@@ -15,6 +15,9 @@ const isPalindrome = x => {
   return x.toString().split('').reverse().join('') === x.toString();
 };
 
+// Runtime: 220 ms, faster than 37.11% of JavaScript online submissions for Palindrome Number.
+// Memory Usage: 48.2 MB, less than 61.74% of JavaScript online submissions for Palindrome Number.
+
 console.log(isPalindrome(121)) // true
 
 console.log(isPalindrome(-121)) // false
