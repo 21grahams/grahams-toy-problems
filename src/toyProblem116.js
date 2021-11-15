@@ -8,10 +8,11 @@ An integer is a palindrome when it reads the same backward as forward. For examp
 // output: a boolean, true if integer is a palindrome, false if not
 // constraints: -231 <= x <= 231 - 1
 // edge cases: if integer is single digit, return true
-const isPalindrome = x =>{
+const isPalindrome = x => {
   // account for edge case
-
+  if (x.toString().split('').length === 1) return true;
   // convert to string, reverse, join and compare the string and return result
+  return x.toString().split('').reverse().join('') === x.toString();
 };
 
 console.log(isPalindrome(121)) // true
@@ -23,3 +24,5 @@ console.log(isPalindrome(10)) // false
 // Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 console.log(isPalindrome(-101)) // false
+
+console.log(isPalindrome(1)) // true
