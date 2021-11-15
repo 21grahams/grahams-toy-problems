@@ -9,7 +9,9 @@ An integer is a palindrome when it reads the same backward as forward. For examp
 // constraints: -231 <= x <= 231 - 1
 // edge cases: if integer is single digit, return true
 const isPalindrome = x =>{
-  // do something  
+  // account for edge case
+
+  // convert to string, reverse, join and compare the string and return result
 };
 
 console.log(isPalindrome(121)) // true
