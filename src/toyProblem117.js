@@ -11,3 +11,8 @@ Note: You are not allowed to use any built-in exponent function or operator, suc
 const mySqrt = x => {
   // do something  
 };
+
+console.log(mySqrt(4)) // 2
+
+console.log(mySqrt(8)) // 2
+// Explanation: The square root of 8 is 2.82842..., and since the decimal part is truncated, 2 is returned.
