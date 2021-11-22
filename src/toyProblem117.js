@@ -19,6 +19,9 @@ const mySqrt = (x) => {
   return Math.trunc(Math.sqrt(x));
 };
 
+// Runtime: 88 ms, faster than 80.31% of JavaScript online submissions for Sqrt(x).
+// Memory Usage: 40 MB, less than 88.70% of JavaScript online submissions for Sqrt(x).
+
 console.log(mySqrt(4)); // 2
 
 console.log(mySqrt(8)); // 2
