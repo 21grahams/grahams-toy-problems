@@ -13,7 +13,9 @@ Note: You are not allowed to use any built-in exponent function or operator, suc
 // constraints: 0 <= x <= 231 - 1
 // edge cases: return only the truncated part of x
 const mySqrt = x => {
-  // do something  
+  // collect Math.sqrt of x and save in variable
+  // if that variable contains a decimal
+    // return the closest whole number
 };
 
 console.log(mySqrt(4)) // 2
