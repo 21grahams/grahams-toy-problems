@@ -11,7 +11,7 @@ Note: You are not allowed to use any built-in exponent function or operator, suc
 // input: a non-negative integer
 // output: the sqrt of the non-negative integer
 // constraints: 0 <= x <= 231 - 1
-// edge cases: if x is 0, return 0
+// edge cases: return only the truncated part of x
 const mySqrt = x => {
   // do something  
 };
