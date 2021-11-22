@@ -12,13 +12,14 @@ Note: You are not allowed to use any built-in exponent function or operator, suc
 // output: the sqrt of the non-negative integer
 // constraints: 0 <= x <= 231 - 1
 // edge cases: return only the truncated part of x
-const mySqrt = x => {
+const mySqrt = (x) => {
   // collect Math.sqrt of x and save in variable
   // if that variable contains a decimal
-    // return the closest whole number
+  // return the closest whole number
+  return Math.trunc(Math.sqrt(x));
 };
 
-console.log(mySqrt(4)) // 2
+console.log(mySqrt(4)); // 2
 
-console.log(mySqrt(8)) // 2
+console.log(mySqrt(8)); // 2
 // Explanation: The square root of 8 is 2.82842..., and since the decimal part is truncated, 2 is returned.
