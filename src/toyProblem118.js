@@ -9,6 +9,7 @@ An integer n is a power of two, if there exists an integer x such that n == 2x *
 // constraints: -231 <= n <= 231 - 1
 // edge cases: if n is 1, return true
 const isPowerOfTwo = n => {
+  // account for edge case
   // if n modulo 2 is 0
     // return true
   // otherwise
