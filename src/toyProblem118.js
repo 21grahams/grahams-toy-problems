@@ -26,6 +26,9 @@ const isPowerOfTwo = (n) => {
   }
 };
 
+// Runtime: 84 ms, faster than 84.34% of JavaScript online submissions for Power of Two.
+// Memory Usage: 40.4 MB, less than 15.95% of JavaScript online submissions for Power of Two.
+
 console.log(isPowerOfTwo(1)); // true
 // Explanation: 2^0 = 1
 
