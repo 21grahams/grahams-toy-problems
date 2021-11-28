@@ -10,10 +10,14 @@ An integer n is a power of two, if there exists an integer x such that n == 2x *
 // edge cases: if n is 1, return true
 const isPowerOfTwo = n => {
   // account for edge case
-  // if n modulo 2 is 0
-    // return true
-  // otherwise
-    // return false
+
+  // set a var for num, assign to n
+  // while num is less than or equal to 1
+    // if num is equal to 1
+      // return true
+    // if num modulo 2 is not 0
+      // return false
+      // assign num to Math.floor of num / 2
 };
 
 console.log(isPowerOfTwo(1)) // true
@@ -27,3 +31,5 @@ console.log(isPowerOfTwo(3)) // false
 console.log(isPowerOfTwo(4)) // true
 
 console.log(isPowerOfTwo(5)) // false
+
+console.log(isPowerOfTwo(6)) // false
