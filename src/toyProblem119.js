@@ -8,3 +8,9 @@ Given an integer num, return its complement */
 const findComplement = num => {
   // do something  
 };
+
+console.log(findComplement(5)) // 2
+// Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.
+
+console.log(findComplement(1)) // 0
+// Explanation: The binary representation of 1 is 1 (no leading zero bits), and its complement is 0. So you need to output 0.
