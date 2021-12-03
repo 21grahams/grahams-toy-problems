@@ -5,6 +5,10 @@ The complement of an integer is the integer you get when you flip all the 0's to
 For example, The integer 5 is "101" in binary and its complement is "010" which is the integer 2.
 Given an integer num, return its complement */
 
+// input: an integer
+// output: the complement of that integer
+// constraints: 1 <= num < 231
+// edge cases: if num is 1, return 0
 const findComplement = num => {
   // do something  
 };
