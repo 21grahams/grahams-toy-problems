@@ -10,7 +10,9 @@ Given an integer num, return its complement */
 // constraints: 1 <= num < 231
 // edge cases: if num is 1, return 0
 const findComplement = num => {
-  // do something  
+  // create numberOfDigits var, assign to the the string of num at 2's length
+  // create a maxNumber var, assign to the Math.floor of the Math.pow of 2 and numberOfDigits minus 1
+  // return num to the power of maxNumber 
 };
 
 console.log(findComplement(5)) // 2
