@@ -18,6 +18,9 @@ const findComplement = num => {
   return num ^ maxNumber;
 };
 
+// Runtime: 72 ms, faster than 75.56% of JavaScript online submissions for Number Complement.
+// Memory Usage: 39.1 MB, less than 31.67% of JavaScript online submissions for Number Complement.
+
 console.log(findComplement(5)) // 2
 // Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.
 
