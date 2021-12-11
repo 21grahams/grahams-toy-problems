@@ -30,13 +30,23 @@ Brunello Cucinelli, tasselled green low-top lace-up, 1100
 
 const renderInventory = currentInventory => {
   // create a finalList var string
+  let finalList = '';
   // loop over currentInventory
+  for (let i = 0; i < currentInventory.length; i++) {
     // grab name of designer, store in finalList
+    finalList += currentInventory[0].name + ', ';
+    // access shoes array inside of currentInventory array
+    let shoes = currentInventory[i].shoes;
     // loop over shoes array
+    for (let j = 0; j < shoes.length; j++) {
       // grab name of shoes, store in finalList
+      finalList += shoes[j].name + ', ';
       // grab price of shoes, store in finalList
-
+      finalList += shoes[j].price + '\n';
+    }
+  }
   // return finalList
+  return finalList;
 }
 
 var currentInventory = [
