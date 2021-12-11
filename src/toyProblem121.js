@@ -41,7 +41,12 @@ const renderInventory = currentInventory => {
     for (let j = 0; j < shoes.length; j++) {
       // grab name of shoes, store in finalList
       // grab price of shoes, store in finalList
-      finalList = finalList + designerName + shoes[j].name + ', ' + shoes[j].price + '\n';
+      finalList = finalList + designerName + shoes[j].name + ', ' + shoes[j].price;
+      if ((i === currentInventory.length - 1) && (j === shoes.length - 1)) {
+        continue;
+      } else {
+        finalList += '\n'
+      }
     }
   }
   // return finalList
