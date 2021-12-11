@@ -29,7 +29,14 @@ Brunello Cucinelli, tasselled green low-top lace-up, 1100
 // and so on...*/
 
 const renderInventory = currentInventory => {
-  // do something
+  // create a finalList var string
+  // loop over currentInventory
+    // grab name of designer, store in finalList
+    // loop over shoes array
+      // grab name of shoes, store in finalList
+      // grab price of shoes, store in finalList
+
+  // return finalList
 }
 
 var currentInventory = [
@@ -50,6 +57,8 @@ var currentInventory = [
     ]
   }
 ];
+
+console.log('renderInventory: ', renderInventory(currentInventory))
 
 //...console output:
 // Brunello Cucinelli, tasselled black low-top lace-up, 1000
