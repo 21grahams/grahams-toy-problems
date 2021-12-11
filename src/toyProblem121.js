@@ -31,3 +31,30 @@ Brunello Cucinelli, tasselled green low-top lace-up, 1100
 const renderInventory = currentInventory => {
   // do something
 }
+
+var currentInventory = [
+  {
+    name: 'Brunello Cucinelli',
+    shoes: [
+      {name: 'tasselled black low-top lace-up', price: 1000},
+      {name: 'tasselled green low-top lace-up', price: 1100},
+      {name: 'plain beige suede moccasin', price: 950},
+      {name: 'plain olive suede moccasin', price: 1050}
+    ]
+  },
+  {
+    name: 'Gucci',
+    shoes: [
+      {name: 'red leather laced sneakers', price: 800},
+      {name: 'black leather laced sneakers', price: 900}
+    ]
+  }
+];
+
+//...console output:
+// Brunello Cucinelli, tasselled black low-top lace-up, 1000
+// Brunello Cucinelli, tasselled green low-top lace-up, 1100
+// Brunello Cucinelli, tasselled green low-top lace-up, 950
+// Brunello Cucinelli, tasselled green low-top lace-up, 1050
+// Gucci, red leather laced sneakers, 800
+// Gucci, black leather laced sneakers, 900
