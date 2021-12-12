@@ -40,7 +40,18 @@ var expected = {
 } */
 
 const calculateAveragePricePerDesigner = inventory => {
-  // do something
+  // create a finalResult object
+  // create a designers array
+  // create a designers object
+  // create string for name
+  // create string for averagePrice
+  // loop over inventory
+    // create alias for current inventory object
+    // store name in name string and designers object
+    // access shoes array and loop
+      // collect average price and store in averagePrice string and designers object
+
+  // return designers array inside finalResult object
 }
 
 var currentInventory = [
@@ -62,7 +73,7 @@ var currentInventory = [
   }
 ]
 
-console.log(calculateAveragePricePerDesigner(inventory)) // should output:
+console.log(calculateAveragePricePerDesigner(currentInventory)) // should output:
 /*  {
   'designers': [
     {
