@@ -39,19 +39,28 @@ var expected = {
   ]
 } */
 
-const calculateAveragePricePerDesigner = inventory => {
-  // create a finalResult object
-  // create a designers array
-  // create a designers object
-  // create string for name
-  // create string for averagePrice
-  // loop over inventory
-    // create alias for current inventory object
-    // store name in name string and designers object
-    // access shoes array and loop
-      // collect average price and store in averagePrice string and designers object
+const calculateAveragePricePerDesigner = currentInventory => {
+  let resultObj = {designers: []}
 
-  // return designers array inside finalResult object
+  for (let i = 0; i < currentInventory.length; i++) {
+    let shoesObj = currentInventory[i].shoes
+    let innerObj = {
+      name: currentInventory[i].name,
+      averagePrice: getAverage(shoesObj)
+    }
+    resultObj.designers.push(innerObj)
+  }
+  return resultObj
+}
+
+const getAverage = shoesObj => {
+  let sum = 0;
+  for (let j = 0; j < shoesObj.length; j++) {
+      let average = shoesObj[j].price
+      sum += average;
+    
+  }
+  return sum / shoesObj.length;
 }
 
 var currentInventory = [
