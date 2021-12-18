@@ -26,7 +26,15 @@ var currentInventory = [
 Your task is to find all of the shoes with "black" in the name. Your function should filter these shoes, and return them in a "flat list" similarly to Part A */
 
 const fashionInventory = blackList => {
-  // do something
+  // create a flatList string
+  // loop over blackList
+    // create a variable for shoes
+    // create a variable for designerName
+    // loop over shoes array
+      // create a variable for inventoryObj
+      // if inventoryObj name contains the word black
+        // add name of designer, inventoryObj and flatlist to flatList string
+  // return flatList string
 }
 
 var currentInventory = [
