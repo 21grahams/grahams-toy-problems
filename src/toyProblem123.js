@@ -25,16 +25,33 @@ var currentInventory = [
 
 Your task is to find all of the shoes with "black" in the name. Your function should filter these shoes, and return them in a "flat list" similarly to Part A */
 
-const fashionInventory = blackList => {
+const fashionInventory = blacklist => {
   // create a flatList string
+  let flatList = '';
   // loop over blackList
-    // create a variable for shoes
+  for (let i = 0; i < blacklist.length; i++) {
     // create a variable for designerName
+    let designerName = blacklist[i].name
+    // create a variable for shoes
+    let shoes = blacklist[i].shoes
     // loop over shoes array
+    for (let j = 0; j < shoes.length; j++) {
       // create a variable for inventoryObj
+      let inventoryObj = shoes[j]
       // if inventoryObj name contains the word black
-        // add name of designer, inventoryObj and flatlist to flatList string
+      // add name of designer, inventoryObj and flatlist to flatList string
+      if (inventoryObj.name.includes('black')) {
+        flatList += designerName + ', ' + inventoryObj.name + ', ' + inventoryObj.price
+        if ((i === blacklist.length - 1) && (j === shoes.length - 1)) {
+          return flatList
+        } else {
+          flatList += '\n'
+        }
+      }
+    }
+  }
   // return flatList string
+  return flatList
 }
 
 var currentInventory = [
