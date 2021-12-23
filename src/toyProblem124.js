@@ -70,7 +70,16 @@ var expectedResult = [
 // constraints: none at this time
 // edge cases: none at this time
 const fashionInventory = renderInventory => {
-  // do something
+  // create a resultArr
+  // create nameWords object, containing array
+  // create targetWordIndex string
+  // loop over renderInventory array
+    // create variable for shoes
+    // loop over shoes array
+      // create variable for designerDescription
+      // add designerDescription to nameWords array
+      // find index of the word lace and add to targetWordIndex
+  // return resultArr
 }
 
 var currentInventory = [
