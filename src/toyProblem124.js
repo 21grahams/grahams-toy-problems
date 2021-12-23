@@ -64,6 +64,11 @@ var expectedResult = [
   }
 ]; */
 
+// input: a nested array
+// output: an array containing all the laced shoes that contain "lace" in them, 
+//   and indicate which word contains "lace"
+// constraints: none at this time
+// edge cases: none at this time
 const fashionInventory = renderInventory => {
   // do something
 }
