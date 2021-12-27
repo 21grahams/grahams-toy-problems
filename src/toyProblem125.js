@@ -11,6 +11,13 @@ var classList = ["Joe", "Jack", "John", "Fred", "Frank", "Barry", "Larry", "Mary
 // output: an object literal of each string and an age associated with that name (string)
 // constraints: (The ages should be randomly generated for each student, either age 10 or age 11)
 // edge cases: none at this time
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 const decorateClassListWithAges = students => {
   // do something
 }
