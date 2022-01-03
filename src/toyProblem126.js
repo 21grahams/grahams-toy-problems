@@ -10,32 +10,49 @@ Given the head of a singly linked list, return true if it is a palindrome */
 var Node = function (val, next) {
   this.val = val;
   this.next = null;
-}
-
-const isPalindrome = head => {
-  // account for edge cases
-  // create a result array
-  // while a head is present in linked list
-    // push head of linked list to result array and access next node in linked list
-    // push every next node of linked list to result array until complete
-  // if the reverse of result array equals result array
-    // return true
-  // otherwise
-    // return false
 };
 
-let nodeA = new Node(1)
-let nodeB = new Node(2)
-let nodeC = new Node(2)
-let nodeD = new Node(1)
+const isPalindrome = (head) => {
+  // account for edge cases
+  if (head.next === null) return true;
+  if (!head) return false;
+  // create a result array
+  let resultArr = [], reversed = [];
+  let cur = head;
+  // while a head is present in linked list
+  while (cur) {
+    // push head of linked list to result array and access next node in linked list
+    resultArr.push(cur.val);
+    reversed.push(cur.val);
+    // push every next node of linked list to result array until complete
+    cur = cur.next;
+  }
+  // if the reverse of result array equals result array
+  reversed = reversed.reverse().join('')
+  if (reversed === resultArr.join('')) {
+    // return true
+    return true
+    // otherwise
+  } else {
+    // return false
+    return false
+  }
+};
 
-nodeA.next = nodeB
-nodeB.next = nodeC
-node.next = nodeD
-console.log(isPalindrome(nodeA)) // true
+let nodeA = new Node(1);
+let nodeB = new Node(2);
+let nodeC = new Node(2);
+let nodeD = new Node(1);
 
-let nodeG = new Node(1)
-let nodeK = new Node(2)
+nodeA.next = nodeB;
+nodeB.next = nodeC;
+nodeC.next = nodeD;
+nodeD.next = null;
+console.log(isPalindrome(nodeA)); // true
 
-nodeG.next = nodeK
-console.log(isPalindrome(nodeG)) // false
+let nodeG = new Node(1);
+let nodeK = new Node(2);
+
+nodeG.next = nodeK;
+nodeK.next = null;
+console.log(isPalindrome(nodeG)); // false
