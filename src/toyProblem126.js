@@ -39,6 +39,10 @@ const isPalindrome = (head) => {
   }
 };
 
+// Runtime: 270 ms, faster than 18.67% of JavaScript online submissions for Palindrome Linked List.
+// Memory Usage: 84 MB, less than 5.17% of JavaScript online submissions for Palindrome Linked List.
+
+
 let nodeA = new Node(1);
 let nodeB = new Node(2);
 let nodeC = new Node(2);
