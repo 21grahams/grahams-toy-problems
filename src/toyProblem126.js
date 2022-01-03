@@ -6,6 +6,12 @@ Given the head of a singly linked list, return true if it is a palindrome */
 // output: a boolean, true if the singly linked list is a palindrome, false if not
 // constraints: The number of nodes in the list is in the range [1, 105]. 0 <= Node.val <= 9
 // edge cases: if head has one number only, return true. If head is empty, return false
+
+var Node = function (val, next) {
+  this.val = val;
+  this.next = null;
+}
+
 const isPalindrome = head => {
   // account for edge cases
   // create a result array
@@ -18,5 +24,18 @@ const isPalindrome = head => {
     // return false
 };
 
-console.log(isPalindrome([1, 2, 2, 1])) // true
-console.log(isPalindrome([1, 2])) // false
+let nodeA = new Node(1)
+let nodeB = new Node(2)
+let nodeC = new Node(2)
+let nodeD = new Node(1)
+
+nodeA.next = nodeB
+nodeB.next = nodeC
+node.next = nodeD
+console.log(isPalindrome(nodeA)) // true
+
+let nodeG = new Node(1)
+let nodeK = new Node(2)
+
+nodeG.next = nodeK
+console.log(isPalindrome(nodeG)) // false
