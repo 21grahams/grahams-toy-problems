@@ -20,13 +20,21 @@ function getRandomIntInclusive(min, max) {
 
 const decorateClassListWithAges = students => {
   // create a resultArr
-  // create a masterObj
   // create a getRandomAge variable that takes in the getRandomIntInclusive function with the ages of 10 and 11
+  let resultArr = [], getRandomAge = getRandomIntInclusive(10, 11)
   // loop over students array
+  for (let i = 0; i < students.length; i++) {
+    // create a masterObj
+    let masterObj = {}
     // pass each current student to the masterObj
+    masterObj['name'] = students[i]
     // pass an age key to the masterObj with a value of the getRandomAge var
+    masterObj['age'] = getRandomAge
     // push onto resultArr
+    resultArr.push(masterObj)
+  }
   // return resultArr
+  return resultArr
 }
 
 var classList = ["Joe", "Jack", "John", "Fred", "Frank", "Barry", "Larry", "Mary",
