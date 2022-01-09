@@ -9,8 +9,8 @@ A boomerang is a set of three points that are all distinct and not in a straight
 // constraints: points.length == 3. points[i].length == 2. 0 <= xi, yi <= 100
 // edge cases: none at this time
 const isBoomerang = points => {
-  // do something  
+  // do something
 };
 
-console.log(isBoomerang([1,1],[2,3],[3,2])) // true
-console.log(isBoomerang([1,1],[2,2],[3,3])) // false
+console.log(isBoomerang([[1, 1], [2, 3], [3, 2]])) // true
+console.log(isBoomerang([[1, 1], [2, 2], [3, 3]])) // false
