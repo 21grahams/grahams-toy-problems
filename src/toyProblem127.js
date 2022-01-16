@@ -8,8 +8,8 @@ A boomerang is a set of three points that are all distinct and not in a straight
 // output: a boolean, true if the points are a boomerang, false if not
 // constraints: points.length == 3. points[i].length == 2. 0 <= xi, yi <= 100
 // edge cases: none at this time
-const isBoomerang = (points) => {
-  // create new pseudocode
+const isBoomerang = ([[ax, ay], [bx, by], [cx, cy]]) => {
+  return (by - ay) * (cx - bx) !== (cy - by) * (bx - ax);
 };
 
 console.log(
