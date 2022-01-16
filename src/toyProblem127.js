@@ -12,6 +12,8 @@ const isBoomerang = ([[ax, ay], [bx, by], [cx, cy]]) => {
   return (by - ay) * (cx - bx) !== (cy - by) * (bx - ax);
 };
 
+// Runtime: 91 ms, faster than 34.48% of JavaScript online submissions for Valid Boomerang.
+
 console.log(
   isBoomerang([
     [1, 1],
