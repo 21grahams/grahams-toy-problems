@@ -8,13 +8,21 @@ A boomerang is a set of three points that are all distinct and not in a straight
 // output: a boolean, true if the points are a boomerang, false if not
 // constraints: points.length == 3. points[i].length == 2. 0 <= xi, yi <= 100
 // edge cases: none at this time
-const isBoomerang = points => {
-  // loop over points
-    // if next index at each y point is NOT current index plus one
-      // return true, this is a boomerang
-    // otherwise
-      // return false, this is not a boomerang
+const isBoomerang = (points) => {
+  // create new pseudocode
 };
 
-console.log(isBoomerang([[1, 1], [2, 3], [3, 2]])) // true
-console.log(isBoomerang([[1, 1], [2, 2], [3, 3]])) // false
+console.log(
+  isBoomerang([
+    [1, 1],
+    [2, 3],
+    [3, 2],
+  ])
+); // true
+console.log(
+  isBoomerang([
+    [1, 1],
+    [2, 2],
+    [3, 3],
+  ])
+); // false
