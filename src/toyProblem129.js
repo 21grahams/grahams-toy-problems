@@ -8,9 +8,7 @@ const flipEveryNChars = (string, num) => {
   // do something
 }
 
-let testCase = 'a short example'
-let output = flipEveryNChars(testCase, 5)
-console.log(output) // --> ohs axe trelpma
+console.log(flipEveryNChars('a short example', 5)) // --> ohs axe trelpma
 
 /*
 Breaking this example down piece by piece:
