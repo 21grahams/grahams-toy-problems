@@ -30,6 +30,7 @@ const flipEveryNChars = (string, num) => {
 }
 
 console.log(flipEveryNChars('a short example', 5)) // --> ohs axe trelpma
+console.log(flipEveryNChars('graham kirsh', 7)) // --> maharghsirk
 
 /*
 Breaking this example down piece by piece:
