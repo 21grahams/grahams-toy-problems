@@ -5,7 +5,14 @@
 // constraints: none at this time
 // edge cases: none at this time
 const flipEveryNChars = (string, num) => {
-  // do something
+  // split string into letterArray
+  // create resultString variable
+  // loop over letterArray
+    // add each letter to resultString
+    // if index equals num
+      // reverse resultString
+      // double num
+  // return resultString
 }
 
 console.log(flipEveryNChars('a short example', 5)) // --> ohs axe trelpma
