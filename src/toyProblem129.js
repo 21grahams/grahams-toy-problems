@@ -6,13 +6,27 @@
 // edge cases: none at this time
 const flipEveryNChars = (string, num) => {
   // split string into letterArray
+  let letterArr = string.split('')
   // create resultString variable
+  let originalVal = num
+  let resultString = ''
+  let initialString = ''
   // loop over letterArray
+  for (let i = 0; i < letterArr.length; i++) {
     // add each letter to resultString
+    initialString += letterArr[i]
     // if index equals num
+    if (i === num - 1) {
       // reverse resultString
+      resultString += initialString.split('').reverse().join('')
       // double num
+      num = num + originalVal
+      initialString = ''
+    }
+  }
+  resultString += initialString.split('').reverse().join('')
   // return resultString
+  return resultString
 }
 
 console.log(flipEveryNChars('a short example', 5)) // --> ohs axe trelpma
