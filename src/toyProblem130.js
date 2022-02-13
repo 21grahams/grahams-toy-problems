@@ -11,30 +11,40 @@ detectOutlierValue("1 10 1 1");  //=> 2 - Second number is even, while the rest 
 // output: an integer, which represents the index of the number out of place (even or odd depending on input)
 // constraints: none at this time
 // edge cases: none at this time
-const detectOutlierValue = input => {
+const detectOutlierValue = nums => {
   // create a count variable, assign to 0
   // create resultIndex variable, assign to 0
   // create odd and even arrays
-  // loop over input
+  // convert nums string to an array of nums
+  let arrayNums = nums.split(' ')
+  let count = 0, resultIndex = 0, oddArray = [], evenArray = []
+  // loop over nums
+  for (let i = 0; i < arrayNums.length; i++) {
     // if current element is odd
+    if (arrayNums[i] % 2 === 1) {
       // push to odd array
-    // else
+      oddArray.push(arrayNums[i])
+      // else
+    } else {
       // push to even array
-  // if length of odd is one
+      evenArray.push(arrayNums[i])
+    }
+  }
+    // if length of odd is one
     // we've found outlier, assign to count variable
-  // if length of even is one
+    if (oddArray.length === 1) count = oddArray[0]
+    // if length of even is one
     // we've found outlier, assign to count variable
-  // loop over input
+    if (evenArray.length === 1) count = evenArray[0]
+  // loop over nums
+  for (let i = 0; i < arrayNums.length; i++) {
     // if count equals current index
-      // assign current index to currentIndex variable plus one
-  // return currentIndex
+    // assign current index to resultIndex variable plus one
+    if (count === arrayNums[i]) resultIndex = i + 1
+  }
+  // return resultIndex
+  return resultIndex
 }
 
 console.log(detectOutlierValue('2 4 7 8 10')) // 3 Third number is odd, while the rest of the numbers are even
 console.log(detectOutlierValue('1 10 1 1')) // 2 Second number is even, while the rest of the numbers are odd
-/*
-count = 0
-flag = false
-i = 0
-input = 2
-*/
