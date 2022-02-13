@@ -12,20 +12,29 @@ detectOutlierValue("1 10 1 1");  //=> 2 - Second number is even, while the rest 
 // constraints: none at this time
 // edge cases: none at this time
 const detectOutlierValue = input => {
-  // create a count variable, initialize to 0
-  // create a boolean flag, set to false
+  // create a count variable, assign to 0
+  // create resultIndex variable, assign to 0
+  // create odd and even arrays
   // loop over input
     // if current element is odd
-      // flip bool to true
-    // if any other elements are odd
-      // break
+      // push to odd array
     // else
-      // assign count to current element plus one
-
-    // repeat process of lines 18 through 23 for even
-
-  // return count
+      // push to even array
+  // if length of odd is one
+    // we've found outlier, assign to count variable
+  // if length of even is one
+    // we've found outlier, assign to count variable
+  // loop over input
+    // if count equals current index
+      // assign current index to currentIndex variable plus one
+  // return currentIndex
 }
 
 console.log(detectOutlierValue('2 4 7 8 10')) // 3 Third number is odd, while the rest of the numbers are even
 console.log(detectOutlierValue('1 10 1 1')) // 2 Second number is even, while the rest of the numbers are odd
+/*
+count = 0
+flag = false
+i = 0
+input = 2
+*/
