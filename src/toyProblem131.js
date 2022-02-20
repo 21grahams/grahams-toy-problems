@@ -10,11 +10,17 @@ e o
 l r  
 l l  
 o d
-t h
-f
 */
 
 const transposeTwoStrings = arr => {
   // do something
 }
 
+console.log(transposeTwoStrings(['Hello', 'World'])) 
+/*
+H W  
+e o  
+l r  
+l l  
+o d
+*/
