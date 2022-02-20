@@ -14,6 +14,7 @@ t h
 f
 */
 
-const transposeTwoStrings = (str1, str2) => {
+const transposeTwoStrings = arr => {
   // do something
 }
+
