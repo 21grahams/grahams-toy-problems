@@ -12,6 +12,10 @@ l l
 o d
 */
 
+// input: an array of two strings
+// output: those same strings, but displayed from top to bottom, rather than left to right
+// constraints: none at this time
+// edge cases: none at this time
 const transposeTwoStrings = arr => {
   // do something
 }
