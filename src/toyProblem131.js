@@ -18,10 +18,14 @@ o d
 // edge cases: none at this time
 const transposeTwoStrings = arr => {
   // create a resultString
+  let resultString = ''
   // loop over arr
-    // grab first letter of each word and increment to resultString
-    // add a breaking point
+    // loop each word in arr
+      // assign word one to shifting of arr[0] and word two to shifting of arr[1]
+      // increment resultString to word one and word two
+  
   // return resultString
+  return resultString
 }
 
 console.log(transposeTwoStrings(['Hello', 'World'])) 
