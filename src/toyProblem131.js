@@ -18,13 +18,23 @@ o d
 // edge cases: none at this time
 const transposeTwoStrings = arr => {
   // create first, second and longest word variables
-  // check which is longest word
   // create transposed string
+  let firstWord = arr[0], secondWord = arr[1], longestWord, transposedString = '';
+  // check which is longest word
+  if (firstWord > secondWord) {
+    longestWord = firstWord
+  } else {
+    longestWord = secondWord
+  }
   // loop over longest word
+  for (let i = 0; i < longestWord.length; i++) {
     // assign first character to first word at i, second character to second word at i
+    let firstCharacter = firstWord[i], secondCharacter = secondWord[i]
     // increment transposed string to first word, second word and newline symbol
-
+    transposedString += firstCharacter + ' ' + secondCharacter + '\n'
+  }
   // return transposed string
+  return transposedString
 }
 
 console.log(transposeTwoStrings(['Hello', 'World'])) 
