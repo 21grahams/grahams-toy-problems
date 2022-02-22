@@ -17,15 +17,14 @@ o d
 // constraints: none at this time
 // edge cases: none at this time
 const transposeTwoStrings = arr => {
-  // create a resultString
-  let resultString = ''
-  // loop over arr
-    // loop each word in arr
-      // assign word one to shifting of arr[0] and word two to shifting of arr[1]
-      // increment resultString to word one and word two
-  
-  // return resultString
-  return resultString
+  // create first, second and longest word variables
+  // check which is longest word
+  // create transposed string
+  // loop over longest word
+    // assign first character to first word at i, second character to second word at i
+    // increment transposed string to first word, second word and newline symbol
+
+  // return transposed string
 }
 
 console.log(transposeTwoStrings(['Hello', 'World'])) 
