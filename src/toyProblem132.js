@@ -12,3 +12,5 @@ console.log(pair); // --> [4, 5]
 function findPairForSum(integers, targetSum) {
   // do something
 }
+
+console.log(findPairForSum([3, 34, 4, 12, 5, 2], 9)) // [4, 5]
