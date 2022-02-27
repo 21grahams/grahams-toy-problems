@@ -10,7 +10,13 @@ console.log(pair); // --> [4, 5]
 // output: array of a pair of numbers
 
 function findPairForSum(integers, targetSum) {
-  // do something
+  let resultArr = []
+  for (let i = 0; i < integers.length; i++) {
+    for (let j = i + 1; j < integers.length; j++) {
+      if (integers[i] + integers[j] === targetSum) resultArr.push(integers[i], integers[j])
+    }
+  }
+  return resultArr
 }
 
 console.log(findPairForSum([3, 34, 4, 12, 5, 2], 9)) // [4, 5]
