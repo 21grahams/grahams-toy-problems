@@ -1,8 +1,12 @@
 /* Move zeroes 
 
-given an array, move all zeroes to the back
+given an array of intergers, move all zeroes to the back and return same array
 */
 
+// input: an array of integers
+// output: the same array, in the same order, except all zeroes moved to the back
+// constraints: must return the same array. Cannot be a duplicate or different array
+// edge cases: if the array contains no numbers, return an empty array
 const moveZeroes = () => {
   // do something
 }
