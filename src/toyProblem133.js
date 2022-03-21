@@ -7,8 +7,16 @@ given an array of intergers, move all zeroes to the back and return same array
 // output: the same array, in the same order, except all zeroes moved to the back
 // constraints: must return the same array. Cannot be a duplicate or different array
 // edge cases: if the array contains no numbers, return an empty array
-const moveZeroes = () => {
-  // do something
+const moveZeroes = nums => {
+  // account for edge case
+  // create a count var, assign to 0
+  // loop over nums array
+    // if current num in array is a 0
+      // increment count
+      // splice out 0
+      // decrement index
+  // push amount of 0's collected from count var onto nums array
+  // return nums array
 }
 
 console.log(moveZeroes([1, 0, 2, 3, 0, 5, 5, 35, 0])) // [1, 2, 3, 5, 5, 35, 0, 0, 0]
