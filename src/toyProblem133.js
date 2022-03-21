@@ -9,13 +9,22 @@ given an array of intergers, move all zeroes to the back and return same array
 // edge cases: if the array contains no numbers, return an empty array
 const moveZeroes = nums => {
   // account for edge case
-  // create a count var, assign to 0
+  if (nums.length === 0) return []
+  // create a result array 
+  let count = 0
   // loop over nums array
+  for (let i = 0; i < nums.length; i++) {
     // if current num in array is a 0
-      // increment count
+    if (nums[i] === 0) {
+      // push current element to result array
+      count++
       // splice out 0
+      nums.splice(i, 1)
       // decrement index
-  // push amount of 0's collected from count var onto nums array
+      i--
+    }
+  }
+  // concat result array with nums array
   // return nums array
 }
 
