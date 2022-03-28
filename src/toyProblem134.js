@@ -6,6 +6,10 @@ You are given an integer array nums. The unique elements of an array are the ele
 Return the sum of all the unique elements of nums.
 */
 
+// input: an array of integers
+// output: the sum of all unique elements of numbers from the array (unique being the numbers that appear once)
+// constraints: 1 <= nums.length <= 100. 1 <= nums[i] <= 100
+// edge cases: if array is empty, return 0. If there are no unique numbers, return 0
 const sumOfUnique = nums => {
   // do something
 };
