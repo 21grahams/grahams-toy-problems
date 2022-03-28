@@ -25,7 +25,10 @@ const sumOfUnique = nums => {
     sum += result[i]
   }
   return sum
-};
+}
+
+// Runtime: 75 ms, faster than 64.86% of JavaScript online submissions for Sum of Unique Elements.
+// Memory Usage: 42.2 MB, less than 59.21% of JavaScript online submissions for Sum of Unique Elements.
 
 console.log(sumOfUnique([1, 2, 3, 2])) // 4
 // Explanation: The unique elements are [1,3], and the sum is 4.
