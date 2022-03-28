@@ -11,7 +11,20 @@ Return the sum of all the unique elements of nums.
 // constraints: 1 <= nums.length <= 100. 1 <= nums[i] <= 100
 // edge cases: if array is empty, return 0. If there are no unique numbers, return 0
 const sumOfUnique = nums => {
-  // do something
+  if (nums.length === 0) return 0
+  let sum = 0, result = []
+  nums.sort()
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === nums[i + 1] || nums[i] === nums[i - 1]) {
+      continue
+    } else {
+      result.push(nums[i])
+    }
+  }
+  for (let i = 0; i < result.length; i++) {
+    sum += result[i]
+  }
+  return sum
 };
 
 console.log(sumOfUnique([1, 2, 3, 2])) // 4
