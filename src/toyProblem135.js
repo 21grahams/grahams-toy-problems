@@ -6,6 +6,10 @@ Given two string arrays word1 and word2, return true if the two arrays represent
 A string is represented by an array if the array elements concatenated in order forms the string.
 */
 
+// input: two arrays, each one containing a set of strings
+// output: a boolean. true if each word array matches each other and false if they do not
+// constraints: 1 <= word1.length, word2.length <= 103. 1 <= word1[i].length, word2[i].length <= 103. 1 <= sum(word1[i].length), sum(word2[i].length) <= 103. word1[i] and word2[i] consist of lowercase letters.
+// edge cases: none at this time
 const arrayStringsAreEqual = (word1, word2) => {
   // do something   
 }
