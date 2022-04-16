@@ -18,6 +18,9 @@ const arrayStringsAreEqual = (word1, word2) => {
   return word1 === word2
 }
 
+// Runtime: 68 ms, faster than 71.69% of JavaScript online submissions for Check If Two String Arrays are Equivalent.
+// Memory Usage: 42.1 MB, less than 77.56% of JavaScript online submissions for Check If Two String Arrays are Equivalent.
+
 console.log(arrayStringsAreEqual(["ab", "c"], ["a", "bc"])) // true
 // Explanation: word1 represents string "ab" + "c" -> "abc". word2 represents string "a" + "bc" -> "abc". The strings are the same, so return true.
 
