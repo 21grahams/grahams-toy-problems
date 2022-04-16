@@ -11,11 +11,7 @@ A string is represented by an array if the array elements concatenated in order 
 // constraints: 1 <= word1.length, word2.length <= 103. 1 <= word1[i].length, word2[i].length <= 103. 1 <= sum(word1[i].length), sum(word2[i].length) <= 103. word1[i] and word2[i] consist of lowercase letters.
 // edge cases: none at this time
 const arrayStringsAreEqual = (word1, word2) => {
-  // join each word
-  word1 = word1.join('')
-  word2 = word2.join('')
-  // compare each word and return 
-  return word1 === word2
+  return word1.join('') === word2.join('')
 }
 
 // Runtime: 68 ms, faster than 71.69% of JavaScript online submissions for Check If Two String Arrays are Equivalent.
