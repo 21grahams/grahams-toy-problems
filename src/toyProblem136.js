@@ -12,7 +12,12 @@ You must implement a solution with a linear runtime complexity and use only cons
 // constraints: 1 <= nums.length <= 3 * 104. -3 * 104 <= nums[i] <= 3 * 104. Each element in the array appears twice except for one element which appears only once.
 // edge cases: if array is empty, return null
 const singleNumber = nums => {
-  // do something   
+  // create a result var, assign to 0
+  // sort nums array
+  // loop over nums array
+    // if current num is not equal to next or previous num
+      // assign current num to result
+  // return result  
 }
 
 console.log(singleNumber([2, 2, 1])) // 1
