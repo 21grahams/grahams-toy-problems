@@ -32,6 +32,10 @@ const singleNumber = (nums) => {
   return result;
 };
 
+// Runtime: 112 ms, faster than 38.67% of JavaScript online submissions for Single Number.
+// Memory Usage: 45.6 MB, less than 50.91% of JavaScript online submissions for Single Number.
+
+
 console.log(singleNumber([2, 2, 1])); // 1
 console.log(singleNumber([4, 1, 2, 1, 2])); // 4
 console.log(singleNumber([1])); // 1
