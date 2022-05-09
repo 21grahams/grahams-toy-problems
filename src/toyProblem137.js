@@ -29,6 +29,9 @@ var isLeapYear = function (year) {
   else return true;
 };
 
+// Runtime: 191 ms, faster than 80.61% of JavaScript online submissions for Day of the Year.
+// Memory Usage: 51 MB, less than 80.61% of JavaScript online submissions for Day of the Year.
+
 console.log(dayOfYear("2019-01-09")); // 9
 // Explanation: Given date is the 9th day of the year in 2019.
 
