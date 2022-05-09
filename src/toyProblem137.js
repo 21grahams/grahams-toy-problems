@@ -5,6 +5,10 @@ Given a string date representing a Gregorian calendar date formatted as YYYY-MM-
 
 */
 
+// input: a date in the form of a string
+// output: a single number, which is the result of what day of the year it is
+// constraints: date.length == 10. date[4] == date[7] == '-', and all other date[i]'s are digits. date represents a calendar date between Jan 1st, 1900 and Dec 31th, 2019.
+// edge cases: none at this time
 const dayOfYear = date => {
   // do something
 }
