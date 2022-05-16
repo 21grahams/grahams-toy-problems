@@ -9,7 +9,18 @@ Given an array of integers arr, return true if the number of occurrences of each
 // constraints: 1 <= arr.length <= 1000. -1000 <= arr[i] <= 1000
 // edge cases: if array contains 0 or 1 integer(s), return true, as arr is unique
 const uniqueOccurrences = arr => {
-  // do something
+  // account for the edge cases
+  // create an object
+  // loop over the arr
+    // if current number of object doesn't exist 
+      // assign that arr value to key of object and value to 1
+    // otherwise
+      // assign that arr value to key of object and increment value
+  // get an array of the values of the object
+  // if any value equals another
+    // return false
+  // otherwise
+    // return true
 }
 
 console.log(uniqueOccurrences([1, 2, 2, 1, 1, 3])) // true
