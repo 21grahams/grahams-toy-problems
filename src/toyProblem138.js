@@ -4,6 +4,10 @@ leetcode - Unique Number of Occurrences
 Given an array of integers arr, return true if the number of occurrences of each value in the array is unique, or false otherwise.
 */
 
+// input: an array of integers
+// output: a boolean, true if the number of occurrences of each value in the array is unique, or false otherwise
+// constraints: 1 <= arr.length <= 1000. -1000 <= arr[i] <= 1000
+// edge cases: if array contains 0 or 1 integer(s), return true, as arr is unique
 const uniqueOccurrences = arr => {
   // do something
 }
