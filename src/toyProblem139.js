@@ -5,15 +5,20 @@ A sentence is a list of words that are separated by a single space with no leadi
 Each of the words consists of only uppercase and lowercase English letters (no punctuation).
 
 For example, "Hello World", "HELLO", and "hello world hello world" are all sentences.
-You are given a sentence s​​​​​​ and an integer k​​​​​​. You want to truncate s​​​​​​ such that it contains only the first k​​​​​​ words. Return s​​​​​​ after truncating it.
+You are given a sentence s​​​​​​ and an integer k​​​​​​. You want to truncate s​​​​​​ such that it contains only the first k​​​​​​ words. 
+Return s​​​​​​ after truncating it.
 */
 
 // input: a string sentence and an integer
 // output: a truncated string given the input integer number
 // constraints: none at this time
-// edge cases: if integer is 0, return entire string
+// edge cases: if integer is 0, return empty string
 const truncateSentence = (s, k) => {
-  // do something  
+  // account for edge case
+  // split string into an array of words
+  // slice string based on the k input
+  // join words back into a string
+  // return joined word
 };
 
 console.log(truncateSentence("Hello how are you Contestant", 4)) // "Hello how are you"
