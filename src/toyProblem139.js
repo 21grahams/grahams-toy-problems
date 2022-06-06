@@ -15,10 +15,15 @@ Return s​​​​​​ after truncating it.
 // edge cases: if integer is 0, return empty string
 const truncateSentence = (s, k) => {
   // account for edge case
+  if (k === 0) return ''
   // split string into an array of words
+  let wordArr = s.split(' ')
   // slice string based on the k input
+  wordArr = wordArr.slice(0, k)
   // join words back into a string
+  let joinedStr = wordArr.join(' ')
   // return joined word
+  return joinedStr
 };
 
 console.log(truncateSentence("Hello how are you Contestant", 4)) // "Hello how are you"
