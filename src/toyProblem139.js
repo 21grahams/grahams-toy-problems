@@ -19,8 +19,8 @@ const truncateSentence = (s, k) => {
   return s.split(' ').slice(0, k).join(' ')
 };
 
-// Runtime: 127 ms, faster than 5.26% of JavaScript online submissions for Truncate Sentence.
-// Memory Usage: 42.4 MB, less than 15.41% of JavaScript online submissions for Truncate Sentence.
+// Runtime: 61 ms, faster than 92.48% of JavaScript online submissions for Truncate Sentence.
+// Memory Usage: 42.1 MB, less than 50.94% of JavaScript online submissions for Truncate Sentence.
 
 console.log(truncateSentence("Hello how are you Contestant", 4)) // "Hello how are you"
 /* Explanation:
