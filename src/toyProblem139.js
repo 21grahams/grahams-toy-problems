@@ -26,6 +26,9 @@ const truncateSentence = (s, k) => {
   return joinedStr
 };
 
+// Runtime: 127 ms, faster than 5.26% of JavaScript online submissions for Truncate Sentence.
+// Memory Usage: 42.4 MB, less than 15.41% of JavaScript online submissions for Truncate Sentence.
+
 console.log(truncateSentence("Hello how are you Contestant", 4)) // "Hello how are you"
 /* Explanation:
 The words in s are ["Hello", "how" "are", "you", "Contestant"].
