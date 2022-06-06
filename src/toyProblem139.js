@@ -16,14 +16,7 @@ Return s​​​​​​ after truncating it.
 const truncateSentence = (s, k) => {
   // account for edge case
   if (k === 0) return ''
-  // split string into an array of words
-  let wordArr = s.split(' ')
-  // slice string based on the k input
-  wordArr = wordArr.slice(0, k)
-  // join words back into a string
-  let joinedStr = wordArr.join(' ')
-  // return joined word
-  return joinedStr
+  return s.split(' ').slice(0, k).join(' ')
 };
 
 // Runtime: 127 ms, faster than 5.26% of JavaScript online submissions for Truncate Sentence.
