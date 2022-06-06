@@ -44,3 +44,5 @@ Hence, you should return "What is the solution".
 */
 
 console.log(truncateSentence("chopper is not a tanuki", 5)) // "chopper is not a tanuki"
+
+console.log(truncateSentence("this is a test to see if the entire string deletes based on edge case", 0)) // ''
