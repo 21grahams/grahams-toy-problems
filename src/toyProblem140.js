@@ -10,3 +10,12 @@ A substring is a contiguous sequence of characters within a string
 const maxLengthBetweenEqualCharacters = s => {
   // do something
 };
+
+console.log(maxLengthBetweenEqualCharacters('aa')) // 0
+// Explanation: The optimal substring here is an empty substring between the two 'a's.
+
+console.log(maxLengthBetweenEqualCharacters('abca')) // 2
+// Explanation: The optimal substring here is "bc".
+
+console.log(maxLengthBetweenEqualCharacters('cbzxy')) // -1
+// Explanation: There are no characters that appear twice in s.
