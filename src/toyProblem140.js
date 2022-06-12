@@ -7,6 +7,10 @@ A substring is a contiguous sequence of characters within a string
 
 */
 
+// input: a sentence coming in as a string
+// output: a number, which equals the longest substrings between two equal chars
+// constraints: 1 <= s.length <= 300. s contains only lowercase English letters.
+// edge cases: If there is no such substring return -1
 const maxLengthBetweenEqualCharacters = s => {
   // do something
 };
