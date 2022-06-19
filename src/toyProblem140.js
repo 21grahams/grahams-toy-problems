@@ -38,3 +38,5 @@ console.log(maxLengthBetweenEqualCharacters('abca')) // 2
 
 console.log(maxLengthBetweenEqualCharacters('cbzxy')) // -1
 // Explanation: There are no characters that appear twice in s.
+
+console.log(maxLengthBetweenEqualCharacters('cabbac')) // 4
