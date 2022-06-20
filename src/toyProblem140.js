@@ -12,22 +12,13 @@ A substring is a contiguous sequence of characters within a string
 // constraints: 1 <= s.length <= 300. s contains only lowercase English letters.
 // edge cases: If there is no such substring return -1
 const maxLengthBetweenEqualCharacters = s => {
-  let count = 0, beenSeen = false, resultObj = {}
-  for (let i = 0; i < s.length; i++) {
-    if (resultObj[s[i]] === undefined) {
-      resultObj[s[i]] = 1
-    } else {
-      resultObj[s[i]]++
-      beenSeen = true
-    }
-    if (s[i + 1] !== s[i] && !beenSeen && i !== 0) {
-      count++
-      continue
-    }
-    
-  }
-  if (!beenSeen) count = -1
-  return count
+  // create a count var, assign to 0
+  // compare first letter of string to last. If they don't match
+    // return -1
+  // otherwise
+    // loop over string
+      // for each iteration, increment count from second element to second to last element
+  // return count
 };
 
 console.log(maxLengthBetweenEqualCharacters('aa')) // 0
