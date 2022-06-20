@@ -15,16 +15,27 @@ const maxLengthBetweenEqualCharacters = s => {
   // create a count var, assign to 0
   let count = 0
   // loop over string i
+  for (let i = 0; i < s.length; i++) {
     // loop over string j as i + 1
+    for (let j = i + 1; j < s.length; j++) {
       // if string of i equals string of j
+      if (s[i] === s[j] && count === 0) {
+        count = j - i - 1
+        break
         // assign count to index
+      }
+    }
+  }
+  if (count === 0 && s[0] !== s[1]) return - 1
   // return count
+  return count
 };
 
 console.log(maxLengthBetweenEqualCharacters('aa')) // 0
 // Explanation: The optimal substring here is an empty substring between the two 'a's.
 
 console.log(maxLengthBetweenEqualCharacters('abca')) // 2
+debugger
 // Explanation: The optimal substring here is "bc".
 
 console.log(maxLengthBetweenEqualCharacters('cbzxy')) // -1
