@@ -30,6 +30,9 @@ const maxLengthBetweenEqualCharacters = (s) => {
   return count;
 };
 
+// Runtime: 86 ms, faster than 61.29% of JavaScript online submissions for Largest Substring Between Two Equal Characters.
+// Memory Usage: 42.1 MB, less than 92.74% of JavaScript online submissions for Largest Substring Between Two Equal Characters.
+
 console.log(maxLengthBetweenEqualCharacters("aa")); // 0
 // Explanation: The optimal substring here is an empty substring between the two 'a's.
 
