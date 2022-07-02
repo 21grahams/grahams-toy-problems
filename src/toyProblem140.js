@@ -19,9 +19,9 @@ const maxLengthBetweenEqualCharacters = (s) => {
     // loop over string j as i + 1
     for (let j = 1; j < s.length; j++) {
       // if string of i equals string of j
-      if (s[i] === s[j]) {
+      if (s[i] === s[j] && count < j - i) {
         // assign count to index
-        count = Math.max(count, j - i - 1);
+        count = j - i - 1
       }
     }
   }
@@ -45,7 +45,7 @@ console.log(maxLengthBetweenEqualCharacters("cbzxy")); // -1
 
 console.log(maxLengthBetweenEqualCharacters("cabbac")); // 4
 
-console.log(maxLengthBetweenEqualCharacters("scayofdzca")); // 6
+console.log(maxLengthBetweenEqualCharacters("scayofdzcda")); // 7
 
 console.log(maxLengthBetweenEqualCharacters("mgntdygtxrvxjnwksqhxuxtrv")); // 18
 
