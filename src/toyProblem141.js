@@ -13,7 +13,12 @@ Given n, calculate F(n).
 // constraints: 0 <= n <= 30
 // edge cases: if there's no input, return null
 const fib = (n) => {
-  // do something  
+  // RECURSION
+  // base case:
+    // if n is equal to 1
+      // return n
+  // recursive case:
+    // call fib function and pass in n - 1
 };
 
 console.log(fib(2)) // 1
