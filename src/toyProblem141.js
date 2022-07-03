@@ -11,3 +11,12 @@ Given n, calculate F(n).
 const fib = (n) => {
   // do something  
 };
+
+console.log(fib(2)) // 1
+// Explanation: F(2) = F(1) + F(0) = 1 + 0 = 1
+
+console.log(fib(3)) // 2
+// Explanation: F(3) = F(2) + F(1) = 1 + 1 = 2
+
+console.log(fib(4)) // 3
+// Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3
