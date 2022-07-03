@@ -13,19 +13,26 @@ Given n, calculate F(n).
 // constraints: 0 <= n <= 30
 // edge cases: if there's no input, return null
 const fib = (n) => {
+  // edge case
+  // if n is less than or equal to 2
+  // return 1
+  if (n === 0) return 0;
+  if (n <= 2) return 1;
   // RECURSION
   // base case:
-    // if n is equal to 1
-      // return n
+  // if n is equal to 1
+  // return n
+  if (n === 0) return 1;
   // recursive case:
-    // call fib function and pass in n - 1
+  // call fib function and pass in n - 1
+  return fib(n - 1) + fib(n - 2);
 };
 
-console.log(fib(2)) // 1
+console.log(fib(2)); // 1
 // Explanation: F(2) = F(1) + F(0) = 1 + 0 = 1
 
-console.log(fib(3)) // 2
+console.log(fib(3)); // 2
 // Explanation: F(3) = F(2) + F(1) = 1 + 1 = 2
 
-console.log(fib(4)) // 3
+console.log(fib(4)); // 3
 // Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3
