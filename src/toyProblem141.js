@@ -8,6 +8,10 @@ F(n) = F(n - 1) + F(n - 2), for n > 1.
 Given n, calculate F(n).
 */
 
+// input: an integer, following the fibonacci sequence
+// output: an integer which is the result of the fib sequence
+// constraints: 0 <= n <= 30
+// edge cases: if there's no input, return null
 const fib = (n) => {
   // do something  
 };
