@@ -28,6 +28,9 @@ const fib = (n) => {
   return fib(n - 1) + fib(n - 2);
 };
 
+// Runtime: 80 ms, faster than 73.10% of JavaScript online submissions for Fibonacci Number.
+// Memory Usage: 41.9 MB, less than 47.09% of JavaScript online submissions for Fibonacci Number.
+
 console.log(fib(2)); // 1
 // Explanation: F(2) = F(1) + F(0) = 1 + 0 = 1
 
