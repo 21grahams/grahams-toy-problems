@@ -23,3 +23,5 @@ nodeA.next = nodeB
 nodeB.next = nodeC
 nodeC.next = nodeD
 nodeD.next = null
+console.log('deleteNode: ', deleteNode(nodeA)) // [4, 1, 9]
+// Explanation: You are given the second node with value 5, the linked list should become 4 -> 1 -> 9 after calling your function.
