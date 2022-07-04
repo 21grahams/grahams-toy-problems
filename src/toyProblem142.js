@@ -12,9 +12,8 @@ var Node = function (val, next) {
 };
 
 const deleteNode = node => {
-  // assign cur to node
-  // while cur exists
-    // assign the node of val to the val of next node
+  // assign the current val of node to the next node val
+  // assign the next node to the next next node
 };
 
 let nodeA = new Node(4)
