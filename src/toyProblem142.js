@@ -18,6 +18,9 @@ const deleteNode = node => {
   node.next = node.next.next
 };
 
+// Runtime: 144 ms, faster than 5.50% of JavaScript online submissions for Delete Node in a Linked List.
+// Memory Usage: 44.3 MB, less than 48.16% of JavaScript online submissions for Delete Node in a Linked List.
+
 let nodeA = new Node(4)
 let nodeB = new Node(5)
 let nodeC = new Node(1)
