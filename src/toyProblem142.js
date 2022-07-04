@@ -14,6 +14,8 @@ var Node = function (val, next) {
 const deleteNode = node => {
   // assign the current val of node to the next node val
   // assign the next node to the next next node
+  node.val = node.next.val
+  node.next = node.next.next
 };
 
 let nodeA = new Node(4)
