@@ -12,7 +12,9 @@ var Node = function (val, next) {
 };
 
 const deleteNode = node => {
-  // do something  
+  // assign cur to node
+  // while cur exists
+    // assign the node of val to the val of next node
 };
 
 let nodeA = new Node(4)
@@ -23,5 +25,16 @@ nodeA.next = nodeB
 nodeB.next = nodeC
 nodeC.next = nodeD
 nodeD.next = null
-console.log('deleteNode: ', deleteNode(nodeA)) // [4, 1, 9]
+console.log('deleteNode: ', deleteNode(5)) // [4, 1, 9]
 // Explanation: You are given the second node with value 5, the linked list should become 4 -> 1 -> 9 after calling your function.
+
+let nodeW = new Node(4)
+let nodeX = new Node(5)
+let nodeY = new Node(1)
+let nodeZ = new Node(9)
+nodeW.next = nodeX
+nodeX.next = nodeY
+nodeY.next = nodeZ
+nodeZ.next = null
+console.log('deleteNode: ', deleteNode(1)) // [4, 5, 9]
+// Explanation: You are given the third node with value 1, the linked list should become 4 -> 5 -> 9 after calling your function.
