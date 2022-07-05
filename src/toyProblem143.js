@@ -14,3 +14,12 @@ Given the integer array fruits, return the maximum number of fruits you can pick
 const totalFruit = fruits => {
   // do something  
 };
+
+console.log(totalFruit([1, 2, 1])) // 3
+// Explanation: We can pick from all 3 trees
+
+console.log(totalFruit([0, 1, 2, 2])) // 3
+// Explanation: We can pick from trees [1,2,2]. If we had started at the first tree, we would only pick from trees [0,1]
+
+console.log(totalFruit([1, 2, 3, 2, 2])) // 4
+// Explanation: We can pick from trees [2,3,2,2]. If we had started at the first tree, we would only pick from trees [1,2]
