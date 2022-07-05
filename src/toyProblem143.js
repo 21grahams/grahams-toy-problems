@@ -18,20 +18,29 @@ Given the integer array fruits, return the maximum number of fruits you can pick
 // edge cases: none at this time
 const totalFruit = (fruits) => {
   // create the following variables: last_fruit, second_last_fruit, last_fruit_count, current_max, max, assign to -1, -1, 0, 0, 0 respectively
+  let [last_fruit, second_last_fruit, last_fruit_count, current_max, max] = [-1, -1, 0, 0, 0]
   // for of loop over fruits
+  for (const fruit of fruits) {
     // if fruit equals last_fruit OR fruit equals second_last_fruit
-      // increment current_max OR current_max equals last_fruit_count + 1
-      // if fruit equals last_fruit
-        // increment last_fruit_count OR
-        // last_fruit_count equals 1
-
-      // if fruit doesn't equal last_fruit
-        // second_last_fruit equals last_fruit
-        // last_fruit equals fruit
-
-        // max equals Math.max of max and current_max
-
+    // increment current_max OR current_max equals last_fruit_count + 1
+    fruit === last_fruit || fruit === second_last_fruit ? current_max++ : (current_max = last_fruit_count + 1)
+    // if fruit equals last_fruit
+    // increment last_fruit_count OR
+    // last_fruit_count equals 1
+    fruit === last_fruit ? last_fruit_count++ : (last_fruit_count = 1)
+    
+    // if fruit doesn't equal last_fruit
+    if (fruit !== last_fruit) {
+      // second_last_fruit equals last_fruit
+      second_last_fruit = last_fruit
+      // last_fruit equals fruit
+      last_fruit = fruit
+    }
+    // max equals Math.max of max and current_max
+    max = Math.max(max, current_max)
+  }
     // return max
+    return max
 };
 
 console.log(totalFruit([1, 2, 1])); // 3
