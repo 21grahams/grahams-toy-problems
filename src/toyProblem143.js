@@ -11,6 +11,10 @@ Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
 Given the integer array fruits, return the maximum number of fruits you can pick.
 */
 
+// input: an array of integers
+// output: an integer which represents the most amount of possible fruit obtained from fruit trees, represented as the input of integers
+// constraints: 1 <= fruits.length <= 105. 0 <= fruits[i] < fruits.length
+// edge cases: none at this time
 const totalFruit = fruits => {
   // do something  
 };
