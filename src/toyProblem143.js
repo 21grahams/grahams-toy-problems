@@ -43,6 +43,9 @@ const totalFruit = (fruits) => {
     return max
 };
 
+// Runtime: 119 ms, faster than 85.70% of JavaScript online submissions for Fruit Into Baskets.
+// Memory Usage: 50.4 MB, less than 76.99% of JavaScript online submissions for Fruit Into Baskets.
+
 console.log(totalFruit([1, 2, 1])); // 3
 // Explanation: We can pick from all 3 trees
 
