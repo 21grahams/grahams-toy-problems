@@ -12,13 +12,37 @@ A mapping of digits to letters (just like on the telephone buttons) is given bel
 // edge cases: if there are no digits present in the input, return an empty array
 const letterCombinations = digits => {
   // account for edge case
+  if (digits.length === 0) return []
   // create a hash map object, assign numbers to their corresponding letters
   // create an empty containerArray and string for our results
-  // loop over the object
-    // incremement the first letter to the stringResult
-  // push the string onto the containerArray
+  let letterObj = {
+    2: 'abc',
+    3: 'def',
+    4: 'ghi',
+    5: 'jkl',
+    6: 'mno',
+    7: 'pqrs',
+    8: 'tuv',
+    9: 'wxyz',
+  }, containerArray = [], initialStringConcat = '', secondaryStringConcat = ''
+  // loop over the digits input
+    for (let i = 0; i < digits.length; i++) {
+      initialStringConcat += letterObj[digits[i]]
+  }
+  // split the initialStringConcat
+  let splitArray = initialStringConcat.split('')
 
+  // loop twice over the splitArray
+  for (let i = 0; i < splitArray.length; i++) {
+    for (let j = Number(digits[1]) || 0; j < splitArray.length; j++) {
+      secondaryStringConcat += splitArray[i] + splitArray[j]
+    }
+    if (i + 1 >= digits[1]) break
+  }
+  // push secondaryStringConcat onto containerArray
+  containerArray.push(secondaryStringConcat)
   // return containerArray
+  return containerArray
 };
 
 console.log(letterCombinations('23')) // ["ad","ae","af","bd","be","bf","cd","ce","cf"]
