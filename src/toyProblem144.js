@@ -26,32 +26,31 @@ const letterCombinations = digits => {
     9: 'wxyz',
   }, possibleCombinations = []
 
-  // split / map the possibleValues into separate strings inside array
-  var possibleValues = digits.split('').map(value => letterObj[value])
+  // OPTION ONE
+  // var possibleValues = digits.split('').map(value => letterObj[value])
 
-  // recursive function initialization, takes in a start and result param
-  const recursiveFunc = (start, result) => {
-    // base case - if the result length is the same as the digits input length
-    // take the joined result and push onto the possibleCombinations array
-    if (result.length === digits.length) possibleCombinations.push(result.join(''))
-    
-    // recursive case - loop twice over possibleValues array
-    for (let i = start; i < possibleValues.length; i++) {
-      for (let j = 0; j < possibleValues[i].length; j++) {
-        // push possibleValues at each index onto the result array
-        result.push(possibleValues[i][j])
-        // call recursive function, pass in i + 1 and result
-        recursiveFunc(i + 1, result)
-        // pop result
-        result.pop()
+  // const recursiveFunc = (start, result) => {
+  //   if (result.length === digits.length) possibleCombinations.push(result.join(''))
+  //   for (let i = start; i < possibleValues.length; i++) {
+  //     for (let j = 0; j < possibleValues[i].length; j++) {
+  //       result.push(possibleValues[i][j])
+  //       recursiveFunc(i + 1, result)
+  //       result.pop()
+  //     }
+  //   }
+  // }
+  // recursiveFunc(0, [])
+  // return possibleCombinations
 
-      }
-    }
-  }
-  // call recursive function, pass in 0 and empty array to initialize
-  recursiveFunc(0, [])
+  // OPTION TWO
+  // create a breadth first search function, takes in a position and string
+    // base case - if the position equals the length of the digits - push the string on the possibleCombinations array
+  // otherwise
+    // recursive case - loop over the digits at position
+      // call the bfs func, pass in the position + 1 and string + digits at position at index
+
+  // call bfs func and pass in 0 and empty string
   // return possibleCombinations array
-  return possibleCombinations
 };
 
 // Runtime: 82 ms, faster than 49.94% of JavaScript online submissions for Letter Combinations of a Phone Number.
