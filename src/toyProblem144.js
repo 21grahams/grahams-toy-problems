@@ -54,6 +54,9 @@ const letterCombinations = digits => {
   return possibleCombinations
 };
 
+// Runtime: 82 ms, faster than 49.94% of JavaScript online submissions for Letter Combinations of a Phone Number.
+// Memory Usage: 42 MB, less than 56.12% of JavaScript online submissions for Letter Combinations of a Phone Number.
+
 console.log(letterCombinations('23')) // ["ad","ae","af","bd","be","bf","cd","ce","cf"]
 
 console.log(letterCombinations('')) // []
