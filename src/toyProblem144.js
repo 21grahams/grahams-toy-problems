@@ -11,7 +11,14 @@ A mapping of digits to letters (just like on the telephone buttons) is given bel
 // constraints: 0 <= digits.length <= 4 digits[i] is a digit in the range ['2', '9'].
 // edge cases: if there are no digits present in the input, return an empty array
 const letterCombinations = digits => {
-  // do something  
+  // account for edge case
+  // create a hash map object, assign numbers to their corresponding letters
+  // create an empty containerArray and string for our results
+  // loop over the object
+    // incremement the first letter to the stringResult
+  // push the string onto the containerArray
+
+  // return containerArray
 };
 
 console.log(letterCombinations('23')) // ["ad","ae","af","bd","be","bf","cd","ce","cf"]
