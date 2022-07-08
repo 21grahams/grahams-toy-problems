@@ -42,6 +42,9 @@ const letterCombinations = digits => {
   // recursiveFunc(0, [])
   // return possibleCombinations
 
+  // Runtime: 82 ms, faster than 49.94% of JavaScript online submissions for Letter Combinations of a Phone Number.
+  // Memory Usage: 42 MB, less than 56.12% of JavaScript online submissions for Letter Combinations of a Phone Number.
+
   // OPTION TWO
   // create a breadth first search function, takes in a position and string
   const bfs = (position, string) => {
@@ -59,10 +62,11 @@ const letterCombinations = digits => {
   bfs(0, '')
   // return possibleCombinations array
   return possibleCombinations
+
+//   Runtime: 111 ms, faster than 9.46% of JavaScript online submissions for Letter Combinations of a Phone Number.
+// Memory Usage: 42.4 MB, less than 20.22% of JavaScript online submissions for Letter Combinations of a Phone Number.
 };
 
-// Runtime: 82 ms, faster than 49.94% of JavaScript online submissions for Letter Combinations of a Phone Number.
-// Memory Usage: 42 MB, less than 56.12% of JavaScript online submissions for Letter Combinations of a Phone Number.
 
 console.log(letterCombinations('23')) // ["ad","ae","af","bd","be","bf","cd","ce","cf"]
 
