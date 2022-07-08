@@ -25,20 +25,19 @@ const letterCombinations = digits => {
     8: 'tuv',
     9: 'wxyz',
   }, containerArray = [], initialStringConcat = '', secondaryStringConcat = ''
-  // loop over the digits input
-    for (let i = 0; i < digits.length; i++) {
-      initialStringConcat += letterObj[digits[i]]
-  }
-  // split the initialStringConcat
-  let splitArray = initialStringConcat.split('')
 
-  // loop twice over the splitArray
-  for (let i = 0; i < splitArray.length; i++) {
-    for (let j = Number(digits[1]) || 0; j < splitArray.length; j++) {
-      secondaryStringConcat += splitArray[i] + splitArray[j]
-    }
-    if (i + 1 >= digits[1]) break
+  // split / map the possibleValues into separate strings inside array
+  var possibleValues = digits.split('').map(value => letterObj[value])
+
+  // base case
+  if (splitArray.length === digits.length) return 1
+
+  // recursive case
+  for (let i = 0; i < splitArray.length; i+=2) {
+    secondaryStringConcat += splitArray[i]
+    return letterCombinations(splitArray.slice(1))
   }
+  
   // push secondaryStringConcat onto containerArray
   containerArray.push(secondaryStringConcat)
   // return containerArray
