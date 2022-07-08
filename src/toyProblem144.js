@@ -9,3 +9,9 @@ A mapping of digits to letters (just like on the telephone buttons) is given bel
 const letterCombinations = digits => {
   // do something  
 };
+
+console.log(letterCombinations('23')) // ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+
+console.log(letterCombinations('')) // []
+
+console.log(letterCombinations('2')) // ["a","b","c"]
