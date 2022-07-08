@@ -44,13 +44,21 @@ const letterCombinations = digits => {
 
   // OPTION TWO
   // create a breadth first search function, takes in a position and string
+  const bfs = (position, string) => {
     // base case - if the position equals the length of the digits - push the string on the possibleCombinations array
-  // otherwise
-    // recursive case - loop over the digits at position
-      // call the bfs func, pass in the position + 1 and string + digits at position at index
-
+    if (position === digits.length) possibleCombinations.push(string)
+    else {
+      // recursive case - loop over the digits at position
+      for (let i = 0; i < letterObj[digits[position]].length; i++) {
+        // call the bfs func, pass in the position + 1 and string + digits at position at index
+        bfs(position + 1, string + letterObj[digits[position]][i])
+      }
+    }
+  }
   // call bfs func and pass in 0 and empty string
+  bfs(0, '')
   // return possibleCombinations array
+  return possibleCombinations
 };
 
 // Runtime: 82 ms, faster than 49.94% of JavaScript online submissions for Letter Combinations of a Phone Number.
