@@ -24,23 +24,34 @@ const letterCombinations = digits => {
     7: 'pqrs',
     8: 'tuv',
     9: 'wxyz',
-  }, possibleCombinations = [], initialStringConcat = '', secondaryStringConcat = ''
+  }, possibleCombinations = []
 
   // split / map the possibleValues into separate strings inside array
   var possibleValues = digits.split('').map(value => letterObj[value])
 
   // recursive function initialization, takes in a start and result param
-
+  const recursiveFunc = (start, result) => {
     // base case - if the result length is the same as the digits input length
-      // take the joined result and push onto the possibleCombinations array
-
+    // take the joined result and push onto the possibleCombinations array
+    if (result.length === digits.length) possibleCombinations.push(result.join(''))
+    
     // recursive case - loop twice over possibleValues array
-      // push possibleValues at each index onto the result array
-      // call recursive function, pass in i + 1 and result
+    for (let i = start; i < possibleValues.length; i++) {
+      for (let j = 0; j < possibleValues[i].length; j++) {
+        // push possibleValues at each index onto the result array
+        result.push(possibleValues[i][j])
+        // call recursive function, pass in i + 1 and result
+        recursiveFunc(i + 1, result)
         // pop result
+        result.pop()
 
+      }
+    }
+  }
   // call recursive function, pass in 0 and empty array to initialize
+  recursiveFunc(0, [])
   // return possibleCombinations array
+  return possibleCombinations
 };
 
 console.log(letterCombinations('23')) // ["ad","ae","af","bd","be","bf","cd","ce","cf"]
