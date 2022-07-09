@@ -13,9 +13,21 @@ Return an integer array answer, where each answer[i] is the answer to the ith qu
 // input: an array of string words and another array of query string queries
 // output: an array of integers, where each current answer is the answer to the nth query
 // constraints: 1 <= queries.length <= 2000. 1 <= words.length <= 2000. 1 <= queries[i].length, words[i].length <= 10. queries[i][j], words[i][j] consist of lowercase English letters.
-// edge cases: None at this time
+// edge cases: if f(queries[i]) is NOT < f(W), return an empty array
 const numSmallerByFrequency = (queries, words) => {
-  // do something  
+  // create a letterMap, assign each letter to it's number equivilant in the alphabet
+  // create a lexicographicalQueryCount, assign to 0 
+  // create a lexicographicalWordCount, assign to 0 
+  // create a finalWordCount, assign to 0 
+  // create a wordAmount, assign to 0 
+  // create a finalCountArr
+  // loop over queries, find the lexicographically smallest character in each query string, assign it's relative alphabet character number to lexicographicalQueryCount
+    // loop over words, find the lexicographically smallest character in each word string, assign it's relative alphabet character number to lexicographicalWordCount
+      // if lexicographicalWordCount is larger than lexicographicalQueryCount
+        // increment finalWordCount
+        // push finalWordCount onto finalCountArr
+    // reset finalWordCount
+  // return finalCountArr
 };
 
 console.log(numSmallerByFrequency(['cbd'], ['zaaaz'])) // [1]
