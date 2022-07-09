@@ -16,16 +16,26 @@ Return an integer array answer, where each answer[i] is the answer to the ith qu
 // edge cases: if f(queries[i]) is NOT < f(W), return an empty array
 const numSmallerByFrequency = (queries, words) => {
   // create a result arr
+  let resultArr = []
   // loop over queries
+  queries.forEach((query) => {
     // create a count, init to 0
     // assign query by splitting, sorting and joining
+    let count = 0
+    query = query.split('').sort().join('')
     // loop over words
+    words.forEach((word) => {
       // assign words by splitting, sorting and joining
+      word = word.split('').sort().join('')
       // if the last index of the query at query index 0 is smaller than last index of word at word of index 0
-        // increment count
-
+      if (query.lastIndexOf(query[0]) < word.lastIndexOf(word[0])) count++
+      // increment count
+    })
     // push count to result arr
+    resultArr.push(count)
+  })
   // return result array
+  return resultArr
 };
 
 console.log(numSmallerByFrequency(["cbd"], ["zaaaz"])); // [1]
