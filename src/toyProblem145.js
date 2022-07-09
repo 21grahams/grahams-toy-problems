@@ -38,6 +38,9 @@ const numSmallerByFrequency = (queries, words) => {
   return resultArr
 };
 
+// Runtime: 271 ms, faster than 20.00% of JavaScript online submissions for Compare Strings by Frequency of the Smallest Character.
+// Memory Usage: 49.7 MB, less than 48.57% of JavaScript online submissions for Compare Strings by Frequency of the Smallest Character.
+
 console.log(numSmallerByFrequency(["cbd"], ["zaaaz"])); // [1]
 // Explanation: On the first query we have f("cbd") = 1, f("zaaaz") = 3 so f("cbd") < f("zaaaz").
 
