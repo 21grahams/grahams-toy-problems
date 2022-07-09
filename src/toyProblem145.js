@@ -12,3 +12,9 @@ Return an integer array answer, where each answer[i] is the answer to the ith qu
 const numSmallerByFrequency = (queries, words) => {
   // do something  
 };
+
+console.log(numSmallerByFrequency(['cbd'], ['zaaz'])) // [1]
+// Explanation: On the first query we have f("cbd") = 1, f("zaaaz") = 3 so f("cbd") < f("zaaaz").
+
+console.log(numSmallerByFrequency(['bbb', 'cc'], ["a","aa","aaa","aaaa"])) // [1, 2]
+// Explanation: On the first query only f("bbb") < f("aaaa"). On the second query both f("aaa") and f("aaaa") are both > f("cc").
