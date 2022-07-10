@@ -18,3 +18,14 @@ For arr = [-7, 22, 17, 3], n = 4 and the median is obtained by sorting the arr
 const getStrongest = (arr, k) => {
   // do something  
 };
+
+console.log(getStrongest([1, 2, 3, 4, 5], 2)) // [5, 1]
+// Explanation: Median is 3, the elements of the array sorted by the strongest are [5,1,4,2,3]. The strongest 2 elements are [5, 1]. [1, 5] is also accepted answer.
+// Please note that although |5 - 3| == |1 - 3| but 5 is stronger than 1 because 5 > 1.
+
+console.log(getStrongest([1, 1, 3, 5, 5], 2)) // [5, 5]
+// Explanation: Median is 3, the elements of the array sorted by the strongest are [5,5,1,1,3]. The strongest 2 elements are [5, 5].
+
+console.log(getStrongest([6, 7, 11, 7, 6, 8], 5)) // [11, 8, 6, 6, 7]
+// Explanation: Median is 7, the elements of the array sorted by the strongest are [11,8,6,6,7,7].
+// Any permutation of [11,8,6,6,7] is accepted.
