@@ -21,18 +21,38 @@ For arr = [-7, 22, 17, 3], n = 4 and the median is obtained by sorting the arr
 // edge cases: if k is 0, return an empty array
 const getStrongest = (arr, k) => {
   // account for edge case
+  if (k === 0) return []
   // create a finalArr
+  let finalArr = [], median = 0
   // find the median of each input arr and store in median variable
+  median = Math.floor(arr.reduce((x, y) => x + y, 0) / arr.length)
   // loop over arr twice
-  // if length of finalArr is less than k
-    // if arr[i] minus median is greater than arr[j]
-      // push arr[i] onto finalArr
-    // otherwise if arr[i] minus median is equal to arr[j]
-      // if arr[i] is greater than arr[j]
-        // push arr[i] onto finalArr
-      // otherwise
-        // push arr[j] onto finalArr
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      // if length of finalArr is less than k
+      if (finalArr.length < k || arr[j] > arr[i]) {
+        // if arr[i] minus median is greater than arr[j]
+        if (Math.abs(arr[i] - median) > Math.abs(arr[j] - median)) {
+          // push arr[i] onto finalArr
+          finalArr.push(arr[i])
+          break
+          // otherwise if arr[i] minus median is equal to arr[j]
+        } else if (Math.abs(arr[i] - median) === Math.abs(arr[j] - median)) {
+          // if arr[i] is greater than arr[j]
+          if (arr[i] > arr[j]) {
+            // push arr[i] onto finalArr
+            finalArr.push(arr[i])
+            // otherwise
+          } else {
+            // push arr[j] onto finalArr
+            finalArr.push(arr[j])
+          }
+        }
+      }
+    }
+  }
   // return finalArr
+  return finalArr
 };
 
 console.log(getStrongest([1, 2, 3, 4, 5], 2)) // [5, 1]
