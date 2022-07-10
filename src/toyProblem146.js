@@ -20,7 +20,19 @@ For arr = [-7, 22, 17, 3], n = 4 and the median is obtained by sorting the arr
 // constraints: 1 <= arr.length <= 105. -105 <= arr[i] <= 105. 1 <= k <= arr.length
 // edge cases: if k is 0, return an empty array
 const getStrongest = (arr, k) => {
-  // do something  
+  // account for edge case
+  // create a finalArr
+  // find the median of each input arr and store in median variable
+  // loop over arr twice
+  // if length of finalArr is less than k
+    // if arr[i] minus median is greater than arr[j]
+      // push arr[i] onto finalArr
+    // otherwise if arr[i] minus median is equal to arr[j]
+      // if arr[i] is greater than arr[j]
+        // push arr[i] onto finalArr
+      // otherwise
+        // push arr[j] onto finalArr
+  // return finalArr
 };
 
 console.log(getStrongest([1, 2, 3, 4, 5], 2)) // [5, 1]
