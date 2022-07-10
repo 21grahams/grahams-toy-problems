@@ -15,6 +15,10 @@ For arr = [-7, 22, 17, 3], n = 4 and the median is obtained by sorting the arr
 
 */
 
+// input: an array of integers and a single integer, k which represents the amount of strong numbers to return in output
+// output: an array of integers, the number of integers depends on the number of input, k
+// constraints: 1 <= arr.length <= 105. -105 <= arr[i] <= 105. 1 <= k <= arr.length
+// edge cases: if k is 0, return an empty array
 const getStrongest = (arr, k) => {
   // do something  
 };
