@@ -23,7 +23,7 @@ const getStrongest = (arr, k) => {
   // account for edge case
   if (k === 0) return []
   // create a finalArr
-  median = 0
+  let median = 0
   // find the median of each input arr and store in median variable
   median = Math.floor(arr.reduce((x, y) => x + y, 0) / arr.length)
   // sort arr
@@ -44,6 +44,9 @@ const getStrongest = (arr, k) => {
   // return the sliced array from 0 to k
   return arr.slice(0, k)
 };
+
+// Runtime: 422 ms, faster than 75.00% of JavaScript online submissions for The k Strongest Values in an Array.
+// Memory Usage: 66 MB, less than 53.57% of JavaScript online submissions for The k Strongest Values in an Array.
 
 console.log(getStrongest([1, 2, 3, 4, 5], 2)) // [5, 1]
 // i = 0 : 1 - 3 = 2
