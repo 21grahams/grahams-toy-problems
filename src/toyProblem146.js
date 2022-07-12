@@ -23,19 +23,19 @@ const getStrongest = (arr, k) => {
   // account for edge case
   if (k === 0) return []
   // create a finalArr
-  let finalArr = [], median = 0, strongest = 0, secondaryStrongest = 0
+  let finalArr = [], median = 0, bigger
   // find the median of each input arr and store in median variable
   median = Math.floor(arr.reduce((x, y) => x + y, 0) / arr.length)
-  // loop over arr
-  for (let i = 0; i < arr.length; i++) {
-    // if absolute value of arr[i] minus the median is greater than strongest
-      // assign strongest to arr[i]
-    // otherwise if absolute value of arr[i] minus the median is greater than secondaryStrongest
-      // assign secondaryStrongest to arr[i]
-    // push strongest and secondaryStrongest to finalArr
-  }
-  // return finalArr
-  return finalArr
+  // sort arr
+    // assign first variable to a minus median
+    // assign second variable to b minus median
+
+    // if first equals second
+      // return b - a
+    
+    // return second minus first
+
+  // return the sliced array from 0 to k
 };
 
 console.log(getStrongest([1, 2, 3, 4, 5], 2)) // [5, 1]
