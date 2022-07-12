@@ -23,39 +23,27 @@ const getStrongest = (arr, k) => {
   // account for edge case
   if (k === 0) return []
   // create a finalArr
-  let finalArr = [], median = 0
+  let finalArr = [], median = 0, strongest = 0, secondaryStrongest = 0
   // find the median of each input arr and store in median variable
   median = Math.floor(arr.reduce((x, y) => x + y, 0) / arr.length)
-  // loop over arr twice
+  // loop over arr
   for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      // if length of finalArr is less than k
-      if (finalArr.length < k || arr[j] > arr[i]) {
-        // if arr[i] minus median is greater than arr[j]
-        if (Math.abs(arr[i] - median) > Math.abs(arr[j] - median)) {
-          // push arr[i] onto finalArr
-          finalArr.push(arr[i])
-          break
-          // otherwise if arr[i] minus median is equal to arr[j]
-        } else if (Math.abs(arr[i] - median) === Math.abs(arr[j] - median)) {
-          // if arr[i] is greater than arr[j]
-          if (arr[i] > arr[j]) {
-            // push arr[i] onto finalArr
-            finalArr.push(arr[i])
-            // otherwise
-          } else {
-            // push arr[j] onto finalArr
-            finalArr.push(arr[j])
-          }
-        }
-      }
-    }
+    // if absolute value of arr[i] minus the median is greater than strongest
+      // assign strongest to arr[i]
+    // otherwise if absolute value of arr[i] minus the median is greater than secondaryStrongest
+      // assign secondaryStrongest to arr[i]
+    // push strongest and secondaryStrongest to finalArr
   }
   // return finalArr
   return finalArr
 };
 
 console.log(getStrongest([1, 2, 3, 4, 5], 2)) // [5, 1]
+// i = 0 : 1 - 3 = 2
+// i = 1 : 2 - 3 = 1
+// i = 2 : 3 - 3 = 0
+// i = 3 : 4 - 3 = 1 
+// i = 4 : 5 - 3 = 2
 // Explanation: Median is 3, the elements of the array sorted by the strongest are [5,1,4,2,3]. The strongest 2 elements are [5, 1]. [1, 5] is also accepted answer.
 // Please note that although |5 - 3| == |1 - 3| but 5 is stronger than 1 because 5 > 1.
 
