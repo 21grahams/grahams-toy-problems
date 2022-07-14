@@ -9,9 +9,12 @@ Starting with any positive integer, replace the number by the sum of the squares
 Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
 Those numbers for which this process ends in 1 are happy.
 Return true if n is a happy number, and false if not.
-
 */
 
+// input: an integer, represented as the letter n
+// output: a boolean. True if the number is happy, false if not. What determines a happy number is described above
+// constraints: 1 <= n <= 231 - 1
+// edge cases: none at this time
 const isHappy = n => {
   // do something
 }
@@ -19,10 +22,10 @@ const isHappy = n => {
 console.log(isHappy(19)) // true
 /* 
 Explanation:
-12 + 92 = 82
-82 + 22 = 68
-62 + 82 = 100
-12 + 02 + 02 = 1
+1^2 + 9^2 = 82
+8^2 + 2^2 = 68
+6^2 + 8^2 = 100
+1^2 + 0^2 + 0^2 = 1
 */
 
 console.log(isHappy(2)) // false
