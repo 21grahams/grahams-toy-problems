@@ -16,7 +16,14 @@ Return true if n is a happy number, and false if not.
 // constraints: 1 <= n <= 231 - 1
 // edge cases: none at this time
 const isHappy = n => {
-  // do something
+  // base case - if n equals 1, return true
+
+  // recursive case
+    // create recurseFunc, takes in sum 
+      // split numbers
+      // find each numbers square and sum them
+      // calls recurseFunc passing in new sum
+  // invoke recurseFunc, pass in n
 }
 
 console.log(isHappy(19)) // true
