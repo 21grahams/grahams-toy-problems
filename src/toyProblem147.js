@@ -15,18 +15,35 @@ Return true if n is a happy number, and false if not.
 // output: a boolean. True if the number is happy, false if not. What determines a happy number is described above
 // constraints: 1 <= n <= 231 - 1
 // edge cases: none at this time
-const isHappy = n => {
+const isHappy = (n) => {
   // base case - if n equals 1, return true
-
   // recursive case
-    // create recurseFunc, takes in sum 
-      // split numbers
-      // find each numbers square and sum them
-      // calls recurseFunc passing in new sum
+  // create recurseFunc, takes in sum
+  let innerSum
+  const recurseFunc = (sum) => {
+    // if (sum.toString().length === 1 && sum !== 1) return false
+    if (sum === 1) return true
+    innerSum = 0;
+    // split numbers
+    let splitNum = sum.toString().split("");
+    for (let i = 0; i < splitNum.length; i++) {
+      innerSum += splitNum[i] ** 2;
+    }
+    console.log("innerSum: ", innerSum);
+    // calls recurseFunc passing in new sum
+    if (innerSum === 1) return true;
+    recurseFunc(innerSum);
+  };
   // invoke recurseFunc, pass in n
-}
+  recurseFunc(n);
+  if (innerSum === 1 || n === 1) {
+    return true
+  } else {
+    return false
+  }
+};
 
-console.log(isHappy(19)) // true
+console.log(isHappy(19)); // true
 /* 
 Explanation:
 1^2 + 9^2 = 82
@@ -36,3 +53,5 @@ Explanation:
 */
 
 console.log(isHappy(2)) // false
+
+// console.log(isHappy(7)) // true
