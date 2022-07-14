@@ -15,3 +15,14 @@ Return true if n is a happy number, and false if not.
 const isHappy = n => {
   // do something
 }
+
+console.log(isHappy(19)) // true
+/* 
+Explanation:
+12 + 92 = 82
+82 + 22 = 68
+62 + 82 = 100
+12 + 02 + 02 = 1
+*/
+
+console.log(isHappy(2)) // false
