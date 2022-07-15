@@ -54,4 +54,4 @@ Explanation:
 
 console.log(isHappy(2)) // false
 
-// console.log(isHappy(7)) // true
+console.log(isHappy(7)) // true
