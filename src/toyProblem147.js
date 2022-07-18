@@ -16,42 +16,36 @@ Return true if n is a happy number, and false if not.
 // constraints: 1 <= n <= 231 - 1
 // edge cases: none at this time
 const isHappy = (n) => {
-  // base case - if n equals 1, return true
-  // recursive case
-  // create recurseFunc, takes in sum
-  let innerSum
+  let innerSum, finalResult, beenSeen, finalObj = {}
   const recurseFunc = (sum) => {
-    // if (sum.toString().length === 1 && sum !== 1) return false
-    if (sum === 1) return true
+    if (sum === 1) {
+      finalResult = true;
+      return;
+    }
+    if (finalObj[innerSum] > 1 && innerSum[1] === undefined) {
+      finalResult = false;
+      return;
+    }
+    
     innerSum = 0;
-    // split numbers
+    beenSeen = innerSum;
     let splitNum = sum.toString().split("");
     for (let i = 0; i < splitNum.length; i++) {
       innerSum += splitNum[i] ** 2;
+      if (finalObj[splitNum[i]] === undefined) {
+        finalObj[splitNum[i]] = 1
+      } else {
+        finalObj[splitNum[i]]++
+      }
     }
-    console.log("innerSum: ", innerSum);
-    // calls recurseFunc passing in new sum
-    if (innerSum === 1) return true;
     recurseFunc(innerSum);
   };
-  // invoke recurseFunc, pass in n
   recurseFunc(n);
-  if (innerSum === 1 || n === 1) {
-    return true
-  } else {
-    return false
-  }
+  return finalResult;
 };
 
 console.log(isHappy(19)); // true
-/* 
-Explanation:
-1^2 + 9^2 = 82
-8^2 + 2^2 = 68
-6^2 + 8^2 = 100
-1^2 + 0^2 + 0^2 = 1
-*/
 
-console.log(isHappy(2)) // false
+console.log(isHappy(2)); // false
 
-console.log(isHappy(7)) // true
+console.log(isHappy(7)); // true
