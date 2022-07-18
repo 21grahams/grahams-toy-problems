@@ -44,6 +44,9 @@ const isHappy = (n) => {
   return finalResult;
 };
 
+// Runtime: 103 ms, faster than 46.83% of JavaScript online submissions for Happy Number.
+// Memory Usage: 43.1 MB, less than 68.88% of JavaScript online submissions for Happy Number.
+
 console.log(isHappy(19)); // true
 
 console.log(isHappy(2)); // false
