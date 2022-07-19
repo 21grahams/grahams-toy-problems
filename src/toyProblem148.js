@@ -12,7 +12,15 @@ You must write an algorithm that runs in O(n) time.
 // constraints: Must create an algorithm that runs in linear time complexity. 0 <= nums.length <= 105. -109 <= nums[i] <= 109
 // edgecases: if array is empty, return null
 const longestConsecutive = nums => {
-  // do something
+  // account for edge case
+  // sort nums input array
+  // create a count, init to 0
+  // loop over nums array
+    // if current element plus one DOESN'T equal next element
+      // assign count to 0
+    // if current element plus one equals next element
+      // increment count
+  // return count
 }
 
 console.log(longestConsecutive([100, 4, 200, 1, 3, 2])) // 4
