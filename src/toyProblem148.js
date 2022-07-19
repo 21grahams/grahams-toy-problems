@@ -6,6 +6,11 @@ Given an unsorted array of integers nums, return the length of the longest conse
 You must write an algorithm that runs in O(n) time.
 */
 
+
+// input: an array of unsorted integers
+// output: an integer which represents the longest consecutive element sequence of the input array
+// constraints: Must create an algorithm that runs in linear time complexity. 0 <= nums.length <= 105. -109 <= nums[i] <= 109
+// edgecases: if array is empty, return null
 const longestConsecutive = nums => {
   // do something
 }
