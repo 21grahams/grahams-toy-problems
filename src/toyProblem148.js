@@ -13,6 +13,12 @@ You must write an algorithm that runs in O(n) time.
 // edgecases: if array is empty, return 0
 const longestConsecutive = nums => {
   if (nums.length === 0) return 0
+  // sort nums
+  // create count var, assign to 1
+  // loop over nums
+    // if nums at index - 1 plus 1 equals nums at current index AND nums at index plus 1 equals nums at next index
+      // increment count
+  // return count
 }
 
 console.log(longestConsecutive([100, 4, 200, 1, 3, 2])) // 4
