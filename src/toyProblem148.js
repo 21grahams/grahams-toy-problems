@@ -29,6 +29,9 @@ const longestConsecutive = (nums) => {
   return max;
 };
 
+// Runtime: 187 ms, faster than 61.00% of JavaScript online submissions for Longest Consecutive Sequence.
+// Memory Usage: 58.5 MB, less than 39.99% of JavaScript online submissions for Longest Consecutive Sequence.
+
 console.log(longestConsecutive([100, 4, 200, 1, 3, 2])); // 4
 // Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
 
