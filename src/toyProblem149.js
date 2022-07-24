@@ -29,6 +29,9 @@ const transpose = matrix => {
   return finalResult
 }
 
+// Runtime: 111 ms, faster than 42.06% of JavaScript online submissions for Transpose Matrix.
+// Memory Usage: 44.8 MB, less than 44.86% of JavaScript online submissions for Transpose Matrix.
+
 console.log(transpose([[1, 2, 3], [4, 5, 6], [7, 8, 9]])) // [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
 /*
 [[1, 2, 3], -> [[1, 4, 7],
