@@ -11,19 +11,17 @@ The transpose of a matrix is the matrix flipped over its main diagonal, switchin
 // constraints: m == matrix.length. n == matrix[i].length. 1 <= m, n <= 1000. 1 <= m * n <= 105. -109 <= matrix[i][j] <= 109. 
 // edge cases: none at this time
 const transpose = matrix => {
-  // matrix[0][0] remains in place
-  // matrix[1][1] remains in place
-  // matrix[2][2] remains in place
-  // create a variable for the column and row
-  // loop over the matrix twice (outer and inner, traverse entire matrix)
-    // create temp var, assign to matrix at i and j
-    // assign element matrix[i][j] to matrix at j and i
-    // assign matrix at j and i to temp
-
-  // return matrix
+  // create a finalResult array
+  // loop over the matrix
+    // create a cols array
+    // loop over all the columns of the matrix
+      // push all elements of the current index of matrix to the cols array
+  // push all elements of the cols array to the finalResult array
+  
+  // return finalResult array
 }
 
-// console.log(transpose([[1, 2, 3], [4, 5, 6], [7, 8, 9]])) // [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+console.log(transpose([[1, 2, 3], [4, 5, 6], [7, 8, 9]])) // [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
 /*
 [[1, 2, 3], -> [[1, 4, 7],
 [4, 5, 6], ->  [2, 5, 8],
