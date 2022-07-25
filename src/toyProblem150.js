@@ -9,3 +9,9 @@ Given two strings str1 and str2, return the largest string x such that x divides
 const gcdOfStrings = (str1, str2) => {
   // do something
 }
+
+console.log(gcdOfStrings('ABCABC', 'ABC')) // 'ABC'
+
+console.log(gcdOfStrings('ABABAB', 'ABAB')) // 'AB'
+
+console.log(gcdOfStrings('LEET', 'CODE')) // ''
