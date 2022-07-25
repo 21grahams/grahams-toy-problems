@@ -11,7 +11,11 @@ Given two strings str1 and str2, return the largest string x such that x divides
 // constraints: 1 <= str1.length, str2.length <= 1000. str1 and str2 consist of English uppercase letters.
 // edge cases: if strings aren't divisible, return empty string
 const gcdOfStrings = (str1, str2) => {
-  // do something
+  // create a resultStr
+  // drop the duplicates in an array for str1 and str2
+  // if str1 includes str2
+    // concat resultStr with str2
+  // return resultStr
 }
 
 console.log(gcdOfStrings('ABCABC', 'ABC')) // 'ABC'
