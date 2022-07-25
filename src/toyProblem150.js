@@ -22,7 +22,10 @@ const gcdOfStrings = (str1, str2) => {
   } else {
     return gcdOfStrings(str2.slice(str1.length), str1);
   }
-};
+}
+
+// Runtime: 94 ms, faster than 45.07% of JavaScript online submissions for Greatest Common Divisor of Strings.
+// Memory Usage: 43.7 MB, less than 35.92% of JavaScript online submissions for Greatest Common Divisor of Strings.
 
 console.log(gcdOfStrings("ABCABC", "ABC")); // 'ABC'
 
