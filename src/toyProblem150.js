@@ -11,15 +11,28 @@ Given two strings str1 and str2, return the largest string x such that x divides
 // constraints: 1 <= str1.length, str2.length <= 1000. str1 and str2 consist of English uppercase letters.
 // edge cases: if strings aren't divisible, return empty string
 const gcdOfStrings = (str1, str2) => {
-  // create a resultStr
-  // drop the duplicates in an array for str1 and str2
-  // if str1 includes str2
-    // concat resultStr with str2
-  // return resultStr
-}
+  if (str1 + str2 !== str2 + str1) {
+    // not possible
+    // no common element
+    return "";
+  } else if (str1 === str2) {
+    return str1;
+  } else if (str1.length > str2.length) {
+    return gcdOfStrings(str1.slice(str2.length), str2);
+  } else {
+    return gcdOfStrings(str2.slice(str1.length), str1);
+  }
+};
 
-console.log(gcdOfStrings('ABCABC', 'ABC')) // 'ABC'
+console.log(gcdOfStrings("ABCABC", "ABC")); // 'ABC'
 
-console.log(gcdOfStrings('ABABAB', 'ABAB')) // 'AB'
+console.log(gcdOfStrings("ABABAB", "ABAB")); // 'AB'
 
-console.log(gcdOfStrings('LEET', 'CODE')) // ''
+console.log(gcdOfStrings("LEET", "CODE")); // ''
+
+console.log(
+  gcdOfStrings(
+    "TAUXXTAUXXTAUXXTAUXXTAUXX",
+    "TAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXXTAUXX"
+  )
+); // 'TAUXX'
