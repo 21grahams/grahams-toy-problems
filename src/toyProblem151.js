@@ -10,6 +10,10 @@ Note that if there are multiple occurrences of the same substring, every occurre
 A substring is a contiguous sequence of characters in a string.
 */
 
+// input: a string, represented as the letter s
+// output: an integer, which represents the number of good substrings, in this case, a non-repeated string of 3 letters
+// constraints: 1 <= s.length <= 100. s​​​​​​ consists of lowercase English letters.
+// edge cases: none at this time
 const countGoodSubstrings = s => {
   // do something
 }
