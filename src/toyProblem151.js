@@ -13,3 +13,9 @@ A substring is a contiguous sequence of characters in a string.
 const countGoodSubstrings = s => {
   // do something
 }
+
+console.log(countGoodSubstrings('xyzzaz')) // 1
+// Explanation: There are 4 substrings of size 3: "xyz", "yzz", "zza", and "zaz". The only good substring of length 3 is "xyz".
+
+console.log(countGoodSubstrings('aababcabc')) // 4
+// Explanation: There are 7 substrings of size 3: "aab", "aba", "bab", "abc", "bca", "cab", and "abc". The good substrings are "abc", "bca", "cab", and "abc".
