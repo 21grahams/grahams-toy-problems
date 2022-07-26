@@ -28,8 +28,8 @@ const countGoodSubstrings = (s) => {
   return count
 };
 
-// Runtime: 123 ms, faster than 23.86% of JavaScript online submissions for Substrings of Size Three with Distinct Characters.
-// Memory Usage: 44.7 MB, less than 29.40% of JavaScript online submissions for Substrings of Size Three with Distinct Characters.
+// Runtime: 66 ms, faster than 94.22% of JavaScript online submissions for Substrings of Size Three with Distinct Characters.
+// Memory Usage: 44.6 MB, less than 31.33% of JavaScript online submissions for Substrings of Size Three with Distinct Characters.
 
 console.log(countGoodSubstrings("xyzzaz")); // 1
 // Explanation: There are 4 substrings of size 3: "xyz", "yzz", "zza", and "zaz". The only good substring of length 3 is "xyz".
