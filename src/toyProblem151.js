@@ -15,7 +15,13 @@ A substring is a contiguous sequence of characters in a string.
 // constraints: 1 <= s.length <= 100. s​​​​​​ consists of lowercase English letters.
 // edge cases: none at this time
 const countGoodSubstrings = s => {
-  // do something
+  // create a count
+  // loop over s
+    // loop over s again, stopping j at 2 index past i
+      // create a new set of characters (drop dupes)
+      // if length is equal to 3
+        // increment count
+  // return count
 }
 
 console.log(countGoodSubstrings('xyzzaz')) // 1
