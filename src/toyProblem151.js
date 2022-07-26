@@ -14,18 +14,22 @@ A substring is a contiguous sequence of characters in a string.
 // output: an integer, which represents the number of good substrings, in this case, a non-repeated string of 3 letters
 // constraints: 1 <= s.length <= 100. s​​​​​​ consists of lowercase English letters.
 // edge cases: none at this time
-const countGoodSubstrings = s => {
-  // create a count
-  // loop over s
-    // loop over s again, stopping j at 2 index past i
-      // create a new set of characters (drop dupes)
-      // if length is equal to 3
-        // increment count
-  // return count
-}
+const countGoodSubstrings = (s) => {
+  let count = 0;
+  let innerArr;
+  for (let i = 0; i < s.length; i++) {
+    innerArr = [];
+    for (let j = i; j < i + 3; j++) {
+      innerArr.push(s[j]);
+    }
+    let dropDupes = [...new Set(innerArr)].filter(Boolean)
+    if (dropDupes.length === 3) count++
+  }
+  return count
+};
 
-console.log(countGoodSubstrings('xyzzaz')) // 1
+console.log(countGoodSubstrings("xyzzaz")); // 1
 // Explanation: There are 4 substrings of size 3: "xyz", "yzz", "zza", and "zaz". The only good substring of length 3 is "xyz".
 
-console.log(countGoodSubstrings('aababcabc')) // 4
+console.log(countGoodSubstrings("aababcabc")); // 4
 // Explanation: There are 7 substrings of size 3: "aab", "aba", "bab", "abc", "bca", "cab", and "abc". The good substrings are "abc", "bca", "cab", and "abc".
