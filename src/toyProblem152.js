@@ -16,13 +16,10 @@ const numberOfMatches = (n) => {
   let matches;
   if (n === 1) return 0;
 
-  // EVEN
   if (n % 2 === 0) {
     matches = n / 2;
     n = n - matches;
     return matches + numberOfMatches(n);
-
-    // ODD
   } else {
     matches = (n - 1) / 2;
     n = n - matches;
