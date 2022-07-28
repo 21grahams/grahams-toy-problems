@@ -31,6 +31,10 @@ const numberOfMatches = (n) => {
   return matches
 };
 
+// Runtime: 75 ms, faster than 77.49% of JavaScript online submissions for Count of Matches in Tournament.
+// Memory Usage: 41.7 MB, less than 88.93% of JavaScript online submissions for Count of Matches in Tournament.
+
+
 console.log(numberOfMatches(7)); // 6
 /* Explanation: Details of the tournament: 
 - 1st Round: Teams = 7, Matches = 3, and 4 teams advance.
