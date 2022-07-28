@@ -13,7 +13,17 @@ Return the number of matches played in the tournament until a winner is decided.
 // constraints: aside from the constraints above: 1 <= n <= 200
 // edge cases: none at this time
 const numberOfMatches = n => {
-  // do something
+  // RECURSION 
+
+  // base case
+  // if n is equal to 1
+    // return 1
+
+  // recursion case
+  // if n is an even number
+    // call our recursion func with n / 2
+  // otherwise 
+    // call our recursion func with (n - 1) / 2
 }
 
 console.log(numberOfMatches(7)) // 6
