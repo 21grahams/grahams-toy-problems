@@ -8,6 +8,10 @@ If the current number of teams is odd, one team randomly advances in the tournam
 Return the number of matches played in the tournament until a winner is decided.
 */
 
+// input: an integer which represents the number of teams in a tournament
+// output: an integer which represents the total number of matches played in the tournament once a winner was decided
+// constraints: aside from the constraints above: 1 <= n <= 200
+// edge cases: none at this time
 const numberOfMatches = n => {
   // do something
 }
