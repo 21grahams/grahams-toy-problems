@@ -11,17 +11,35 @@ Return the maximum product of nums after at most k operations. Since the answer 
 // constraints: 1 <= nums.length, k <= 105. 0 <= nums[i] <= 106
 // edge cases: not necessarily an edge case but ensure no number stays at 0, or product becomes 0
 const maximumProduct = (nums, k) => {
-  // do something
-}
+  // create a product var
+  let product = 1;
+  // loop over nums array
+  while (k > 0) {
+    for (let i = 0; i < nums.length; i++) {
+      if (k === 0) break
+      nums[i]++;
+      k--;
+    }
+  }
+  console.log("nums: ", nums);
+  // while k is greater than 0
+  // increment nums[i]
+  // loop over nums array
+  for (let i = 0; i < nums.length; i++) {
+    product *= nums[i];
+  }
+  // find the product of all nums
+  return product;
+};
 
-console.log(maximumProduct([0, 4], 5)) // 20
+console.log(maximumProduct([0, 4], 5)); // 20
 /* Explanation: Increment the first number 5 times.
 Now nums = [5, 4], with a product of 5 * 4 = 20.
 It can be shown that 20 is maximum product possible, so we return 20.
 Note that there may be other ways to increment nums to have the maximum product.
 */
 
-console.log(maximumProduct([6, 3, 3, 2], 2)) // 216
+console.log(maximumProduct([6, 3, 3, 2], 2)); // 216
 /* Explanation: Increment the second number 1 time and increment the fourth number 1 time.
 Now nums = [6, 4, 3, 3], with a product of 6 * 4 * 3 * 3 = 216.
 It can be shown that 216 is maximum product possible, so we return 216.
