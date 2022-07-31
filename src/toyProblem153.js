@@ -16,7 +16,7 @@ const maximumProduct = (nums, k) => {
   // loop over nums array
   while (k > 0) {
     for (let i = 0; i < nums.length; i++) {
-      if (k === 0) break
+      if (k === 0) break;
       nums[i]++;
       k--;
     }
