@@ -24,6 +24,9 @@ const maximumProduct = (nums, k) => {
   return nums.reduce((a,b)=>a*b % (1e9+7))
 };
 
+// Runtime: 272 ms, faster than 81.40% of JavaScript online submissions for Maximum Product After K Increments.
+// Memory Usage: 56.4 MB, less than 93.02% of JavaScript online submissions for Maximum Product After K Increments.
+
 console.log(maximumProduct([0, 4], 5)); // 20
 /* Explanation: Increment the first number 5 times.
 Now nums = [5, 4], with a product of 5 * 4 = 20.
