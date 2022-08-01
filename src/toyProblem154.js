@@ -15,15 +15,27 @@ You must solve the problem without modifying the array nums and uses only consta
 const findDuplicate = (nums) => {
   // create a mapping obj
   // create a finalCount var
+  let mappingObj = {}, finalCount = 0
   // loop over nums
+  for (let i = 0; i < nums.length; i++) {
     // if the current num at the object is undefined
-      // assign current num at the object to 1
+    if (mappingObj[nums[i]] === undefined) {
+    // assign current num at the object to 1
+    mappingObj[nums[i]] = 1
     // otherwise
-      // increment it
+    } else 
+    // increment it
+    mappingObj[nums[i]]++
+  }
+  console.log(mappingObj)
   // loop over the object
+  for (let key in mappingObj) {
     // if the value at the key is greater than 1
-      // assign finalCount to current key 
+    // assign finalCount to current key 
+    if (mappingObj[key] > 1) finalCount = key
+  }
   // return finalCount
+  return finalCount
 }
 
 console.log(findDuplicate([1, 3, 4, 2, 2])) // 2
