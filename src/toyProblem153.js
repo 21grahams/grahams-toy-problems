@@ -12,17 +12,29 @@ Return the maximum product of nums after at most k operations. Since the answer 
 // edge cases: not necessarily an edge case but ensure no number stays at 0, or product becomes 0
 const maximumProduct = (nums, k) => {
   // create a product variable, assign to 1
+  let product = 1
   // sort the nums input array
-    // while k is greater than 0
-      // loop over nums
-        // if k equals 0, break
-        // increment nums at current index
-        // decrement k
-
+  nums = nums.sort((a, b) => a - b)
+  // while k is greater than 0
+  while (k > 0) {
     // loop over nums
+    for (let i = 0; i < nums.length; i++) {
+      // if k equals 0, break
+      if (k === 0) break
+      // check for the lowest value and increment
+      nums = nums.sort((a, b) => a - b)
+      nums[0]++
+      // decrement k
+      k--
+    }
+  }
+    // loop over nums
+    for (let i = 0; i < nums.length; i++) {
       // find total product
-
+      product *= nums[i]
+    }
   // return product
+  return product%1000000007
 };
 
 console.log(maximumProduct([0, 4], 5)); // 20
