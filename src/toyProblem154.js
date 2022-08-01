@@ -8,6 +8,10 @@ There is only one repeated number in nums, return this repeated number.
 You must solve the problem without modifying the array nums and uses only constant extra space.
 */
 
+// input: an array of integers
+// output: a single integer which represents the duplicate number from the input array
+// constraints: 1 <= n <= 105. nums.length == n + 1. 1 <= nums[i] <= n. All the integers in nums appear only once except for precisely one integer which appears two or more times.
+// edge cases: if the array is empty, return null
 const findDuplicate = () => {
   // do something
 }
