@@ -38,6 +38,9 @@ const findDuplicate = (nums) => {
   return finalCount
 }
 
+// Runtime: 733 ms, faster than 5.08% of JavaScript online submissions for Find the Duplicate Number.
+// Memory Usage: 124.6 MB, less than 5.24% of JavaScript online submissions for Find the Duplicate Number.
+
 console.log(findDuplicate([1, 3, 4, 2, 2])) // 2
 
 console.log(findDuplicate([3, 1, 3, 4, 2])) // 3
