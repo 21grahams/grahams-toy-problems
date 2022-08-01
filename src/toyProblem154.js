@@ -11,3 +11,7 @@ You must solve the problem without modifying the array nums and uses only consta
 const findDuplicate = () => {
   // do something
 }
+
+console.log(findDuplicate([1, 3, 4, 2, 2])) // 2
+
+console.log(findDuplicate([3, 1, 3, 4, 2])) // 3
